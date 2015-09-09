@@ -22,8 +22,10 @@ module hw1problem3(X, Z, RESET, CLOCK);
 	input X, RESET, CLOCK;
 	output Z;
 	
-	reg Q1, Q0;
-	wire D1, D0;
+	reg Q1;
+	reg Q0;
+	wire D1;
+	wire D0;
 	
 	always @ (posedge CLOCK)
 		if (RESET == 1) begin Q1 <= 0; Q0 <= 0; end
