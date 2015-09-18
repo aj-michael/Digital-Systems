@@ -13,7 +13,7 @@ always@(State)
 	if(State==State1) OneShot<=1;
 	else OneShot<=0;
 
-always @ (posedge CLOCK)
+always @ (posedge CLOCK or posedge Reset)
 	if(Reset==1)	State <= 0; else
 	case (State)
 	0:	if (InputPulse==0) State<=State0; else State<=State1;

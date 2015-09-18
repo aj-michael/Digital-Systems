@@ -20,6 +20,6 @@ module Lab2Part1Fall2015AJM(Rows, ClockIn, Load, Reset, RotateOnce, Columns, Key
 	Clock50MHz KeypadScanClock(ClockIn, Clock, ClockLocked);
 	DebouncerWithoutLatch RotateOnceSwitch(RotateOnce, DebouncedRotate, Reset, Clock);
 	ClockedOneShot RotateOnceUnit(DebouncedRotate, Rotate, Reset, Clock);
-	ShiftReg4bits ColumnPattern(Load, Rotate, 4'b1110, Columns, Reset, Clock);
-	KeyEncoderAJM KeyMapUnit(Rows, Columns, KeyNumberLEDs);
+	ShiftReg4bits ColumnPattern(4'b1110, Clock, Load, Reset, Rotate, Columns);
+	KeyEncoderAJM KeyMapUnit(Columns, Rows, KeyNumberLEDs);
 endmodule
