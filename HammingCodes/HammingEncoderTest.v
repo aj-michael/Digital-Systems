@@ -12,8 +12,10 @@
 module HammingEncoderTest;
 	reg [3:0] data;
 	wire [6:0] code;
+	wire [6:0] code2;
 
 	HammingEncoder uut(data, code);
+	NewHammingEncoder uut2(data, code2);
 
 	initial begin
 		data = 4'b0000; #1;

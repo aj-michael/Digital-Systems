@@ -2,8 +2,10 @@
 module HammingDecoderTest;
 	reg [6:0] ReceivedHammingCode;
 	wire [3:0] DecodedWord;
+	wire [3:0] DecodedWord2;
 
 	HammingDecoder DUT1 (ReceivedHammingCode, DecodedWord);
+	NewHammingDecoder DUT2 (ReceivedHammingCode, DecodedWord2);
 	
 	wire [2:0] syndrome = DUT1.syndrome;
 
