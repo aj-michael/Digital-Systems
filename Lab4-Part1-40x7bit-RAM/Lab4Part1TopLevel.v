@@ -2,6 +2,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 // Company:  Rose-Hulman Institute of Technology
 // Engineer: Adam Michael
+// Description: This is a programmable RAM with load and increment.
 //////////////////////////////////////////////////////////////////////////////////
 module Lab4Part1TopLevel(Data,ClockIn,IncrementAddress,IncrementData,LoadData,Reset,ScrollEnable,Display,MemAddress,Transistors,Locked);
 	input [6:0] Data;

@@ -8,9 +8,9 @@
 //////////////////////////////////////////////////////////////////////////////////
 module ScrollTimer(Clock, Enable, Reset, PulseOutput);
 	input Clock, Enable, Reset;
-	output PulseOutput;
+	output reg PulseOutput;
 	reg [24:0] counter;
-	param CLOCK_CYCLES = 17500000;
+	parameter CLOCK_CYCLES = 17500000;
 	initial PulseOutput = 0;
 	initial counter = 0;
 	always@(posedge Clock)

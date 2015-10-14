@@ -2,13 +2,13 @@
 //////////////////////////////////////////////////////////////////////////////////
 // Company:  Rose-Hulman Institute of Technology
 // Engineer: Adam Michael
+// Date: 	 10/1/2015
+// Summary:  Splits a number from 0 to 128 into its digits.
 //////////////////////////////////////////////////////////////////////////////////
 module SplitDigits(Number, Hundreds, Tens, Ones);
 	input [6:0] Number;
-	output reg [3:0] Hundreds, Tens, Ones;
-	always @ (Number)
-		case (Number)
-		// automate this with python? I need 128 cases.
-		7'b0000000: {Hundreds, Tens, Ones} <= 12'b000000000000;
-		endcase
+	output [3:0] Hundreds, Tens, Ones;
+	assign Hundreds = (Number / 100) % 10;
+	assign Tens = (Number / 10) % 10;
+	assign Ones = Number % 10;
 endmodule
