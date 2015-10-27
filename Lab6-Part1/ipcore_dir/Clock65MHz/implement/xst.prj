@@ -1,0 +1,2 @@
+verilog work ../../Clock65MHz.v
+verilog work ../example_design/Clock65MHz_exdes.v

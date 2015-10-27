@@ -1,0 +1,13 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Sun Oct 25 19:37:20 2015
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "ClockLocked" LOCATE = SITE "U16" LEVEL 1;
+COMP "SDA" LOCATE = SITE "L3" LEVEL 1;
+COMP "SCL" LOCATE = SITE "L4" LEVEL 1;
+COMP "Go" LOCATE = SITE "C4" LEVEL 1;
+COMP "Clock" LOCATE = SITE "V10" LEVEL 1;
+COMP "Reset" LOCATE = SITE "C9" LEVEL 1;
+SCHEMATIC END;
+

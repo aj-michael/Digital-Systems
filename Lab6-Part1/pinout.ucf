@@ -1,0 +1,7 @@
+NET "Clock" LOC = V10;
+NET "Reset" LOC = C9;
+NET "Go" LOC = C4;
+
+NET "ClockLocked" LOC = U16;
+NET "SCL" LOC = L4;
+NET "SDA" LOC = L3;
