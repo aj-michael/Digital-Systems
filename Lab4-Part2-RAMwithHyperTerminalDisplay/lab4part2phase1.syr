@@ -1,0 +1,946 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> 
+Reading design: lab4part2phase1.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "lab4part2phase1.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "lab4part2phase1"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : lab4part2phase1
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/a/workspace/Digital-Systems/Lab4-Part2-RAMwithHyperTerminalDisplay/Refreshing7Seg.v" into library work
+Parsing module <Refreshing7Seg>.
+Analyzing Verilog file "/home/a/workspace/Digital-Systems/Lab4-Part2-RAMwithHyperTerminalDisplay/DisplayMux.v" into library work
+Parsing module <DisplayMux>.
+Analyzing Verilog file "/home/a/workspace/Digital-Systems/Lab4-Part2-RAMwithHyperTerminalDisplay/DelayLoop.v" into library work
+Parsing module <DelayLoop>.
+Analyzing Verilog file "/home/a/workspace/Digital-Systems/Lab4-Part2-RAMwithHyperTerminalDisplay/SevenSegDriver.v" into library work
+Parsing module <SevenSegDriver>.
+Analyzing Verilog file "/home/a/workspace/Digital-Systems/Lab4-Part2-RAMwithHyperTerminalDisplay/RAMAddressUpdate.v" into library work
+Parsing module <RAMAddressUpdate>.
+Analyzing Verilog file "/home/a/workspace/Digital-Systems/Lab4-Part2-RAMwithHyperTerminalDisplay/RAM40x7bits.v" into library work
+Parsing module <RAM40x7bits>.
+Analyzing Verilog file "/home/a/workspace/Digital-Systems/Lab4-Part2-RAMwithHyperTerminalDisplay/ipcore_dir/Clock70MHz.v" into library work
+Parsing module <Clock70MHz>.
+Analyzing Verilog file "/home/a/workspace/Digital-Systems/Lab4-Part2-RAMwithHyperTerminalDisplay/HEXto7Segment.v" into library work
+Parsing module <HEXto7Segment>.
+Analyzing Verilog file "/home/a/workspace/Digital-Systems/Lab4-Part2-RAMwithHyperTerminalDisplay/DebouncerWithoutLatch.v" into library work
+Parsing module <DebouncerWithoutLatch>.
+Analyzing Verilog file "/home/a/workspace/Digital-Systems/Lab4-Part2-RAMwithHyperTerminalDisplay/ClockedOneShot.v" into library work
+Parsing module <ClockedOneShot>.
+Analyzing Verilog file "/home/a/workspace/Digital-Systems/Lab4-Part2-RAMwithHyperTerminalDisplay/lab4part2phase1.v" into library work
+Parsing module <lab4part2phase1>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <lab4part2phase1>.
+
+Elaborating module <RAM40x7bits>.
+
+Elaborating module <HEXto7Segment>.
+
+Elaborating module <Clock70MHz>.
+
+Elaborating module <IBUFG>.
+
+Elaborating module <DCM_SP(CLKDV_DIVIDE=2.0,CLKFX_DIVIDE=10,CLKFX_MULTIPLY=7,CLKIN_DIVIDE_BY_2="FALSE",CLKIN_PERIOD=10.0,CLKOUT_PHASE_SHIFT="NONE",CLK_FEEDBACK="1X",DESKEW_ADJUST="SYSTEM_SYNCHRONOUS",PHASE_SHIFT=0,STARTUP_WAIT="FALSE")>.
+WARNING:HDLCompiler:1127 - "/home/a/workspace/Digital-Systems/Lab4-Part2-RAMwithHyperTerminalDisplay/ipcore_dir/Clock70MHz.v" Line 129: Assignment to status_int ignored, since the identifier is never used
+
+Elaborating module <BUFG>.
+
+Elaborating module <DebouncerWithoutLatch>.
+
+Elaborating module <DelayLoop>.
+
+Elaborating module <ClockedOneShot>.
+
+Elaborating module <SevenSegDriver>.
+
+Elaborating module <DisplayMux>.
+
+Elaborating module <Refreshing7Seg>.
+
+Elaborating module <RAMAddressUpdate>.
+WARNING:HDLCompiler:413 - "/home/a/workspace/Digital-Systems/Lab4-Part2-RAMwithHyperTerminalDisplay/RAMAddressUpdate.v" Line 14: Result of 7-bit expression is truncated to fit in 6-bit target.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <lab4part2phase1>.
+    Related source file is "/home/a/workspace/Digital-Systems/Lab4-Part2-RAMwithHyperTerminalDisplay/lab4part2phase1.v".
+    Summary:
+	no macro.
+Unit <lab4part2phase1> synthesized.
+
+Synthesizing Unit <RAM40x7bits>.
+    Related source file is "/home/a/workspace/Digital-Systems/Lab4-Part2-RAMwithHyperTerminalDisplay/RAM40x7bits.v".
+    Found 1-bit register for signal <Data<33><3>>.
+    Found 1-bit register for signal <Data<33><2>>.
+    Found 1-bit register for signal <Data<33><0>>.
+    Found 1-bit register for signal <Data<32><3>>.
+    Found 1-bit register for signal <Data<32><1>>.
+    Found 1-bit register for signal <Data<31><6>>.
+    Found 1-bit register for signal <Data<31><5>>.
+    Found 1-bit register for signal <Data<31><4>>.
+    Found 1-bit register for signal <Data<31><1>>.
+    Found 1-bit register for signal <Data<31><0>>.
+    Found 1-bit register for signal <Data<30><6>>.
+    Found 1-bit register for signal <Data<30><5>>.
+    Found 1-bit register for signal <Data<30><3>>.
+    Found 1-bit register for signal <Data<30><2>>.
+    Found 1-bit register for signal <Data<30><0>>.
+    Found 1-bit register for signal <Data<29><6>>.
+    Found 1-bit register for signal <Data<29><5>>.
+    Found 1-bit register for signal <Data<29><2>>.
+    Found 1-bit register for signal <Data<29><0>>.
+    Found 1-bit register for signal <Data<28><6>>.
+    Found 1-bit register for signal <Data<28><5>>.
+    Found 1-bit register for signal <Data<28><4>>.
+    Found 1-bit register for signal <Data<28><2>>.
+    Found 1-bit register for signal <Data<27><6>>.
+    Found 1-bit register for signal <Data<27><5>>.
+    Found 1-bit register for signal <Data<27><4>>.
+    Found 1-bit register for signal <Data<27><1>>.
+    Found 1-bit register for signal <Data<27><0>>.
+    Found 1-bit register for signal <Data<26><6>>.
+    Found 1-bit register for signal <Data<26><5>>.
+    Found 1-bit register for signal <Data<26><4>>.
+    Found 1-bit register for signal <Data<26><3>>.
+    Found 1-bit register for signal <Data<26><0>>.
+    Found 1-bit register for signal <Data<25><6>>.
+    Found 1-bit register for signal <Data<25><4>>.
+    Found 1-bit register for signal <Data<25><1>>.
+    Found 1-bit register for signal <Data<25><0>>.
+    Found 1-bit register for signal <Data<24><5>>.
+    Found 1-bit register for signal <Data<23><6>>.
+    Found 1-bit register for signal <Data<23><5>>.
+    Found 1-bit register for signal <Data<23><3>>.
+    Found 1-bit register for signal <Data<23><2>>.
+    Found 1-bit register for signal <Data<22><6>>.
+    Found 1-bit register for signal <Data<22><5>>.
+    Found 1-bit register for signal <Data<22><0>>.
+    Found 1-bit register for signal <Data<21><6>>.
+    Found 1-bit register for signal <Data<21><5>>.
+    Found 1-bit register for signal <Data<21><4>>.
+    Found 1-bit register for signal <Data<21><2>>.
+    Found 1-bit register for signal <Data<20><6>>.
+    Found 1-bit register for signal <Data<20><5>>.
+    Found 1-bit register for signal <Data<20><3>>.
+    Found 1-bit register for signal <Data<20><0>>.
+    Found 1-bit register for signal <Data<19><6>>.
+    Found 1-bit register for signal <Data<19><5>>.
+    Found 1-bit register for signal <Data<19><2>>.
+    Found 1-bit register for signal <Data<19><1>>.
+    Found 1-bit register for signal <Data<19><0>>.
+    Found 1-bit register for signal <Data<18><6>>.
+    Found 1-bit register for signal <Data<18><5>>.
+    Found 1-bit register for signal <Data<18><3>>.
+    Found 1-bit register for signal <Data<18><0>>.
+    Found 1-bit register for signal <Data<17><6>>.
+    Found 1-bit register for signal <Data<17><2>>.
+    Found 1-bit register for signal <Data<16><5>>.
+    Found 1-bit register for signal <Data<15><5>>.
+    Found 1-bit register for signal <Data<15><4>>.
+    Found 1-bit register for signal <Data<15><2>>.
+    Found 1-bit register for signal <Data<15><0>>.
+    Found 1-bit register for signal <Data<14><5>>.
+    Found 1-bit register for signal <Data<14><4>>.
+    Found 1-bit register for signal <Data<14><0>>.
+    Found 1-bit register for signal <Data<13><5>>.
+    Found 1-bit register for signal <Data<13><4>>.
+    Found 1-bit register for signal <Data<12><5>>.
+    Found 1-bit register for signal <Data<12><4>>.
+    Found 1-bit register for signal <Data<12><1>>.
+    Found 1-bit register for signal <Data<11><5>>.
+    Found 1-bit register for signal <Data<10><6>>.
+    Found 1-bit register for signal <Data<10><5>>.
+    Found 1-bit register for signal <Data<10><3>>.
+    Found 1-bit register for signal <Data<10><2>>.
+    Found 1-bit register for signal <Data<9><6>>.
+    Found 1-bit register for signal <Data<9><5>>.
+    Found 1-bit register for signal <Data<9><3>>.
+    Found 1-bit register for signal <Data<9><2>>.
+    Found 1-bit register for signal <Data<8><6>>.
+    Found 1-bit register for signal <Data<8><5>>.
+    Found 1-bit register for signal <Data<8><0>>.
+    Found 1-bit register for signal <Data<7><6>>.
+    Found 1-bit register for signal <Data<7><2>>.
+    Found 1-bit register for signal <Data<7><1>>.
+    Found 1-bit register for signal <Data<6><5>>.
+    Found 1-bit register for signal <Data<5><5>>.
+    Found 1-bit register for signal <Data<5><4>>.
+    Found 1-bit register for signal <Data<5><1>>.
+    Found 1-bit register for signal <Data<5><0>>.
+    Found 1-bit register for signal <Data<4><5>>.
+    Found 1-bit register for signal <Data<4><4>>.
+    Found 1-bit register for signal <Data<4><1>>.
+    Found 1-bit register for signal <Data<4><0>>.
+    Found 1-bit register for signal <Data<3><5>>.
+    Found 1-bit register for signal <Data<3><4>>.
+    Found 1-bit register for signal <Data<3><1>>.
+    Found 1-bit register for signal <Data<3><0>>.
+    Found 1-bit register for signal <Data<2><6>>.
+    Found 1-bit register for signal <Data<2><2>>.
+    Found 1-bit register for signal <Data<2><0>>.
+    Found 1-bit register for signal <Data<1><6>>.
+    Found 1-bit register for signal <Data<1><1>>.
+    Found 1-bit register for signal <Data<1><0>>.
+    Found 1-bit register for signal <Data<0><6>>.
+    Found 1-bit register for signal <Data<0><2>>.
+    Found 1-bit register for signal <Data<0><0>>.
+    Found 1-bit register for signal <Data<33><6>>.
+    Found 1-bit register for signal <Data<33><5>>.
+    Found 1-bit register for signal <Data<33><4>>.
+    Found 1-bit register for signal <Data<33><1>>.
+    Found 1-bit register for signal <Data<32><6>>.
+    Found 1-bit register for signal <Data<32><5>>.
+    Found 1-bit register for signal <Data<32><4>>.
+    Found 1-bit register for signal <Data<32><2>>.
+    Found 1-bit register for signal <Data<32><0>>.
+    Found 1-bit register for signal <Data<31><3>>.
+    Found 1-bit register for signal <Data<31><2>>.
+    Found 1-bit register for signal <Data<30><4>>.
+    Found 1-bit register for signal <Data<30><1>>.
+    Found 1-bit register for signal <Data<29><4>>.
+    Found 1-bit register for signal <Data<29><3>>.
+    Found 1-bit register for signal <Data<29><1>>.
+    Found 1-bit register for signal <Data<28><3>>.
+    Found 1-bit register for signal <Data<28><1>>.
+    Found 1-bit register for signal <Data<28><0>>.
+    Found 1-bit register for signal <Data<27><3>>.
+    Found 1-bit register for signal <Data<27><2>>.
+    Found 1-bit register for signal <Data<26><2>>.
+    Found 1-bit register for signal <Data<26><1>>.
+    Found 1-bit register for signal <Data<25><5>>.
+    Found 1-bit register for signal <Data<25><3>>.
+    Found 1-bit register for signal <Data<25><2>>.
+    Found 1-bit register for signal <Data<24><6>>.
+    Found 1-bit register for signal <Data<24><4>>.
+    Found 1-bit register for signal <Data<24><3>>.
+    Found 1-bit register for signal <Data<24><2>>.
+    Found 1-bit register for signal <Data<24><1>>.
+    Found 1-bit register for signal <Data<24><0>>.
+    Found 1-bit register for signal <Data<23><4>>.
+    Found 1-bit register for signal <Data<23><1>>.
+    Found 1-bit register for signal <Data<23><0>>.
+    Found 1-bit register for signal <Data<22><4>>.
+    Found 1-bit register for signal <Data<22><3>>.
+    Found 1-bit register for signal <Data<22><2>>.
+    Found 1-bit register for signal <Data<22><1>>.
+    Found 1-bit register for signal <Data<21><3>>.
+    Found 1-bit register for signal <Data<21><1>>.
+    Found 1-bit register for signal <Data<21><0>>.
+    Found 1-bit register for signal <Data<20><4>>.
+    Found 1-bit register for signal <Data<20><2>>.
+    Found 1-bit register for signal <Data<20><1>>.
+    Found 1-bit register for signal <Data<19><4>>.
+    Found 1-bit register for signal <Data<19><3>>.
+    Found 1-bit register for signal <Data<18><4>>.
+    Found 1-bit register for signal <Data<18><2>>.
+    Found 1-bit register for signal <Data<18><1>>.
+    Found 1-bit register for signal <Data<17><5>>.
+    Found 1-bit register for signal <Data<17><4>>.
+    Found 1-bit register for signal <Data<17><3>>.
+    Found 1-bit register for signal <Data<17><1>>.
+    Found 1-bit register for signal <Data<17><0>>.
+    Found 1-bit register for signal <Data<16><6>>.
+    Found 1-bit register for signal <Data<16><4>>.
+    Found 1-bit register for signal <Data<16><3>>.
+    Found 1-bit register for signal <Data<16><2>>.
+    Found 1-bit register for signal <Data<16><1>>.
+    Found 1-bit register for signal <Data<16><0>>.
+    Found 1-bit register for signal <Data<15><6>>.
+    Found 1-bit register for signal <Data<15><3>>.
+    Found 1-bit register for signal <Data<15><1>>.
+    Found 1-bit register for signal <Data<14><6>>.
+    Found 1-bit register for signal <Data<14><3>>.
+    Found 1-bit register for signal <Data<14><2>>.
+    Found 1-bit register for signal <Data<14><1>>.
+    Found 1-bit register for signal <Data<13><6>>.
+    Found 1-bit register for signal <Data<13><3>>.
+    Found 1-bit register for signal <Data<13><2>>.
+    Found 1-bit register for signal <Data<13><1>>.
+    Found 1-bit register for signal <Data<13><0>>.
+    Found 1-bit register for signal <Data<12><6>>.
+    Found 1-bit register for signal <Data<12><3>>.
+    Found 1-bit register for signal <Data<12><2>>.
+    Found 1-bit register for signal <Data<12><0>>.
+    Found 1-bit register for signal <Data<11><6>>.
+    Found 1-bit register for signal <Data<11><4>>.
+    Found 1-bit register for signal <Data<11><3>>.
+    Found 1-bit register for signal <Data<11><2>>.
+    Found 1-bit register for signal <Data<11><1>>.
+    Found 1-bit register for signal <Data<11><0>>.
+    Found 1-bit register for signal <Data<10><4>>.
+    Found 1-bit register for signal <Data<10><1>>.
+    Found 1-bit register for signal <Data<10><0>>.
+    Found 1-bit register for signal <Data<9><4>>.
+    Found 1-bit register for signal <Data<9><1>>.
+    Found 1-bit register for signal <Data<9><0>>.
+    Found 1-bit register for signal <Data<8><4>>.
+    Found 1-bit register for signal <Data<8><3>>.
+    Found 1-bit register for signal <Data<8><2>>.
+    Found 1-bit register for signal <Data<8><1>>.
+    Found 1-bit register for signal <Data<7><5>>.
+    Found 1-bit register for signal <Data<7><4>>.
+    Found 1-bit register for signal <Data<7><3>>.
+    Found 1-bit register for signal <Data<7><0>>.
+    Found 1-bit register for signal <Data<6><6>>.
+    Found 1-bit register for signal <Data<6><4>>.
+    Found 1-bit register for signal <Data<6><3>>.
+    Found 1-bit register for signal <Data<6><2>>.
+    Found 1-bit register for signal <Data<6><1>>.
+    Found 1-bit register for signal <Data<6><0>>.
+    Found 1-bit register for signal <Data<5><6>>.
+    Found 1-bit register for signal <Data<5><3>>.
+    Found 1-bit register for signal <Data<5><2>>.
+    Found 1-bit register for signal <Data<4><6>>.
+    Found 1-bit register for signal <Data<4><3>>.
+    Found 1-bit register for signal <Data<4><2>>.
+    Found 1-bit register for signal <Data<3><6>>.
+    Found 1-bit register for signal <Data<3><3>>.
+    Found 1-bit register for signal <Data<3><2>>.
+    Found 1-bit register for signal <Data<2><5>>.
+    Found 1-bit register for signal <Data<2><4>>.
+    Found 1-bit register for signal <Data<2><3>>.
+    Found 1-bit register for signal <Data<2><1>>.
+    Found 1-bit register for signal <Data<1><5>>.
+    Found 1-bit register for signal <Data<1><4>>.
+    Found 1-bit register for signal <Data<1><3>>.
+    Found 1-bit register for signal <Data<1><2>>.
+    Found 1-bit register for signal <Data<0><5>>.
+    Found 1-bit register for signal <Data<0><4>>.
+    Found 1-bit register for signal <Data<0><3>>.
+    Found 1-bit register for signal <Data<0><1>>.
+    Found 1-bit register for signal <Data<39><6>>.
+    Found 1-bit register for signal <Data<39><5>>.
+    Found 1-bit register for signal <Data<39><4>>.
+    Found 1-bit register for signal <Data<39><3>>.
+    Found 1-bit register for signal <Data<39><2>>.
+    Found 1-bit register for signal <Data<39><1>>.
+    Found 1-bit register for signal <Data<39><0>>.
+    Found 1-bit register for signal <Data<38><6>>.
+    Found 1-bit register for signal <Data<38><5>>.
+    Found 1-bit register for signal <Data<38><4>>.
+    Found 1-bit register for signal <Data<38><3>>.
+    Found 1-bit register for signal <Data<38><2>>.
+    Found 1-bit register for signal <Data<38><1>>.
+    Found 1-bit register for signal <Data<38><0>>.
+    Found 1-bit register for signal <Data<37><6>>.
+    Found 1-bit register for signal <Data<37><5>>.
+    Found 1-bit register for signal <Data<37><4>>.
+    Found 1-bit register for signal <Data<37><3>>.
+    Found 1-bit register for signal <Data<37><2>>.
+    Found 1-bit register for signal <Data<37><1>>.
+    Found 1-bit register for signal <Data<37><0>>.
+    Found 1-bit register for signal <Data<36><6>>.
+    Found 1-bit register for signal <Data<36><5>>.
+    Found 1-bit register for signal <Data<36><4>>.
+    Found 1-bit register for signal <Data<36><3>>.
+    Found 1-bit register for signal <Data<36><2>>.
+    Found 1-bit register for signal <Data<36><1>>.
+    Found 1-bit register for signal <Data<36><0>>.
+    Found 1-bit register for signal <Data<35><6>>.
+    Found 1-bit register for signal <Data<35><5>>.
+    Found 1-bit register for signal <Data<35><4>>.
+    Found 1-bit register for signal <Data<35><3>>.
+    Found 1-bit register for signal <Data<35><2>>.
+    Found 1-bit register for signal <Data<35><1>>.
+    Found 1-bit register for signal <Data<35><0>>.
+    Found 1-bit register for signal <Data<34><6>>.
+    Found 1-bit register for signal <Data<34><5>>.
+    Found 1-bit register for signal <Data<34><4>>.
+    Found 1-bit register for signal <Data<34><3>>.
+    Found 1-bit register for signal <Data<34><2>>.
+    Found 1-bit register for signal <Data<34><1>>.
+    Found 1-bit register for signal <Data<34><0>>.
+    Found 7-bit 40-to-1 multiplexer for signal <Dout> created at line 56.
+    Summary:
+	inferred 280 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <RAM40x7bits> synthesized.
+
+Synthesizing Unit <HEXto7Segment>.
+    Related source file is "/home/a/workspace/Digital-Systems/Lab4-Part2-RAMwithHyperTerminalDisplay/HEXto7Segment.v".
+    Found 16x8-bit Read Only RAM for signal <Segments>
+    Summary:
+	inferred   1 RAM(s).
+Unit <HEXto7Segment> synthesized.
+
+Synthesizing Unit <Clock70MHz>.
+    Related source file is "/home/a/workspace/Digital-Systems/Lab4-Part2-RAMwithHyperTerminalDisplay/ipcore_dir/Clock70MHz.v".
+    Summary:
+	no macro.
+Unit <Clock70MHz> synthesized.
+
+Synthesizing Unit <DebouncerWithoutLatch>.
+    Related source file is "/home/a/workspace/Digital-Systems/Lab4-Part2-RAMwithHyperTerminalDisplay/DebouncerWithoutLatch.v".
+        State0 = 0
+        State1 = 1
+        State2 = 2
+        State3 = 3
+    Found 1-bit register for signal <DebouncedOuput>.
+    Found 1-bit register for signal <ClearTimer>.
+    Found 2-bit register for signal <State>.
+    Found finite state machine <FSM_0> for signal <State>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 8                                              |
+    | Inputs             | 2                                              |
+    | Outputs            | 2                                              |
+    | Clock              | CLOCK (rising_edge)                            |
+    | Reset              | Reset (positive)                               |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 00                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred   2 D-type flip-flop(s).
+	inferred   1 Finite State Machine(s).
+Unit <DebouncerWithoutLatch> synthesized.
+
+Synthesizing Unit <DelayLoop>.
+    Related source file is "/home/a/workspace/Digital-Systems/Lab4-Part2-RAMwithHyperTerminalDisplay/DelayLoop.v".
+        Divider = 250000
+        NumberOfBits = 18
+    Found 18-bit register for signal <count>.
+    Found 18-bit adder for signal <count[17]_GND_10_o_add_4_OUT> created at line 24.
+    Found 18-bit comparator lessequal for signal <n0002> created at line 23
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  18 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <DelayLoop> synthesized.
+
+Synthesizing Unit <ClockedOneShot>.
+    Related source file is "/home/a/workspace/Digital-Systems/Lab4-Part2-RAMwithHyperTerminalDisplay/ClockedOneShot.v".
+        State0 = 0
+        State1 = 1
+        State2 = 2
+        State3 = 3
+    Found 2-bit register for signal <State>.
+    Found finite state machine <FSM_1> for signal <State>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 6                                              |
+    | Inputs             | 1                                              |
+    | Outputs            | 1                                              |
+    | Clock              | CLOCK (rising_edge)                            |
+    | Reset              | Reset (positive)                               |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 00                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred   1 Finite State Machine(s).
+Unit <ClockedOneShot> synthesized.
+
+Synthesizing Unit <SevenSegDriver>.
+    Related source file is "/home/a/workspace/Digital-Systems/Lab4-Part2-RAMwithHyperTerminalDisplay/SevenSegDriver.v".
+    Summary:
+	no macro.
+Unit <SevenSegDriver> synthesized.
+
+Synthesizing Unit <DisplayMux>.
+    Related source file is "/home/a/workspace/Digital-Systems/Lab4-Part2-RAMwithHyperTerminalDisplay/DisplayMux.v".
+    Register <Digit2> equivalent to <Digit3> has been removed
+    Found 8-bit register for signal <Digit1>.
+    Found 8-bit register for signal <Digit0>.
+    Found 8-bit register for signal <Digit3>.
+    Summary:
+	inferred  24 D-type flip-flop(s).
+Unit <DisplayMux> synthesized.
+
+Synthesizing Unit <Refreshing7Seg>.
+    Related source file is "/home/a/workspace/Digital-Systems/Lab4-Part2-RAMwithHyperTerminalDisplay/Refreshing7Seg.v".
+        Bits = 4
+        Divider = 10000
+        NumberOfBits = 22
+    Found 23-bit register for signal <count>.
+    Found 2-bit register for signal <Q>.
+    Found 2-bit adder for signal <Q[1]_GND_14_o_add_3_OUT> created at line 20.
+    Found 23-bit adder for signal <count[22]_GND_14_o_add_11_OUT> created at line 34.
+    Found 4x4-bit Read Only RAM for signal <Transistors>
+    Summary:
+	inferred   1 RAM(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred  25 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <Refreshing7Seg> synthesized.
+
+Synthesizing Unit <RAMAddressUpdate>.
+    Related source file is "/home/a/workspace/Digital-Systems/Lab4-Part2-RAMwithHyperTerminalDisplay/RAMAddressUpdate.v".
+    Found 6-bit register for signal <RAMaddress>.
+    Found 6-bit adder for signal <RAMaddress[5]_GND_15_o_add_1_OUT> created at line 14.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   6 D-type flip-flop(s).
+Unit <RAMAddressUpdate> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 3
+ 16x8-bit single-port Read Only RAM                    : 2
+ 4x4-bit single-port Read Only RAM                     : 1
+# Adders/Subtractors                                   : 4
+ 18-bit adder                                          : 1
+ 2-bit adder                                           : 1
+ 23-bit adder                                          : 1
+ 6-bit adder                                           : 1
+# Registers                                            : 253
+ 1-bit register                                        : 240
+ 18-bit register                                       : 1
+ 2-bit register                                        : 1
+ 23-bit register                                       : 1
+ 6-bit register                                        : 1
+ 7-bit register                                        : 6
+ 8-bit register                                        : 3
+# Comparators                                          : 1
+ 18-bit comparator lessequal                           : 1
+# Multiplexers                                         : 3
+ 18-bit 2-to-1 multiplexer                             : 1
+ 23-bit 2-to-1 multiplexer                             : 1
+ 7-bit 40-to-1 multiplexer                             : 1
+# FSMs                                                 : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+INFO:Xst:2261 - The FF/Latch <Digit3_0> in Unit <DisplayInput> is equivalent to the following 7 FFs/Latches, which will be removed : <Digit3_1> <Digit3_2> <Digit3_3> <Digit3_4> <Digit3_5> <Digit3_6> <Digit3_7> 
+
+Synthesizing (advanced) Unit <DelayLoop>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+Unit <DelayLoop> synthesized (advanced).
+
+Synthesizing (advanced) Unit <HEXto7Segment>.
+INFO:Xst:3231 - The small RAM <Mram_Segments> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <HEXnumber>     |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <Segments>      |          |
+    -----------------------------------------------------------------------
+Unit <HEXto7Segment> synthesized (advanced).
+
+Synthesizing (advanced) Unit <RAMAddressUpdate>.
+The following registers are absorbed into counter <RAMaddress>: 1 register on signal <RAMaddress>.
+Unit <RAMAddressUpdate> synthesized (advanced).
+
+Synthesizing (advanced) Unit <Refreshing7Seg>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+The following registers are absorbed into counter <Q>: 1 register on signal <Q>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_Transistors> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 4-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <Q>             |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <Transistors>   |          |
+    -----------------------------------------------------------------------
+Unit <Refreshing7Seg> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 3
+ 16x8-bit single-port distributed Read Only RAM        : 2
+ 4x4-bit single-port distributed Read Only RAM         : 1
+# Counters                                             : 4
+ 18-bit up counter                                     : 1
+ 2-bit up counter                                      : 1
+ 23-bit up counter                                     : 1
+ 6-bit up counter                                      : 1
+# Registers                                            : 306
+ Flip-Flops                                            : 306
+# Comparators                                          : 1
+ 18-bit comparator lessequal                           : 1
+# Multiplexers                                         : 1
+ 7-bit 40-to-1 multiplexer                             : 1
+# FSMs                                                 : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <Digit3_0> in Unit <DisplayMux> is equivalent to the following 7 FFs/Latches, which will be removed : <Digit3_1> <Digit3_2> <Digit3_3> <Digit3_4> <Digit3_5> <Digit3_6> <Digit3_7> 
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <State[1:2]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 00
+ 01    | 01
+ 10    | 11
+ 11    | 10
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_1> on signal <State[1:3]> with one-hot encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 001
+ 01    | 010
+ 11    | 100
+-------------------
+
+Optimizing unit <lab4part2phase1> ...
+
+Optimizing unit <RAM40x7bits> ...
+
+Optimizing unit <DisplayMux> ...
+INFO:Xst:2261 - The FF/Latch <DisplayUnit/DisplayInput/Digit0_7> in Unit <lab4part2phase1> is equivalent to the following 2 FFs/Latches, which will be removed : <DisplayUnit/DisplayInput/Digit1_7> <DisplayUnit/DisplayInput/Digit3_0> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block lab4part2phase1, actual ratio is 6.
+FlipFlop UpdateAddress/RAMaddress_0 has been replicated 4 time(s)
+FlipFlop UpdateAddress/RAMaddress_1 has been replicated 5 time(s)
+FlipFlop UpdateAddress/RAMaddress_2 has been replicated 1 time(s)
+FlipFlop UpdateAddress/RAMaddress_3 has been replicated 1 time(s)
+FlipFlop UpdateAddress/RAMaddress_4 has been replicated 1 time(s)
+FlipFlop DisplayUnit/DisplayInput/Digit0_7 has been replicated 1 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 363
+ Flip-Flops                                            : 363
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : lab4part2phase1.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 585
+#      GND                         : 1
+#      INV                         : 4
+#      LUT1                        : 22
+#      LUT2                        : 9
+#      LUT3                        : 11
+#      LUT4                        : 14
+#      LUT5                        : 24
+#      LUT6                        : 398
+#      MUXCY                       : 39
+#      MUXF7                       : 14
+#      MUXF8                       : 7
+#      VCC                         : 1
+#      XORCY                       : 41
+# FlipFlops/Latches                : 363
+#      FD                          : 27
+#      FDCE                        : 142
+#      FDE                         : 42
+#      FDPE                        : 114
+#      FDR                         : 35
+#      FDRE                        : 2
+#      FDS                         : 1
+# Clock Buffers                    : 2
+#      BUFG                        : 2
+# IO Buffers                       : 30
+#      IBUF                        : 10
+#      IBUFG                       : 1
+#      OBUF                        : 19
+# DCMs                             : 1
+#      DCM_SP                      : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             362  out of  18224     1%  
+ Number of Slice LUTs:                  482  out of   9112     5%  
+    Number used as Logic:               482  out of   9112     5%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    493
+   Number with an unused Flip Flop:     131  out of    493    26%  
+   Number with an unused LUT:            11  out of    493     2%  
+   Number of fully used LUT-FF pairs:   351  out of    493    71%  
+   Number of unique control sets:         9
+
+IO Utilization: 
+ Number of IOs:                          30
+ Number of bonded IOBs:                  30  out of    232    12%  
+    IOB Flip Flops/Latches:               1
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+Clock                              | DCM_SP:CLKFX           | 363   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 3.054ns (Maximum Frequency: 327.391MHz)
+   Minimum input arrival time before clock: 4.536ns
+   Maximum output required time after clock: 5.087ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Clock'
+  Clock period: 3.054ns (frequency: 327.391MHz)
+  Total number of paths / destination ports: 8818 / 679
+-------------------------------------------------------------------------
+Delay:               4.364ns (Levels of Logic = 5)
+  Source:            UpdateAddress/RAMaddress_0_1 (FF)
+  Destination:       DisplayUnit/DisplayInput/Digit0_6 (FF)
+  Source Clock:      Clock rising 0.7X
+  Destination Clock: Clock rising 0.7X
+
+  Data Path: UpdateAddress/RAMaddress_0_1 to DisplayUnit/DisplayInput/Digit0_6
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            19   0.447   1.072  UpdateAddress/RAMaddress_0_1 (UpdateAddress/RAMaddress_0_1)
+     LUT6:I5->O            1   0.205   0.827  RAMUnit/Mmux_Dout_9 (RAMUnit/Mmux_Dout_9)
+     LUT6:I2->O            1   0.203   0.000  RAMUnit/Mmux_Dout_51 (RAMUnit/Mmux_Dout_51)
+     MUXF7:I1->O           1   0.140   0.000  RAMUnit/Mmux_Dout_4_f7 (RAMUnit/Mmux_Dout_4_f7)
+     MUXF8:I0->O           7   0.144   1.021  RAMUnit/Mmux_Dout_2_f8 (RAMUnitDout<0>)
+     LUT4:I0->O            1   0.203   0.000  Bit3_0Unit/Mram_Segments41 (Bit3_0Unit/Mram_Segments4)
+     FDR:D                     0.102          DisplayUnit/DisplayInput/Digit0_4
+    ----------------------------------------
+    Total                      4.364ns (1.444ns logic, 2.920ns route)
+                                       (33.1% logic, 66.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Clock'
+  Total number of paths / destination ports: 905 / 862
+-------------------------------------------------------------------------
+Offset:              4.536ns (Levels of Logic = 2)
+  Source:            WriteOrRead (PAD)
+  Destination:       RAMUnit/Data_0_1 (FF)
+  Destination Clock: Clock rising 0.7X
+
+  Data Path: WriteOrRead to RAMUnit/Data_0_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   1.222   0.879  WriteOrRead_IBUF (WriteOrRead_IBUF)
+     LUT3:I0->O          112   0.205   1.908  RAMUnit/_n1119_inv11 (RAMUnit/_n1119_inv1)
+     FDPE:CE                   0.322          RAMUnit/Data_0_6
+    ----------------------------------------
+    Total                      4.536ns (1.749ns logic, 2.787ns route)
+                                       (38.6% logic, 61.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Clock'
+  Total number of paths / destination ports: 50 / 18
+-------------------------------------------------------------------------
+Offset:              5.087ns (Levels of Logic = 1)
+  Source:            UpdateAddress/RAMaddress_0 (FF)
+  Destination:       RAMaddress<0> (PAD)
+  Source Clock:      Clock rising 0.7X
+
+  Data Path: UpdateAddress/RAMaddress_0 to RAMaddress<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q           287   0.447   2.069  UpdateAddress/RAMaddress_0 (UpdateAddress/RAMaddress_0)
+     OBUF:I->O                 2.571          RAMaddress_0_OBUF (RAMaddress<0>)
+    ----------------------------------------
+    Total                      5.087ns (3.018ns logic, 2.069ns route)
+                                       (59.3% logic, 40.7% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock Clock
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+Clock          |    4.364|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 6.02 secs
+ 
+--> 
+
+
+Total memory usage is 391684 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
+Number of infos    :    5 (   0 filtered)
+

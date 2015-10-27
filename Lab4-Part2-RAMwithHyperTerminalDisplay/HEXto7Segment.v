@@ -8,8 +8,7 @@
 module HEXto7Segment(HEXnumber,Segments);
 	input [3:0] HEXnumber;
 	output reg [7:0] Segments;
-	
-	// This is wrong for 10-15.
+
 	always @ (HEXnumber)
 		case (HEXnumber)
 		0:	Segments <= 8'B11000000;
@@ -22,14 +21,13 @@ module HEXto7Segment(HEXnumber,Segments);
 		7:	Segments <= 8'B11111000;
 		8:	Segments <= 8'B10000000;
 		9:	Segments <= 8'B10010000;
-		10: Segments <= 8'B10010000;
-		11: Segments <= 8'B10010000;
-		12: Segments <= 8'B10010000;
-		13: Segments <= 8'B10010000;
-		14: Segments <= 8'B10010000;
-		15: Segments <= 8'B10010000;
+		10: Segments <= 8'B10001000;
+		11: Segments <= 8'B10000011;
+		12: Segments <= 8'B11000110;
+		13: Segments <= 8'B10100001;
+		14: Segments <= 8'B10000110;
+		15: Segments <= 8'B10001110;
 		default:	Segments <= 8'B00000000;
 		endcase
-
 
 endmodule

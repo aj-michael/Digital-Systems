@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/a/workspace/Digital-Systems/Lab4-Part2-RAMwithHyperTerminalDisplay/lab4part2phase1.ncd
+OUTFILE=/home/a/workspace/Digital-Systems/Lab4-Part2-RAMwithHyperTerminalDisplay/lab4part2phase1.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=/home/a/workspace/Digital-Systems/Lab4-Part2-RAMwithHyperTerminalDisplay
+LICENSE=WebPack
+USER_INFO=211111032_0_0_255

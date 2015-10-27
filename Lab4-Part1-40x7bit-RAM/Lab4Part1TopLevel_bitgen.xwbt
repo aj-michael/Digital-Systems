@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/a/workspace/Digital-Systems/Lab4-Part1-40x7bit-RAM/Lab4Part1TopLevel.ncd
+OUTFILE=/home/a/workspace/Digital-Systems/Lab4-Part1-40x7bit-RAM/Lab4Part1TopLevel.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=/home/a/workspace/Digital-Systems/Lab4-Part1-40x7bit-RAM
+LICENSE=WebPack
+USER_INFO=211111032_0_0_255

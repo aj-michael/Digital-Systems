@@ -1,0 +1,98 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -intstyle ise -v 3 -s 3 -n
+3 -fastpaths -xml Lab4Part1TopLevel.twx Lab4Part1TopLevel.ncd -o
+Lab4Part1TopLevel.twr Lab4Part1TopLevel.pcf -ucf pinout.ucf
+
+Design file:              Lab4Part1TopLevel.ncd
+Physical constraint file: Lab4Part1TopLevel.pcf
+Device,package,speed:     xc6slx16,csg324,C,-3 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock ClockIn
+----------------+------------+------------+------------+------------+------------------+--------+
+                |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source          | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+----------------+------------+------------+------------+------------+------------------+--------+
+Data<0>         |    3.897(R)|      SLOW  |   -1.953(R)|      FAST  |Clock             |   0.000|
+Data<1>         |    4.808(R)|      SLOW  |   -2.409(R)|      FAST  |Clock             |   0.000|
+Data<2>         |    4.966(R)|      SLOW  |   -2.575(R)|      FAST  |Clock             |   0.000|
+Data<3>         |    5.592(R)|      SLOW  |   -2.654(R)|      FAST  |Clock             |   0.000|
+Data<4>         |    4.362(R)|      SLOW  |   -2.237(R)|      FAST  |Clock             |   0.000|
+Data<5>         |    5.084(R)|      SLOW  |   -2.660(R)|      FAST  |Clock             |   0.000|
+Data<6>         |    4.562(R)|      SLOW  |   -2.351(R)|      FAST  |Clock             |   0.000|
+IncrementAddress|    4.595(R)|      SLOW  |   -2.588(R)|      FAST  |Clock             |   0.000|
+IncrementData   |    3.426(R)|      SLOW  |   -1.683(R)|      FAST  |Clock             |   0.000|
+LoadData        |    5.640(R)|      SLOW  |   -3.245(R)|      FAST  |Clock             |   0.000|
+Reset           |   10.381(R)|      SLOW  |   -1.494(R)|      FAST  |Clock             |   0.000|
+ScrollEnable    |    5.839(R)|      SLOW  |   -2.686(R)|      FAST  |Clock             |   0.000|
+----------------+------------+------------+------------+------------+------------------+--------+
+
+Clock ClockIn to Pad
+--------------+-----------------+------------+-----------------+------------+------------------+--------+
+              |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination   |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+--------------+-----------------+------------+-----------------+------------+------------------+--------+
+Display<0>    |         7.453(R)|      SLOW  |         3.728(R)|      FAST  |Clock             |   0.000|
+Display<1>    |         8.806(R)|      SLOW  |         3.912(R)|      FAST  |Clock             |   0.000|
+Display<2>    |         8.699(R)|      SLOW  |         3.957(R)|      FAST  |Clock             |   0.000|
+Display<3>    |         7.270(R)|      SLOW  |         3.873(R)|      FAST  |Clock             |   0.000|
+Display<4>    |         6.914(R)|      SLOW  |         3.912(R)|      FAST  |Clock             |   0.000|
+Display<5>    |         7.118(R)|      SLOW  |         3.849(R)|      FAST  |Clock             |   0.000|
+Display<6>    |         7.859(R)|      SLOW  |         4.149(R)|      FAST  |Clock             |   0.000|
+Display<7>    |         4.332(R)|      SLOW  |         2.329(R)|      FAST  |Clock             |   0.000|
+MemAddress<0> |         7.051(R)|      SLOW  |         4.361(R)|      FAST  |Clock             |   0.000|
+MemAddress<1> |         7.208(R)|      SLOW  |         4.424(R)|      FAST  |Clock             |   0.000|
+MemAddress<2> |         6.730(R)|      SLOW  |         4.055(R)|      FAST  |Clock             |   0.000|
+MemAddress<3> |         6.594(R)|      SLOW  |         3.992(R)|      FAST  |Clock             |   0.000|
+MemAddress<4> |         7.135(R)|      SLOW  |         4.344(R)|      FAST  |Clock             |   0.000|
+MemAddress<5> |         6.725(R)|      SLOW  |         4.103(R)|      FAST  |Clock             |   0.000|
+Transistors<0>|         7.569(R)|      SLOW  |         4.346(R)|      FAST  |Clock             |   0.000|
+Transistors<1>|         7.631(R)|      SLOW  |         4.403(R)|      FAST  |Clock             |   0.000|
+Transistors<2>|         7.159(R)|      SLOW  |         4.324(R)|      FAST  |Clock             |   0.000|
+Transistors<3>|         7.145(R)|      SLOW  |         4.297(R)|      FAST  |Clock             |   0.000|
+--------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock to Setup on destination clock ClockIn
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+ClockIn        |    5.084|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Analysis completed Thu Oct 22 01:25:37 2015 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 393 MB
+
+
+

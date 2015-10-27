@@ -19,7 +19,6 @@ module lab4part2overall(NextAddress,Reset,DataIn,Clock,SendWrite,Mode,Locked,Dis
 	wire OneshotSendWrite;
 	wire [6:0] RAMDout;
 	wire RAMShouldRead;
-	wire [5:0] ModeControllerRAMAddress;
 	wire [7:0] Bit3_0out;
 	wire [7:0] Bit7_4out;
 	wire ClockOut;
@@ -28,18 +27,26 @@ module lab4part2overall(NextAddress,Reset,DataIn,Clock,SendWrite,Mode,Locked,Dis
 	wire [5:0] UpdatedRAMAddress;
 	wire [5:0] SendCharsRAMAddress;
 	wire tx_buffer_full;
+	wire tx_buffer_half_full;
 	wire UARTClock;
 	
+	parameter baudRate = 20'd38400;
+	parameter clockFrequency = 30'd70000000;
+	
 	Clock70MHz Clock70MHzUnit(Clock,ClockOut,Locked);
+	//module DebouncerWithoutLatch(InputPulse, DebouncedOuput, Reset, CLOCK) ;
+
 	DebouncerWithoutLatch NextDebounceUnit(NextAddress,DebouncedNextAddress,Reset,ClockOut);
 	ClockedOneShot NextOneShot(DebouncedNextAddress,OneshotNextAddress,Reset,ClockOut);
-	RAM40x7bits RAMUnit(ModeControllerRAMAddress,DataIn,ClockOut,RAMShouldRead,RAMDout);
+	RAM40x7bits RAMUnit(RAMaddress,DataIn,ClockOut,Reset,RAMShouldRead,RAMDout);
 	HEXto7Segment Bit3_0Unit(RAMDout[3:0],Bit3_0out);
 	HEXto7Segment Bit7_4Unit({1'b0,RAMDout[6:4]},Bit7_4out);
 	DebouncerWithoutLatch SendDebounceUnit(SendWrite,DebouncedSendWrite,Reset,ClockOut);
 	ClockedOneShot SendOneShot(DebouncedSendWrite,OneshotSendWrite,Reset,ClockOut);
-	SevenSegDriver DisplayUnit(8'b0,8'b0,Bit7_4out,Bit3_0out,Display,Reset,ClockOut,Transistors);
+	SevenSegDriver DisplayUnit(8'b11111111,8'b11111111,Bit7_4out,Bit3_0out,Display,Reset,ClockOut,Transistors);
 	RAMAddressUpdate UpdateAddress(ClockOut,OneshotNextAddress,Reset,UpdatedRAMAddress);
-	ModeController ModeUnit(DataIn,SendCharsRAMAddress,UpdatedRAMAddress,Mode,OneshotSendWrite,ModeControllerNumberOfChars,ModeControllerRAMAddress,RAMShouldRead);
+	ModeController ModeUnit(DataIn,SendCharsRAMAddress,UpdatedRAMAddress,Mode,OneshotSendWrite,ModeControllerNumberOfChars,RAMaddress,RAMShouldRead);
 	SendChars SendCharsUnit(ModeControllerNumberOfChars,ClockOut,Reset,Mode&OneshotSendWrite,tx_buffer_full,UARTClock,SendCharsRAMAddress,Transmitting,write_to_uart);
+	uart_tx TransmitUnit({1'b0,RAMDout},write_to_uart,1'b0,UARTClock,tx,tx_buffer_full,tx_buffer_half_full,ClockOut);
+	BaudRateGenerator BaudRateUnit(UARTClock,Reset,ClockOut,baudRate,clockFrequency);
 endmodule

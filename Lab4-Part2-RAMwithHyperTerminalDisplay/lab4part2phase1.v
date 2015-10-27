@@ -13,7 +13,6 @@ module lab4part2phase1(DataIn, Clock, NextAddress, Reset, WriteOrRead, Display, 
 	output [3:0] Transistors;
 	output Locked;
 	
-	wire UpdateAddressAddress;
 	wire DebouncedNextAddress;
 	wire OneshotNextAddress;
 	wire [6:0] RAMUnitDout;
@@ -21,12 +20,12 @@ module lab4part2phase1(DataIn, Clock, NextAddress, Reset, WriteOrRead, Display, 
 	wire [7:0] segDout;
 	wire [7:0] segZero;
 	
-	RAM40x7bits RAMUnit(UpdateAddressAddress,DataIn,ClockOut,WriteOrRead,RAMUnitDout);
-	HEXto7Segment Bit3_0Unit(RAMUnitDout,segDout);
+	RAM40x7bits RAMUnit(RAMaddress,DataIn,ClockOut,Reset,WriteOrRead,RAMUnitDout);
+	HEXto7Segment Bit3_0Unit(RAMUnitDout[3:0],segDout);
 	Clock70MHz ClockUnit(Clock,ClockOut,Locked);
-	HEXto7Segment Bit7_4Unit(7'b0,segZero);
+	HEXto7Segment Bit7_4Unit({1'b0,RAMUnitDout[6:4]},segZero);
 	DebouncerWithoutLatch PrintDebounceUnit(NextAddress,DebouncedNextAddress,Reset,ClockOut);
 	ClockedOneShot PrintOneShot(DebouncedNextAddress,OneshotNextAddress,Reset,ClockOut);
-	SevenSegDriver DisplayUnit();
-	RAMAddressUpdate UpdateAddress(ClockOut,OneshotNextAddress,Reset,UpdateAddressAddress);
+	SevenSegDriver DisplayUnit(8'b11111111,8'b11111111,segZero,segDout,Display,Reset,ClockOut,Transistors);
+	RAMAddressUpdate UpdateAddress(ClockOut,OneshotNextAddress,Reset,RAMaddress);
 endmodule

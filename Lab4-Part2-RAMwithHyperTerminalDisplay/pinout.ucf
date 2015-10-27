@@ -1,0 +1,38 @@
+NET "clock" LOC = V10;
+NET "reset" LOC = C9;
+
+NET "tx" LOC = N18;
+NET "Locked" LOC = U16;
+NET "Transmitting" LOC = T11;
+NET "SendWrite" LOC = A8;
+NET "NextAddress" LOC = C4;
+NET "Mode" LOC = T5;
+
+NET "RAMaddress[0]" LOC = V16;
+NET "RAMaddress[1]" LOC = U15;
+NET "RAMaddress[2]" LOC = V15;
+NET "RAMaddress[3]" LOC = M11;
+NET "RAMaddress[4]" LOC = N11;
+NET "RAMaddress[5]" LOC = R11;
+
+NET "DataIn[0]" LOC = T10;
+NET "DataIn[1]" LOC = T9;
+NET "DataIn[2]" LOC = V9;
+NET "DataIn[3]" LOC = M8;
+NET "DataIn[4]" LOC = N8;
+NET "DataIn[5]" LOC = U8;
+NET "DataIn[6]" LOC = V8;
+
+NET "Display[0]" LOC = T17;
+NET "Display[1]" LOC = T18;
+NET "Display[2]" LOC = U17;
+NET "Display[3]" LOC = U18;
+NET "Display[4]" LOC = M14;
+NET "Display[5]" LOC = N14;
+NET "Display[6]" LOC = L14;
+NET "Display[7]" LOC = M13;
+
+NET "Transistors[0]" LOC = N16;
+NET "Transistors[1]" LOC = N15;
+NET "Transistors[2]" LOC = P18;
+NET "Transistors[3]" LOC = P17;

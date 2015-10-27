@@ -1,0 +1,25 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Thu Oct 22 05:58:25 2015
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "NumberOfChars<0>" LOCATE = SITE "T10" LEVEL 1;
+COMP "NumberOfChars<1>" LOCATE = SITE "T9" LEVEL 1;
+COMP "NumberOfChars<2>" LOCATE = SITE "V9" LEVEL 1;
+COMP "NumberOfChars<3>" LOCATE = SITE "M8" LEVEL 1;
+COMP "NumberOfChars<4>" LOCATE = SITE "N8" LEVEL 1;
+COMP "NumberOfChars<5>" LOCATE = SITE "U8" LEVEL 1;
+COMP "tx" LOCATE = SITE "N18" LEVEL 1;
+COMP "RAMaddress<0>" LOCATE = SITE "V16" LEVEL 1;
+COMP "Clock" LOCATE = SITE "V10" LEVEL 1;
+COMP "RAMaddress<1>" LOCATE = SITE "U15" LEVEL 1;
+COMP "Transmitting" LOCATE = SITE "T11" LEVEL 1;
+COMP "RAMaddress<2>" LOCATE = SITE "V15" LEVEL 1;
+COMP "RAMaddress<3>" LOCATE = SITE "M11" LEVEL 1;
+COMP "RAMaddress<4>" LOCATE = SITE "N11" LEVEL 1;
+COMP "RAMaddress<5>" LOCATE = SITE "R11" LEVEL 1;
+COMP "Reset" LOCATE = SITE "C9" LEVEL 1;
+COMP "Locked" LOCATE = SITE "U16" LEVEL 1;
+COMP "Send" LOCATE = SITE "A8" LEVEL 1;
+SCHEMATIC END;
+

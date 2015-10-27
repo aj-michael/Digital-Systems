@@ -1,0 +1,96 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -intstyle ise -v 3 -s 3 -n
+3 -fastpaths -xml lab4part2phase1.twx lab4part2phase1.ncd -o
+lab4part2phase1.twr lab4part2phase1.pcf -ucf phase1pinout.ucf
+
+Design file:              lab4part2phase1.ncd
+Physical constraint file: lab4part2phase1.pcf
+Device,package,speed:     xc6slx16,csg324,C,-3 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock Clock
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+DataIn<0>   |    5.996(R)|      SLOW  |   -1.405(R)|      FAST  |ClockOut          |   0.000|
+DataIn<1>   |    5.616(R)|      SLOW  |   -1.529(R)|      FAST  |ClockOut          |   0.000|
+DataIn<2>   |    5.803(R)|      SLOW  |   -1.389(R)|      FAST  |ClockOut          |   0.000|
+DataIn<3>   |    6.102(R)|      SLOW  |   -1.552(R)|      FAST  |ClockOut          |   0.000|
+DataIn<4>   |    5.977(R)|      SLOW  |   -1.674(R)|      FAST  |ClockOut          |   0.000|
+DataIn<5>   |    5.116(R)|      SLOW  |   -1.575(R)|      FAST  |ClockOut          |   0.000|
+DataIn<6>   |    6.165(R)|      SLOW  |   -1.724(R)|      FAST  |ClockOut          |   0.000|
+NextAddress |    4.041(R)|      SLOW  |   -1.875(R)|      FAST  |ClockOut          |   0.000|
+Reset       |   10.590(R)|      SLOW  |   -1.658(R)|      FAST  |ClockOut          |   0.000|
+WriteOrRead |    9.041(R)|      SLOW  |   -3.145(R)|      FAST  |ClockOut          |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Clock Clock to Pad
+--------------+-----------------+------------+-----------------+------------+------------------+--------+
+              |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination   |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+--------------+-----------------+------------+-----------------+------------+------------------+--------+
+Display<0>    |         6.737(R)|      SLOW  |         3.575(R)|      FAST  |ClockOut          |   0.000|
+Display<1>    |         6.175(R)|      SLOW  |         3.509(R)|      FAST  |ClockOut          |   0.000|
+Display<2>    |         7.020(R)|      SLOW  |         3.830(R)|      FAST  |ClockOut          |   0.000|
+Display<3>    |         6.828(R)|      SLOW  |         3.850(R)|      FAST  |ClockOut          |   0.000|
+Display<4>    |         6.878(R)|      SLOW  |         3.804(R)|      FAST  |ClockOut          |   0.000|
+Display<5>    |         6.943(R)|      SLOW  |         3.646(R)|      FAST  |ClockOut          |   0.000|
+Display<6>    |         6.744(R)|      SLOW  |         3.437(R)|      FAST  |ClockOut          |   0.000|
+Display<7>    |         4.334(R)|      SLOW  |         2.331(R)|      FAST  |ClockOut          |   0.000|
+RAMaddress<0> |         9.728(R)|      SLOW  |         6.210(R)|      FAST  |ClockOut          |   0.000|
+RAMaddress<1> |         6.939(R)|      SLOW  |         4.382(R)|      FAST  |ClockOut          |   0.000|
+RAMaddress<2> |         9.106(R)|      SLOW  |         5.771(R)|      FAST  |ClockOut          |   0.000|
+RAMaddress<3> |         8.544(R)|      SLOW  |         5.400(R)|      FAST  |ClockOut          |   0.000|
+RAMaddress<4> |         6.301(R)|      SLOW  |         3.861(R)|      FAST  |ClockOut          |   0.000|
+RAMaddress<5> |         6.240(R)|      SLOW  |         3.829(R)|      FAST  |ClockOut          |   0.000|
+Transistors<0>|         5.984(R)|      SLOW  |         3.576(R)|      FAST  |ClockOut          |   0.000|
+Transistors<1>|         6.141(R)|      SLOW  |         3.676(R)|      FAST  |ClockOut          |   0.000|
+Transistors<2>|         6.020(R)|      SLOW  |         3.624(R)|      FAST  |ClockOut          |   0.000|
+Transistors<3>|         6.255(R)|      SLOW  |         3.772(R)|      FAST  |ClockOut          |   0.000|
+--------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock to Setup on destination clock Clock
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+Clock          |    6.288|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Analysis completed Thu Oct 22 04:29:08 2015 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 397 MB
+
+
+

@@ -14,4 +14,8 @@ module ModeController(DataIn, RAMaddressSend, RAMaddressUpdate, Mode, WriteOrRea
 	output [5:0] NumberOfChars;
 	output [5:0] RAMaddress;
 	output WriteOrRead;
+	
+	assign WriteOrRead = Mode == 0 && WriteOrReadSend;
+	assign RAMaddress = Mode == 1 ? RAMaddressSend : RAMaddressUpdate;
+	assign NumberOfChars = DataIn[5:0];
 endmodule

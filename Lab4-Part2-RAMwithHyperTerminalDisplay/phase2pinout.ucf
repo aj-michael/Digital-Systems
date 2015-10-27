@@ -1,0 +1,23 @@
+NET "clock" LOC = V10;
+NET "reset" LOC = C9;
+NET "Send" LOC = A8;
+
+NET "NumberOfChars[0]" LOC = T10;
+NET "NumberOfChars[1]" LOC = T9;
+NET "NumberOfChars[2]" LOC = V9;
+NET "NumberOfChars[3]" LOC = M8;
+NET "NumberOfChars[4]" LOC = N8;
+NET "NumberOfChars[5]" LOC = U8;
+
+NET "tx" LOC = N18;
+NET "Locked" LOC = U16;
+
+NET "Transmitting" LOC = T11;
+
+NET "RAMaddress[0]" LOC = V16;
+NET "RAMaddress[1]" LOC = U15;
+NET "RAMaddress[2]" LOC = V15;
+NET "RAMaddress[3]" LOC = M11;
+NET "RAMaddress[4]" LOC = N11;
+NET "RAMaddress[5]" LOC = R11;
+

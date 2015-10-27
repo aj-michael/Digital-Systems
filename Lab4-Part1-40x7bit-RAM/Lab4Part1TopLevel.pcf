@@ -1,0 +1,39 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Thu Oct 22 01:25:26 2015
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "Data<0>" LOCATE = SITE "T10" LEVEL 1;
+COMP "Data<1>" LOCATE = SITE "T9" LEVEL 1;
+COMP "Data<2>" LOCATE = SITE "V9" LEVEL 1;
+COMP "Data<3>" LOCATE = SITE "M8" LEVEL 1;
+COMP "Data<4>" LOCATE = SITE "N8" LEVEL 1;
+COMP "Data<5>" LOCATE = SITE "U8" LEVEL 1;
+COMP "Data<6>" LOCATE = SITE "V8" LEVEL 1;
+COMP "ClockIn" LOCATE = SITE "V10" LEVEL 1;
+COMP "IncrementAddress" LOCATE = SITE "C4" LEVEL 1;
+COMP "LoadData" LOCATE = SITE "B8" LEVEL 1;
+COMP "Reset" LOCATE = SITE "C9" LEVEL 1;
+COMP "ScrollEnable" LOCATE = SITE "A8" LEVEL 1;
+COMP "Locked" LOCATE = SITE "U16" LEVEL 1;
+COMP "IncrementData" LOCATE = SITE "D9" LEVEL 1;
+COMP "MemAddress<0>" LOCATE = SITE "U15" LEVEL 1;
+COMP "MemAddress<1>" LOCATE = SITE "V15" LEVEL 1;
+COMP "MemAddress<2>" LOCATE = SITE "M11" LEVEL 1;
+COMP "MemAddress<3>" LOCATE = SITE "N11" LEVEL 1;
+COMP "MemAddress<4>" LOCATE = SITE "R11" LEVEL 1;
+COMP "MemAddress<5>" LOCATE = SITE "T11" LEVEL 1;
+COMP "Transistors<0>" LOCATE = SITE "N16" LEVEL 1;
+COMP "Transistors<1>" LOCATE = SITE "N15" LEVEL 1;
+COMP "Transistors<2>" LOCATE = SITE "P18" LEVEL 1;
+COMP "Transistors<3>" LOCATE = SITE "P17" LEVEL 1;
+COMP "Display<0>" LOCATE = SITE "T17" LEVEL 1;
+COMP "Display<1>" LOCATE = SITE "T18" LEVEL 1;
+COMP "Display<2>" LOCATE = SITE "U17" LEVEL 1;
+COMP "Display<3>" LOCATE = SITE "U18" LEVEL 1;
+COMP "Display<4>" LOCATE = SITE "M14" LEVEL 1;
+COMP "Display<5>" LOCATE = SITE "N14" LEVEL 1;
+COMP "Display<6>" LOCATE = SITE "L14" LEVEL 1;
+COMP "Display<7>" LOCATE = SITE "M13" LEVEL 1;
+SCHEMATIC END;
+

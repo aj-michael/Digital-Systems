@@ -1,0 +1,651 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.05 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.05 secs
+ 
+--> 
+Reading design: RAM40x7bits.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "RAM40x7bits.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "RAM40x7bits"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : RAM40x7bits
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/a/workspace/Digital-Systems/Lab4-Part2-RAMwithHyperTerminalDisplay/RAM40x7bits.v" into library work
+Parsing module <RAM40x7bits>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <RAM40x7bits>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <RAM40x7bits>.
+    Related source file is "/home/a/workspace/Digital-Systems/Lab4-Part2-RAMwithHyperTerminalDisplay/RAM40x7bits.v".
+    Found 1-bit register for signal <Data<33><3>>.
+    Found 1-bit register for signal <Data<33><2>>.
+    Found 1-bit register for signal <Data<33><0>>.
+    Found 1-bit register for signal <Data<32><3>>.
+    Found 1-bit register for signal <Data<32><1>>.
+    Found 1-bit register for signal <Data<31><6>>.
+    Found 1-bit register for signal <Data<31><5>>.
+    Found 1-bit register for signal <Data<31><4>>.
+    Found 1-bit register for signal <Data<31><1>>.
+    Found 1-bit register for signal <Data<31><0>>.
+    Found 1-bit register for signal <Data<30><6>>.
+    Found 1-bit register for signal <Data<30><5>>.
+    Found 1-bit register for signal <Data<30><3>>.
+    Found 1-bit register for signal <Data<30><2>>.
+    Found 1-bit register for signal <Data<30><0>>.
+    Found 1-bit register for signal <Data<29><6>>.
+    Found 1-bit register for signal <Data<29><5>>.
+    Found 1-bit register for signal <Data<29><2>>.
+    Found 1-bit register for signal <Data<29><0>>.
+    Found 1-bit register for signal <Data<28><6>>.
+    Found 1-bit register for signal <Data<28><5>>.
+    Found 1-bit register for signal <Data<28><4>>.
+    Found 1-bit register for signal <Data<28><2>>.
+    Found 1-bit register for signal <Data<27><6>>.
+    Found 1-bit register for signal <Data<27><5>>.
+    Found 1-bit register for signal <Data<27><4>>.
+    Found 1-bit register for signal <Data<27><1>>.
+    Found 1-bit register for signal <Data<27><0>>.
+    Found 1-bit register for signal <Data<26><6>>.
+    Found 1-bit register for signal <Data<26><5>>.
+    Found 1-bit register for signal <Data<26><4>>.
+    Found 1-bit register for signal <Data<26><3>>.
+    Found 1-bit register for signal <Data<26><0>>.
+    Found 1-bit register for signal <Data<25><6>>.
+    Found 1-bit register for signal <Data<25><4>>.
+    Found 1-bit register for signal <Data<25><1>>.
+    Found 1-bit register for signal <Data<25><0>>.
+    Found 1-bit register for signal <Data<24><5>>.
+    Found 1-bit register for signal <Data<23><6>>.
+    Found 1-bit register for signal <Data<23><5>>.
+    Found 1-bit register for signal <Data<23><3>>.
+    Found 1-bit register for signal <Data<23><2>>.
+    Found 1-bit register for signal <Data<22><6>>.
+    Found 1-bit register for signal <Data<22><5>>.
+    Found 1-bit register for signal <Data<22><0>>.
+    Found 1-bit register for signal <Data<21><6>>.
+    Found 1-bit register for signal <Data<21><5>>.
+    Found 1-bit register for signal <Data<21><4>>.
+    Found 1-bit register for signal <Data<21><2>>.
+    Found 1-bit register for signal <Data<20><6>>.
+    Found 1-bit register for signal <Data<20><5>>.
+    Found 1-bit register for signal <Data<20><3>>.
+    Found 1-bit register for signal <Data<20><0>>.
+    Found 1-bit register for signal <Data<19><6>>.
+    Found 1-bit register for signal <Data<19><5>>.
+    Found 1-bit register for signal <Data<19><2>>.
+    Found 1-bit register for signal <Data<19><1>>.
+    Found 1-bit register for signal <Data<19><0>>.
+    Found 1-bit register for signal <Data<18><6>>.
+    Found 1-bit register for signal <Data<18><5>>.
+    Found 1-bit register for signal <Data<18><3>>.
+    Found 1-bit register for signal <Data<18><0>>.
+    Found 1-bit register for signal <Data<17><6>>.
+    Found 1-bit register for signal <Data<17><2>>.
+    Found 1-bit register for signal <Data<16><5>>.
+    Found 1-bit register for signal <Data<15><5>>.
+    Found 1-bit register for signal <Data<15><4>>.
+    Found 1-bit register for signal <Data<15><2>>.
+    Found 1-bit register for signal <Data<15><0>>.
+    Found 1-bit register for signal <Data<14><5>>.
+    Found 1-bit register for signal <Data<14><4>>.
+    Found 1-bit register for signal <Data<14><0>>.
+    Found 1-bit register for signal <Data<13><5>>.
+    Found 1-bit register for signal <Data<13><4>>.
+    Found 1-bit register for signal <Data<12><5>>.
+    Found 1-bit register for signal <Data<12><4>>.
+    Found 1-bit register for signal <Data<12><1>>.
+    Found 1-bit register for signal <Data<11><5>>.
+    Found 1-bit register for signal <Data<10><6>>.
+    Found 1-bit register for signal <Data<10><5>>.
+    Found 1-bit register for signal <Data<10><3>>.
+    Found 1-bit register for signal <Data<10><2>>.
+    Found 1-bit register for signal <Data<9><6>>.
+    Found 1-bit register for signal <Data<9><5>>.
+    Found 1-bit register for signal <Data<9><3>>.
+    Found 1-bit register for signal <Data<9><2>>.
+    Found 1-bit register for signal <Data<8><6>>.
+    Found 1-bit register for signal <Data<8><5>>.
+    Found 1-bit register for signal <Data<8><0>>.
+    Found 1-bit register for signal <Data<7><6>>.
+    Found 1-bit register for signal <Data<7><2>>.
+    Found 1-bit register for signal <Data<7><1>>.
+    Found 1-bit register for signal <Data<6><5>>.
+    Found 1-bit register for signal <Data<5><5>>.
+    Found 1-bit register for signal <Data<5><4>>.
+    Found 1-bit register for signal <Data<5><1>>.
+    Found 1-bit register for signal <Data<5><0>>.
+    Found 1-bit register for signal <Data<4><5>>.
+    Found 1-bit register for signal <Data<4><4>>.
+    Found 1-bit register for signal <Data<4><1>>.
+    Found 1-bit register for signal <Data<4><0>>.
+    Found 1-bit register for signal <Data<3><5>>.
+    Found 1-bit register for signal <Data<3><4>>.
+    Found 1-bit register for signal <Data<3><1>>.
+    Found 1-bit register for signal <Data<3><0>>.
+    Found 1-bit register for signal <Data<2><6>>.
+    Found 1-bit register for signal <Data<2><2>>.
+    Found 1-bit register for signal <Data<2><0>>.
+    Found 1-bit register for signal <Data<1><6>>.
+    Found 1-bit register for signal <Data<1><1>>.
+    Found 1-bit register for signal <Data<1><0>>.
+    Found 1-bit register for signal <Data<0><6>>.
+    Found 1-bit register for signal <Data<0><2>>.
+    Found 1-bit register for signal <Data<0><0>>.
+    Found 1-bit register for signal <Data<33><6>>.
+    Found 1-bit register for signal <Data<33><5>>.
+    Found 1-bit register for signal <Data<33><4>>.
+    Found 1-bit register for signal <Data<33><1>>.
+    Found 1-bit register for signal <Data<32><6>>.
+    Found 1-bit register for signal <Data<32><5>>.
+    Found 1-bit register for signal <Data<32><4>>.
+    Found 1-bit register for signal <Data<32><2>>.
+    Found 1-bit register for signal <Data<32><0>>.
+    Found 1-bit register for signal <Data<31><3>>.
+    Found 1-bit register for signal <Data<31><2>>.
+    Found 1-bit register for signal <Data<30><4>>.
+    Found 1-bit register for signal <Data<30><1>>.
+    Found 1-bit register for signal <Data<29><4>>.
+    Found 1-bit register for signal <Data<29><3>>.
+    Found 1-bit register for signal <Data<29><1>>.
+    Found 1-bit register for signal <Data<28><3>>.
+    Found 1-bit register for signal <Data<28><1>>.
+    Found 1-bit register for signal <Data<28><0>>.
+    Found 1-bit register for signal <Data<27><3>>.
+    Found 1-bit register for signal <Data<27><2>>.
+    Found 1-bit register for signal <Data<26><2>>.
+    Found 1-bit register for signal <Data<26><1>>.
+    Found 1-bit register for signal <Data<25><5>>.
+    Found 1-bit register for signal <Data<25><3>>.
+    Found 1-bit register for signal <Data<25><2>>.
+    Found 1-bit register for signal <Data<24><6>>.
+    Found 1-bit register for signal <Data<24><4>>.
+    Found 1-bit register for signal <Data<24><3>>.
+    Found 1-bit register for signal <Data<24><2>>.
+    Found 1-bit register for signal <Data<24><1>>.
+    Found 1-bit register for signal <Data<24><0>>.
+    Found 1-bit register for signal <Data<23><4>>.
+    Found 1-bit register for signal <Data<23><1>>.
+    Found 1-bit register for signal <Data<23><0>>.
+    Found 1-bit register for signal <Data<22><4>>.
+    Found 1-bit register for signal <Data<22><3>>.
+    Found 1-bit register for signal <Data<22><2>>.
+    Found 1-bit register for signal <Data<22><1>>.
+    Found 1-bit register for signal <Data<21><3>>.
+    Found 1-bit register for signal <Data<21><1>>.
+    Found 1-bit register for signal <Data<21><0>>.
+    Found 1-bit register for signal <Data<20><4>>.
+    Found 1-bit register for signal <Data<20><2>>.
+    Found 1-bit register for signal <Data<20><1>>.
+    Found 1-bit register for signal <Data<19><4>>.
+    Found 1-bit register for signal <Data<19><3>>.
+    Found 1-bit register for signal <Data<18><4>>.
+    Found 1-bit register for signal <Data<18><2>>.
+    Found 1-bit register for signal <Data<18><1>>.
+    Found 1-bit register for signal <Data<17><5>>.
+    Found 1-bit register for signal <Data<17><4>>.
+    Found 1-bit register for signal <Data<17><3>>.
+    Found 1-bit register for signal <Data<17><1>>.
+    Found 1-bit register for signal <Data<17><0>>.
+    Found 1-bit register for signal <Data<16><6>>.
+    Found 1-bit register for signal <Data<16><4>>.
+    Found 1-bit register for signal <Data<16><3>>.
+    Found 1-bit register for signal <Data<16><2>>.
+    Found 1-bit register for signal <Data<16><1>>.
+    Found 1-bit register for signal <Data<16><0>>.
+    Found 1-bit register for signal <Data<15><6>>.
+    Found 1-bit register for signal <Data<15><3>>.
+    Found 1-bit register for signal <Data<15><1>>.
+    Found 1-bit register for signal <Data<14><6>>.
+    Found 1-bit register for signal <Data<14><3>>.
+    Found 1-bit register for signal <Data<14><2>>.
+    Found 1-bit register for signal <Data<14><1>>.
+    Found 1-bit register for signal <Data<13><6>>.
+    Found 1-bit register for signal <Data<13><3>>.
+    Found 1-bit register for signal <Data<13><2>>.
+    Found 1-bit register for signal <Data<13><1>>.
+    Found 1-bit register for signal <Data<13><0>>.
+    Found 1-bit register for signal <Data<12><6>>.
+    Found 1-bit register for signal <Data<12><3>>.
+    Found 1-bit register for signal <Data<12><2>>.
+    Found 1-bit register for signal <Data<12><0>>.
+    Found 1-bit register for signal <Data<11><6>>.
+    Found 1-bit register for signal <Data<11><4>>.
+    Found 1-bit register for signal <Data<11><3>>.
+    Found 1-bit register for signal <Data<11><2>>.
+    Found 1-bit register for signal <Data<11><1>>.
+    Found 1-bit register for signal <Data<11><0>>.
+    Found 1-bit register for signal <Data<10><4>>.
+    Found 1-bit register for signal <Data<10><1>>.
+    Found 1-bit register for signal <Data<10><0>>.
+    Found 1-bit register for signal <Data<9><4>>.
+    Found 1-bit register for signal <Data<9><1>>.
+    Found 1-bit register for signal <Data<9><0>>.
+    Found 1-bit register for signal <Data<8><4>>.
+    Found 1-bit register for signal <Data<8><3>>.
+    Found 1-bit register for signal <Data<8><2>>.
+    Found 1-bit register for signal <Data<8><1>>.
+    Found 1-bit register for signal <Data<7><5>>.
+    Found 1-bit register for signal <Data<7><4>>.
+    Found 1-bit register for signal <Data<7><3>>.
+    Found 1-bit register for signal <Data<7><0>>.
+    Found 1-bit register for signal <Data<6><6>>.
+    Found 1-bit register for signal <Data<6><4>>.
+    Found 1-bit register for signal <Data<6><3>>.
+    Found 1-bit register for signal <Data<6><2>>.
+    Found 1-bit register for signal <Data<6><1>>.
+    Found 1-bit register for signal <Data<6><0>>.
+    Found 1-bit register for signal <Data<5><6>>.
+    Found 1-bit register for signal <Data<5><3>>.
+    Found 1-bit register for signal <Data<5><2>>.
+    Found 1-bit register for signal <Data<4><6>>.
+    Found 1-bit register for signal <Data<4><3>>.
+    Found 1-bit register for signal <Data<4><2>>.
+    Found 1-bit register for signal <Data<3><6>>.
+    Found 1-bit register for signal <Data<3><3>>.
+    Found 1-bit register for signal <Data<3><2>>.
+    Found 1-bit register for signal <Data<2><5>>.
+    Found 1-bit register for signal <Data<2><4>>.
+    Found 1-bit register for signal <Data<2><3>>.
+    Found 1-bit register for signal <Data<2><1>>.
+    Found 1-bit register for signal <Data<1><5>>.
+    Found 1-bit register for signal <Data<1><4>>.
+    Found 1-bit register for signal <Data<1><3>>.
+    Found 1-bit register for signal <Data<1><2>>.
+    Found 1-bit register for signal <Data<0><5>>.
+    Found 1-bit register for signal <Data<0><4>>.
+    Found 1-bit register for signal <Data<0><3>>.
+    Found 1-bit register for signal <Data<0><1>>.
+    Found 1-bit register for signal <Data<39><6>>.
+    Found 1-bit register for signal <Data<39><5>>.
+    Found 1-bit register for signal <Data<39><4>>.
+    Found 1-bit register for signal <Data<39><3>>.
+    Found 1-bit register for signal <Data<39><2>>.
+    Found 1-bit register for signal <Data<39><1>>.
+    Found 1-bit register for signal <Data<39><0>>.
+    Found 1-bit register for signal <Data<38><6>>.
+    Found 1-bit register for signal <Data<38><5>>.
+    Found 1-bit register for signal <Data<38><4>>.
+    Found 1-bit register for signal <Data<38><3>>.
+    Found 1-bit register for signal <Data<38><2>>.
+    Found 1-bit register for signal <Data<38><1>>.
+    Found 1-bit register for signal <Data<38><0>>.
+    Found 1-bit register for signal <Data<37><6>>.
+    Found 1-bit register for signal <Data<37><5>>.
+    Found 1-bit register for signal <Data<37><4>>.
+    Found 1-bit register for signal <Data<37><3>>.
+    Found 1-bit register for signal <Data<37><2>>.
+    Found 1-bit register for signal <Data<37><1>>.
+    Found 1-bit register for signal <Data<37><0>>.
+    Found 1-bit register for signal <Data<36><6>>.
+    Found 1-bit register for signal <Data<36><5>>.
+    Found 1-bit register for signal <Data<36><4>>.
+    Found 1-bit register for signal <Data<36><3>>.
+    Found 1-bit register for signal <Data<36><2>>.
+    Found 1-bit register for signal <Data<36><1>>.
+    Found 1-bit register for signal <Data<36><0>>.
+    Found 1-bit register for signal <Data<35><6>>.
+    Found 1-bit register for signal <Data<35><5>>.
+    Found 1-bit register for signal <Data<35><4>>.
+    Found 1-bit register for signal <Data<35><3>>.
+    Found 1-bit register for signal <Data<35><2>>.
+    Found 1-bit register for signal <Data<35><1>>.
+    Found 1-bit register for signal <Data<35><0>>.
+    Found 1-bit register for signal <Data<34><6>>.
+    Found 1-bit register for signal <Data<34><5>>.
+    Found 1-bit register for signal <Data<34><4>>.
+    Found 1-bit register for signal <Data<34><3>>.
+    Found 1-bit register for signal <Data<34><2>>.
+    Found 1-bit register for signal <Data<34><1>>.
+    Found 1-bit register for signal <Data<34><0>>.
+    Found 7-bit 40-to-1 multiplexer for signal <Dout> created at line 56.
+    Summary:
+	inferred 280 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <RAM40x7bits> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 244
+ 1-bit register                                        : 238
+ 7-bit register                                        : 6
+# Multiplexers                                         : 1
+ 7-bit 40-to-1 multiplexer                             : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 280
+ Flip-Flops                                            : 280
+# Multiplexers                                         : 1
+ 7-bit 40-to-1 multiplexer                             : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <RAM40x7bits> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block RAM40x7bits, actual ratio is 4.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 280
+ Flip-Flops                                            : 280
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : RAM40x7bits.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 148
+#      LUT3                        : 2
+#      LUT4                        : 3
+#      LUT5                        : 38
+#      LUT6                        : 84
+#      MUXF7                       : 14
+#      MUXF8                       : 7
+# FlipFlops/Latches                : 280
+#      FDCE                        : 124
+#      FDE                         : 42
+#      FDPE                        : 114
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 22
+#      IBUF                        : 15
+#      OBUF                        : 7
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             280  out of  18224     1%  
+ Number of Slice LUTs:                  127  out of   9112     1%  
+    Number used as Logic:               127  out of   9112     1%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    309
+   Number with an unused Flip Flop:      29  out of    309     9%  
+   Number with an unused LUT:           182  out of    309    58%  
+   Number of fully used LUT-FF pairs:    98  out of    309    31%  
+   Number of unique control sets:        40
+
+IO Utilization: 
+ Number of IOs:                          23
+ Number of bonded IOBs:                  23  out of    232     9%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+Clock                              | BUFGP                  | 280   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: 6.047ns
+   Maximum output required time after clock: 5.941ns
+   Maximum combinational path delay: 8.137ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Clock'
+  Total number of paths / destination ports: 2520 / 798
+-------------------------------------------------------------------------
+Offset:              6.047ns (Levels of Logic = 3)
+  Source:            Address<1> (PAD)
+  Destination:       Data_31_6 (FF)
+  Destination Clock: Clock rising
+
+  Data Path: Address<1> to Data_31_6
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            80   1.222   1.974  Address_1_IBUF (Address_1_IBUF)
+     LUT3:I0->O           16   0.205   1.349  _n1079_inv11 (_n1079_inv1)
+     LUT5:I0->O            7   0.203   0.773  _n1079_inv1 (_n1079_inv)
+     FDPE:CE                   0.322          Data_31_6
+    ----------------------------------------
+    Total                      6.047ns (1.952ns logic, 4.095ns route)
+                                       (32.3% logic, 67.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Clock'
+  Total number of paths / destination ports: 280 / 7
+-------------------------------------------------------------------------
+Offset:              5.941ns (Levels of Logic = 5)
+  Source:            Data_26_6 (FF)
+  Destination:       Dout<6> (PAD)
+  Source Clock:      Clock rising
+
+  Data Path: Data_26_6 to Dout<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDPE:C->Q             1   0.447   0.827  Data_26_6 (Data_26_6)
+     LUT6:I2->O            1   0.203   0.827  Mmux_Dout_1019 (Mmux_Dout_1019)
+     LUT6:I2->O            1   0.203   0.000  Mmux_Dout_513 (Mmux_Dout_513)
+     MUXF7:I1->O           1   0.140   0.000  Mmux_Dout_4_f7_5 (Mmux_Dout_4_f76)
+     MUXF8:I0->O           1   0.144   0.579  Mmux_Dout_2_f8_5 (Dout_6_OBUF)
+     OBUF:I->O                 2.571          Dout_6_OBUF (Dout<6>)
+    ----------------------------------------
+    Total                      5.941ns (3.708ns logic, 2.233ns route)
+                                       (62.4% logic, 37.6% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 189 / 7
+-------------------------------------------------------------------------
+Delay:               8.137ns (Levels of Logic = 6)
+  Source:            Address<0> (PAD)
+  Destination:       Dout<6> (PAD)
+
+  Data Path: Address<0> to Dout<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           110   1.222   2.248  Address_0_IBUF (Address_0_IBUF)
+     LUT6:I1->O            1   0.203   0.827  Mmux_Dout_101 (Mmux_Dout_101)
+     LUT6:I2->O            1   0.203   0.000  Mmux_Dout_51 (Mmux_Dout_51)
+     MUXF7:I1->O           1   0.140   0.000  Mmux_Dout_4_f7 (Mmux_Dout_4_f7)
+     MUXF8:I0->O           1   0.144   0.579  Mmux_Dout_2_f8 (Dout_0_OBUF)
+     OBUF:I->O                 2.571          Dout_0_OBUF (Dout<0>)
+    ----------------------------------------
+    Total                      8.137ns (4.483ns logic, 3.654ns route)
+                                       (55.1% logic, 44.9% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 5.04 secs
+ 
+--> 
+
+
+Total memory usage is 390784 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+
