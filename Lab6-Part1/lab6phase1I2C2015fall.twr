@@ -4,7 +4,7 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -intstyle ise -v 3 -s 3 -n
 3 -fastpaths -xml lab6phase1I2C2015fall.twx lab6phase1I2C2015fall.ncd -o
-lab6phase1I2C2015fall.twr lab6phase1I2C2015fall.pcf
+lab6phase1I2C2015fall.twr lab6phase1I2C2015fall.pcf -ucf pinout.ucf
 
 Design file:              lab6phase1I2C2015fall.ncd
 Physical constraint file: lab6phase1I2C2015fall.pcf
@@ -37,7 +37,7 @@ Setup/Hold to clock Clock
             |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
 Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------+------------+------------------+--------+
-Reset       |    4.664(R)|      SLOW  |   -1.418(R)|      FAST  |ClockOut          |   0.000|
+Reset       |    5.649(R)|      SLOW  |   -1.722(R)|      FAST  |ClockOut          |   0.000|
 ------------+------------+------------+------------+------------+------------------+--------+
 
 Clock Clock to Pad
@@ -45,8 +45,8 @@ Clock Clock to Pad
             |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
 Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
 ------------+-----------------+------------+-----------------+------------+------------------+--------+
-SCL         |         5.425(R)|      SLOW  |         3.321(R)|      FAST  |ClockOut          |   0.000|
-SDA         |         6.014(R)|      SLOW  |         3.664(R)|      FAST  |ClockOut          |   0.000|
+SCL         |         6.664(R)|      SLOW  |         4.068(R)|      FAST  |ClockOut          |   0.000|
+SDA         |         6.969(R)|      SLOW  |         4.190(R)|      FAST  |ClockOut          |   0.000|
 ------------+-----------------+------------+-----------------+------------+------------------+--------+
 
 Clock to Setup on destination clock Clock
@@ -54,18 +54,18 @@ Clock to Setup on destination clock Clock
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-Clock          |    3.378|         |         |         |
+Clock          |    4.372|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Sun Oct 25 19:25:23 2015 
+Analysis completed Wed Oct 28 16:18:31 2015 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 391 MB
+Peak Memory Usage: 392 MB
 
 
 

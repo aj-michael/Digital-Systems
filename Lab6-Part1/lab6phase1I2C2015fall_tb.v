@@ -10,6 +10,9 @@ module lab6phase1I2C2015fall_tb;
 	wire ControlClock=uut.ControlUnit.Clock;
 	wire ClockI2C=uut.ControlUnit.ClockI2C;
 	wire BaudEnable=uut.ControlUnit.BaudEnable;
+	wire StartStopAck=uut.ControlUnit.StartStopAck;
+	wire ShiftOrHold=uut.DataUnit.ShiftOrHold;
+	
 	wire SDA;
 
 	lab6phase1I2C2015fall uut(1'b0,Go,Reset,ClockLocked,SCL,SDA);

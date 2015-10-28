@@ -7,7 +7,7 @@ module ShiftRegisterI2C_tb;
 	wire [7:0] ReceivedData;
 	wire ShiftOut;
 	
-	ShiftRegisterI2C2015fall uut (SentData,CLOCK,Reset,ShiftIn,ShiftorHold,WriteLoad,ReceivedData,ShiftOut);
+	ShiftRegisterI2C2015fall uut (SentData,CLOCK,Reset,ShiftIn,ShiftorHold,WriteLoad,ReceivedData,ShiftOut,CLOCK);
 
 	initial begin WriteLoad = 0; SentData = 0; ShiftIn = 0; ShiftorHold = 0; Reset = 0; CLOCK = 0; end
 	

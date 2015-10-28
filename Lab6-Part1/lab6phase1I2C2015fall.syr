@@ -4,15 +4,15 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.07 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.05 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.07 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.05 secs
  
 --> 
 Reading design: lab6phase1I2C2015fall.prj
@@ -121,6 +121,8 @@ Analyzing Verilog file "/home/a/workspace/Digital-Systems/Lab6-Part1/SDAmodule.v
 Parsing module <SDAmodule>.
 Analyzing Verilog file "/home/a/workspace/Digital-Systems/Lab6-Part1/BaudRateGeneratorI2C.v" into library work
 Parsing module <BaudRateGeneratorI2C>.
+Analyzing Verilog file "/home/a/workspace/Digital-Systems/Lab4-Part2-RAMwithHyperTerminalDisplay/DelayLoop.v" into library work
+Parsing module <DelayLoop>.
 Analyzing Verilog file "/home/a/workspace/Digital-Systems/Lab6-Part1/MasterDataUnitI2C.v" into library work
 Parsing module <MasterDataUnitI2C>.
 Analyzing Verilog file "/home/a/workspace/Digital-Systems/Lab6-Part1/ControllerI2C.v" into library work
@@ -137,10 +139,13 @@ Elaborating module <lab6phase1I2C2015fall>.
 Elaborating module <ControllerI2C>.
 
 Elaborating module <NegClockedOneShot>.
-WARNING:HDLCompiler:1127 - "/home/a/workspace/Digital-Systems/Lab6-Part1/ControllerI2C.v" Line 31: Assignment to TimeOut ignored, since the identifier is never used
-WARNING:HDLCompiler:91 - "/home/a/workspace/Digital-Systems/Lab6-Part1/ControllerI2C.v" Line 73: Signal <DataCounter> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:413 - "/home/a/workspace/Digital-Systems/Lab6-Part1/ControllerI2C.v" Line 82: Result of 32-bit expression is truncated to fit in 4-bit target.
-WARNING:HDLCompiler:413 - "/home/a/workspace/Digital-Systems/Lab6-Part1/ControllerI2C.v" Line 83: Result of 32-bit expression is truncated to fit in 4-bit target.
+
+Elaborating module <DelayLoop>.
+WARNING:HDLCompiler:91 - "/home/a/workspace/Digital-Systems/Lab6-Part1/ControllerI2C.v" Line 73: Signal <NextState> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/a/workspace/Digital-Systems/Lab6-Part1/ControllerI2C.v" Line 77: Signal <OneShotI2C> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/a/workspace/Digital-Systems/Lab6-Part1/ControllerI2C.v" Line 94: Signal <State> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:413 - "/home/a/workspace/Digital-Systems/Lab6-Part1/ControllerI2C.v" Line 103: Result of 32-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "/home/a/workspace/Digital-Systems/Lab6-Part1/ControllerI2C.v" Line 104: Result of 32-bit expression is truncated to fit in 4-bit target.
 
 Elaborating module <MasterDataUnitI2C>.
 
@@ -149,7 +154,7 @@ Elaborating module <BaudRateGeneratorI2C>.
 Elaborating module <ShiftRegisterI2C2015fall>.
 
 Elaborating module <SDAmodule>.
-WARNING:HDLCompiler:1127 - "/home/a/workspace/Digital-Systems/Lab6-Part1/lab6phase1I2C2015fall.v" Line 30: Assignment to DataUnitReceivedData ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/a/workspace/Digital-Systems/Lab6-Part1/lab6phase1I2C2015fall.v" Line 34: Assignment to DataUnitReceivedData ignored, since the identifier is never used
 
 Elaborating module <Clock65MHz>.
 
@@ -169,7 +174,7 @@ Synthesizing Unit <lab6phase1I2C2015fall>.
         BaudRate = 20'b00001001110001000000
         ClockFrequency = 30'b000011110111111101001001000000
         FirstByte = 8'b11010011
-INFO:Xst:3210 - "/home/a/workspace/Digital-Systems/Lab6-Part1/lab6phase1I2C2015fall.v" line 30: Output port <ReceivedData> of the instance <DataUnit> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/a/workspace/Digital-Systems/Lab6-Part1/lab6phase1I2C2015fall.v" line 34: Output port <ReceivedData> of the instance <DataUnit> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <lab6phase1I2C2015fall> synthesized.
@@ -185,22 +190,27 @@ Synthesizing Unit <ControllerI2C>.
         StopState = 3'b110
     Found 3-bit register for signal <State>.
     Found 4-bit register for signal <DataCounter>.
-    Found 5-bit subtractor for signal <GND_2_o_GND_2_o_sub_35_OUT> created at line 82.
-    Found 8x11-bit Read Only RAM for signal <_n0109>
+    Found 5-bit subtractor for signal <GND_2_o_GND_2_o_sub_39_OUT> created at line 103.
+    Found 8x10-bit Read Only RAM for signal <_n0128>
+    Found 1-bit 7-to-1 multiplexer for signal <State[2]_NextState[2]_wide_mux_28_OUT<0>> created at line 69.
 WARNING:Xst:737 - Found 1-bit latch for signal <ReadOrWrite>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <BaudEnable>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <ShiftOrHold>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <WriteLoad>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Select>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <DelayLoopStart>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <NextState<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <NextState<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <NextState<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <StartStopAck>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ShiftOrHold>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <WriteLoad>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 4-bit comparator lessequal for signal <n0019> created at line 74
     Summary:
 	inferred   1 RAM(s).
 	inferred   1 Adder/Subtractor(s).
 	inferred   7 D-type flip-flop(s).
-	inferred   8 Latch(s).
-	inferred  22 Multiplexer(s).
+	inferred  10 Latch(s).
+	inferred   1 Comparator(s).
+	inferred  14 Multiplexer(s).
 Unit <ControllerI2C> synthesized.
 
 Synthesizing Unit <NegClockedOneShot>.
@@ -227,6 +237,20 @@ Synthesizing Unit <NegClockedOneShot>.
 	inferred   1 Finite State Machine(s).
 Unit <NegClockedOneShot> synthesized.
 
+Synthesizing Unit <DelayLoop>.
+    Related source file is "/home/a/workspace/Digital-Systems/Lab4-Part2-RAMwithHyperTerminalDisplay/DelayLoop.v".
+        Divider = 1000000
+        NumberOfBits = 20
+    Found 20-bit register for signal <count>.
+    Found 20-bit adder for signal <count[19]_GND_4_o_add_4_OUT> created at line 24.
+    Found 20-bit comparator lessequal for signal <n0002> created at line 23
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  20 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <DelayLoop> synthesized.
+
 Synthesizing Unit <MasterDataUnitI2C>.
     Related source file is "/home/a/workspace/Digital-Systems/Lab6-Part1/MasterDataUnitI2C.v".
         LENGTH = 8
@@ -238,9 +262,9 @@ Synthesizing Unit <BaudRateGeneratorI2C>.
     Related source file is "/home/a/workspace/Digital-Systems/Lab6-Part1/BaudRateGeneratorI2C.v".
     Found 1-bit register for signal <ClockI2C>.
     Found 16-bit register for signal <baud_count>.
-    Found 16-bit adder for signal <baud_count[15]_GND_15_o_add_6_OUT> created at line 26.
-    Found 20x2-bit multiplier for signal <BaudRate[19]_PWR_15_o_MuLt_3_OUT> created at line 21.
-    Found 30-bit comparator equal for signal <GND_15_o_GND_15_o_equal_6_o> created at line 21
+    Found 16-bit adder for signal <baud_count[15]_GND_17_o_add_5_OUT> created at line 26.
+    Found 20x2-bit multiplier for signal <BaudRate[19]_PWR_15_o_MuLt_2_OUT> created at line 21.
+    Found 30-bit comparator equal for signal <GND_17_o_GND_17_o_equal_5_o> created at line 21
     Summary:
 	inferred   1 Multiplier(s).
 	inferred   1 Adder/Subtractor(s).
@@ -252,64 +276,64 @@ Unit <BaudRateGeneratorI2C> synthesized.
 Synthesizing Unit <div_30u_22u>.
     Related source file is "".
     Found 51-bit adder for signal <n2623> created at line 0.
-    Found 51-bit adder for signal <GND_17_o_b[21]_add_3_OUT> created at line 0.
+    Found 51-bit adder for signal <GND_19_o_b[21]_add_3_OUT> created at line 0.
     Found 50-bit adder for signal <n2627> created at line 0.
-    Found 50-bit adder for signal <GND_17_o_b[21]_add_5_OUT> created at line 0.
+    Found 50-bit adder for signal <GND_19_o_b[21]_add_5_OUT> created at line 0.
     Found 49-bit adder for signal <n2631> created at line 0.
-    Found 49-bit adder for signal <GND_17_o_b[21]_add_7_OUT> created at line 0.
+    Found 49-bit adder for signal <GND_19_o_b[21]_add_7_OUT> created at line 0.
     Found 48-bit adder for signal <n2635> created at line 0.
-    Found 48-bit adder for signal <GND_17_o_b[21]_add_9_OUT> created at line 0.
+    Found 48-bit adder for signal <GND_19_o_b[21]_add_9_OUT> created at line 0.
     Found 47-bit adder for signal <n2639> created at line 0.
-    Found 47-bit adder for signal <GND_17_o_b[21]_add_11_OUT> created at line 0.
+    Found 47-bit adder for signal <GND_19_o_b[21]_add_11_OUT> created at line 0.
     Found 46-bit adder for signal <n2643> created at line 0.
-    Found 46-bit adder for signal <GND_17_o_b[21]_add_13_OUT> created at line 0.
+    Found 46-bit adder for signal <GND_19_o_b[21]_add_13_OUT> created at line 0.
     Found 45-bit adder for signal <n2647> created at line 0.
-    Found 45-bit adder for signal <GND_17_o_b[21]_add_15_OUT> created at line 0.
+    Found 45-bit adder for signal <GND_19_o_b[21]_add_15_OUT> created at line 0.
     Found 44-bit adder for signal <n2651> created at line 0.
-    Found 44-bit adder for signal <GND_17_o_b[21]_add_17_OUT> created at line 0.
+    Found 44-bit adder for signal <GND_19_o_b[21]_add_17_OUT> created at line 0.
     Found 43-bit adder for signal <n2655> created at line 0.
-    Found 43-bit adder for signal <GND_17_o_b[21]_add_19_OUT> created at line 0.
+    Found 43-bit adder for signal <GND_19_o_b[21]_add_19_OUT> created at line 0.
     Found 42-bit adder for signal <n2659> created at line 0.
-    Found 42-bit adder for signal <GND_17_o_b[21]_add_21_OUT> created at line 0.
+    Found 42-bit adder for signal <GND_19_o_b[21]_add_21_OUT> created at line 0.
     Found 41-bit adder for signal <n2663> created at line 0.
-    Found 41-bit adder for signal <GND_17_o_b[21]_add_23_OUT> created at line 0.
+    Found 41-bit adder for signal <GND_19_o_b[21]_add_23_OUT> created at line 0.
     Found 40-bit adder for signal <n2667> created at line 0.
-    Found 40-bit adder for signal <GND_17_o_b[21]_add_25_OUT> created at line 0.
+    Found 40-bit adder for signal <GND_19_o_b[21]_add_25_OUT> created at line 0.
     Found 39-bit adder for signal <n2671> created at line 0.
-    Found 39-bit adder for signal <GND_17_o_b[21]_add_27_OUT> created at line 0.
+    Found 39-bit adder for signal <GND_19_o_b[21]_add_27_OUT> created at line 0.
     Found 38-bit adder for signal <n2675> created at line 0.
-    Found 38-bit adder for signal <GND_17_o_b[21]_add_29_OUT> created at line 0.
+    Found 38-bit adder for signal <GND_19_o_b[21]_add_29_OUT> created at line 0.
     Found 37-bit adder for signal <n2679> created at line 0.
-    Found 37-bit adder for signal <GND_17_o_b[21]_add_31_OUT> created at line 0.
+    Found 37-bit adder for signal <GND_19_o_b[21]_add_31_OUT> created at line 0.
     Found 36-bit adder for signal <n2683> created at line 0.
-    Found 36-bit adder for signal <GND_17_o_b[21]_add_33_OUT> created at line 0.
+    Found 36-bit adder for signal <GND_19_o_b[21]_add_33_OUT> created at line 0.
     Found 35-bit adder for signal <n2687> created at line 0.
-    Found 35-bit adder for signal <GND_17_o_b[21]_add_35_OUT> created at line 0.
+    Found 35-bit adder for signal <GND_19_o_b[21]_add_35_OUT> created at line 0.
     Found 34-bit adder for signal <n2691> created at line 0.
-    Found 34-bit adder for signal <GND_17_o_b[21]_add_37_OUT> created at line 0.
+    Found 34-bit adder for signal <GND_19_o_b[21]_add_37_OUT> created at line 0.
     Found 33-bit adder for signal <n2695> created at line 0.
-    Found 33-bit adder for signal <GND_17_o_b[21]_add_39_OUT> created at line 0.
+    Found 33-bit adder for signal <GND_19_o_b[21]_add_39_OUT> created at line 0.
     Found 32-bit adder for signal <n2699> created at line 0.
-    Found 32-bit adder for signal <GND_17_o_b[21]_add_41_OUT> created at line 0.
+    Found 32-bit adder for signal <GND_19_o_b[21]_add_41_OUT> created at line 0.
     Found 31-bit adder for signal <n2703> created at line 0.
-    Found 31-bit adder for signal <GND_17_o_b[21]_add_43_OUT> created at line 0.
+    Found 31-bit adder for signal <GND_19_o_b[21]_add_43_OUT> created at line 0.
     Found 30-bit adder for signal <n2707> created at line 0.
     Found 30-bit adder for signal <a[29]_b[21]_add_45_OUT> created at line 0.
     Found 30-bit adder for signal <n2711> created at line 0.
-    Found 30-bit adder for signal <a[29]_GND_17_o_add_47_OUT> created at line 0.
+    Found 30-bit adder for signal <a[29]_GND_19_o_add_47_OUT> created at line 0.
     Found 30-bit adder for signal <n2715> created at line 0.
-    Found 30-bit adder for signal <a[29]_GND_17_o_add_49_OUT> created at line 0.
+    Found 30-bit adder for signal <a[29]_GND_19_o_add_49_OUT> created at line 0.
     Found 30-bit adder for signal <n2719> created at line 0.
-    Found 30-bit adder for signal <a[29]_GND_17_o_add_51_OUT> created at line 0.
+    Found 30-bit adder for signal <a[29]_GND_19_o_add_51_OUT> created at line 0.
     Found 30-bit adder for signal <n2723> created at line 0.
-    Found 30-bit adder for signal <a[29]_GND_17_o_add_53_OUT> created at line 0.
+    Found 30-bit adder for signal <a[29]_GND_19_o_add_53_OUT> created at line 0.
     Found 30-bit adder for signal <n2727> created at line 0.
-    Found 30-bit adder for signal <a[29]_GND_17_o_add_55_OUT[29:0]> created at line 0.
+    Found 30-bit adder for signal <a[29]_GND_19_o_add_55_OUT[29:0]> created at line 0.
     Found 30-bit adder for signal <n2731> created at line 0.
-    Found 30-bit adder for signal <a[29]_GND_17_o_add_57_OUT[29:0]> created at line 0.
+    Found 30-bit adder for signal <a[29]_GND_19_o_add_57_OUT[29:0]> created at line 0.
     Found 30-bit adder for signal <n2735> created at line 0.
-    Found 30-bit adder for signal <a[29]_GND_17_o_add_59_OUT[29:0]> created at line 0.
-    Found 52-bit adder for signal <GND_17_o_b[21]_add_1_OUT> created at line 0.
+    Found 30-bit adder for signal <a[29]_GND_19_o_add_59_OUT[29:0]> created at line 0.
+    Found 52-bit adder for signal <GND_19_o_b[21]_add_1_OUT> created at line 0.
     Found 52-bit comparator lessequal for signal <BUS_0001> created at line 0
     Found 51-bit comparator lessequal for signal <BUS_0002> created at line 0
     Found 50-bit comparator lessequal for signal <BUS_0003> created at line 0
@@ -375,11 +399,12 @@ HDL Synthesis Report
 
 Macro Statistics
 # RAMs                                                 : 1
- 8x11-bit single-port Read Only RAM                    : 1
+ 8x10-bit single-port Read Only RAM                    : 1
 # Multipliers                                          : 1
  20x2-bit multiplier                                   : 1
-# Adders/Subtractors                                   : 61
+# Adders/Subtractors                                   : 62
  16-bit adder                                          : 1
+ 20-bit adder                                          : 1
  30-bit adder                                          : 16
  31-bit adder                                          : 2
  32-bit adder                                          : 2
@@ -404,15 +429,17 @@ Macro Statistics
  50-bit adder                                          : 2
  51-bit adder                                          : 2
  52-bit adder                                          : 1
-# Registers                                            : 6
+# Registers                                            : 7
  1-bit register                                        : 2
  16-bit register                                       : 1
+ 20-bit register                                       : 1
  3-bit register                                        : 1
  4-bit register                                        : 1
  8-bit register                                        : 1
-# Latches                                              : 8
- 1-bit latch                                           : 8
-# Comparators                                          : 32
+# Latches                                              : 10
+ 1-bit latch                                           : 10
+# Comparators                                          : 34
+ 20-bit comparator lessequal                           : 1
  30-bit comparator equal                               : 1
  30-bit comparator lessequal                           : 9
  31-bit comparator lessequal                           : 1
@@ -424,6 +451,7 @@ Macro Statistics
  37-bit comparator lessequal                           : 1
  38-bit comparator lessequal                           : 1
  39-bit comparator lessequal                           : 1
+ 4-bit comparator lessequal                            : 1
  40-bit comparator lessequal                           : 1
  41-bit comparator lessequal                           : 1
  42-bit comparator lessequal                           : 1
@@ -437,9 +465,11 @@ Macro Statistics
  50-bit comparator lessequal                           : 1
  51-bit comparator lessequal                           : 1
  52-bit comparator lessequal                           : 1
-# Multiplexers                                         : 840
- 1-bit 2-to-1 multiplexer                              : 832
+# Multiplexers                                         : 833
+ 1-bit 2-to-1 multiplexer                              : 823
+ 1-bit 7-to-1 multiplexer                              : 1
  16-bit 2-to-1 multiplexer                             : 2
+ 20-bit 2-to-1 multiplexer                             : 1
  30-bit 2-to-1 multiplexer                             : 3
  32-bit 2-to-1 multiplexer                             : 1
  4-bit 2-to-1 multiplexer                              : 1
@@ -457,12 +487,12 @@ Macro Statistics
 WARNING:Xst:2677 - Node <ReceivedData_7> of sequential type is unconnected in block <ShiftUnit>.
 
 Synthesizing (advanced) Unit <ControllerI2C>.
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0109> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0128> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
     | Port A                                                              |
-    |     aspect ratio   | 8-word x 11-bit                     |          |
+    |     aspect ratio   | 8-word x 10-bit                     |          |
     |     weA            | connected to signal <GND>           | high     |
     |     addrA          | connected to signal <State>         |          |
     |     diA            | connected to signal <GND>           |          |
@@ -470,12 +500,16 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0109> will be implemented on LUTs 
     -----------------------------------------------------------------------
 Unit <ControllerI2C> synthesized (advanced).
 
+Synthesizing (advanced) Unit <DelayLoop>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+Unit <DelayLoop> synthesized (advanced).
+
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
 # RAMs                                                 : 1
- 8x11-bit single-port distributed Read Only RAM        : 1
+ 8x10-bit single-port distributed Read Only RAM        : 1
 # Multipliers                                          : 1
  17x2-bit multiplier                                   : 1
 # Adders/Subtractors                                   : 32
@@ -483,9 +517,12 @@ Macro Statistics
  30-bit adder                                          : 1
  30-bit adder carry in                                 : 29
  5-bit subtractor                                      : 1
+# Counters                                             : 1
+ 20-bit up counter                                     : 1
 # Registers                                            : 33
  Flip-Flops                                            : 33
-# Comparators                                          : 32
+# Comparators                                          : 34
+ 20-bit comparator lessequal                           : 1
  30-bit comparator equal                               : 1
  30-bit comparator lessequal                           : 9
  31-bit comparator lessequal                           : 1
@@ -497,6 +534,7 @@ Macro Statistics
  37-bit comparator lessequal                           : 1
  38-bit comparator lessequal                           : 1
  39-bit comparator lessequal                           : 1
+ 4-bit comparator lessequal                            : 1
  40-bit comparator lessequal                           : 1
  41-bit comparator lessequal                           : 1
  42-bit comparator lessequal                           : 1
@@ -510,8 +548,9 @@ Macro Statistics
  50-bit comparator lessequal                           : 1
  51-bit comparator lessequal                           : 1
  52-bit comparator lessequal                           : 1
-# Multiplexers                                         : 839
- 1-bit 2-to-1 multiplexer                              : 831
+# Multiplexers                                         : 831
+ 1-bit 2-to-1 multiplexer                              : 822
+ 1-bit 7-to-1 multiplexer                              : 1
  16-bit 2-to-1 multiplexer                             : 2
  30-bit 2-to-1 multiplexer                             : 3
  32-bit 2-to-1 multiplexer                             : 1
@@ -542,6 +581,32 @@ Optimizing FSM <DataUnit/ShiftUnit/FSM_0> on signal <State[1:3]> with one-hot en
  01    | 010
  11    | 100
 -------------------
+WARNING:Xst:3002 - This design contains one or more registers/latches that are directly
+   incompatible with the Spartan6 architecture. The two primary causes of this is
+   either a register or latch described with both an asynchronous set and
+   asynchronous reset, or a register or latch described with an asynchronous
+   set or reset which however has an initialization value of the opposite 
+   polarity (i.e. asynchronous reset with an initialization value of 1).
+    While this circuit can be built, it creates a sub-optimal implementation
+   in terms of area, power and performance. For a more optimal implementation
+   Xilinx highly recommends one of the following:
+
+          1) Remove either the set or reset from all registers and latches
+             if not needed for required functionality
+          2) Modify the code in order to produce a synchronous set
+             and/or reset (both is preferred)
+          3) Ensure all registers have the same initialization value as the
+             described asynchronous set or reset polarity
+          4) Use the -async_to_sync option to transform the asynchronous
+             set/reset to synchronous operation
+             (timing simulation highly recommended when using this option)
+
+  Please refer to http://www.xilinx.com search string "Spartan6 asynchronous set/reset" for more details.
+
+  List of register instances with asynchronous set and reset:
+    WriteLoad in unit <ControllerI2C>
+    ShiftOrHold in unit <ControllerI2C>
+
 WARNING:Xst:2041 - Unit lab6phase1I2C2015fall: 1 internal tristate is replaced by logic (pull-up yes): N2.
 
 Optimizing unit <lab6phase1I2C2015fall> ...
@@ -568,8 +633,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 34
- Flip-Flops                                            : 34
+# Registers                                            : 54
+ Flip-Flops                                            : 54
 
 =========================================================================
 
@@ -592,25 +657,26 @@ Top Level Output File Name         : lab6phase1I2C2015fall.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 112
+# BELS                             : 185
 #      GND                         : 1
 #      INV                         : 2
 #      LUT1                        : 15
-#      LUT2                        : 10
-#      LUT3                        : 33
-#      LUT4                        : 2
-#      LUT5                        : 5
-#      LUT6                        : 3
-#      MUXCY                       : 24
+#      LUT2                        : 12
+#      LUT3                        : 32
+#      LUT4                        : 9
+#      LUT5                        : 7
+#      LUT6                        : 26
+#      MUXCY                       : 43
+#      MUXF7                       : 1
 #      VCC                         : 1
-#      XORCY                       : 16
-# FlipFlops/Latches                : 43
-#      FDC                         : 5
-#      FDP                         : 2
-#      FDR                         : 18
+#      XORCY                       : 36
+# FlipFlops/Latches                : 65
+#      FDC                         : 21
+#      FDP                         : 3
+#      FDR                         : 22
 #      FDRE                        : 7
-#      FDS                         : 2
-#      LD                          : 9
+#      FDS                         : 1
+#      LD                          : 11
 # Clock Buffers                    : 2
 #      BUFG                        : 2
 # IO Buffers                       : 6
@@ -628,16 +694,16 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              42  out of  18224     0%  
- Number of Slice LUTs:                   70  out of   9112     0%  
-    Number used as Logic:                70  out of   9112     0%  
+ Number of Slice Registers:              64  out of  18224     0%  
+ Number of Slice LUTs:                  103  out of   9112     1%  
+    Number used as Logic:               103  out of   9112     1%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:     74
-   Number with an unused Flip Flop:      32  out of     74    43%  
-   Number with an unused LUT:             4  out of     74     5%  
-   Number of fully used LUT-FF pairs:    38  out of     74    51%  
-   Number of unique control sets:        10
+ Number of LUT Flip Flop pairs used:    108
+   Number with an unused Flip Flop:      44  out of    108    40%  
+   Number with an unused LUT:             5  out of    108     4%  
+   Number of fully used LUT-FF pairs:    59  out of    108    54%  
+   Number of unique control sets:        13
 
 IO Utilization: 
  Number of IOs:                           6
@@ -665,18 +731,20 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
-------------------------------------------------------+----------------------------------+-------+
-Clock Signal                                          | Clock buffer(FF name)            | Load  |
-------------------------------------------------------+----------------------------------+-------+
-Clock                                                 | DCM_SP:CLKFX                     | 34    |
-ControlUnit/Mram__n0109(ControlUnit/Mram__n010911:O)  | NONE(*)(ControlUnit/NextState_1) | 3     |
-ControlUnit/Mram__n01091(ControlUnit/Mram__n0109111:O)| NONE(*)(ControlUnit/WriteLoad)   | 1     |
-ControlUnit/Mram__n01092(ControlUnit/Mram__n010921:O) | NONE(*)(ControlUnit/ShiftOrHold) | 1     |
-ControlUnit/Mram__n01093(ControlUnit/Mram__n010931:O) | NONE(*)(ControlUnit/BaudEnable)  | 1     |
-ControlUnit/Mram__n01094(ControlUnit/Mram__n010941:O) | NONE(*)(ControlUnit/ReadOrWrite) | 2     |
-ControlUnit/Mram__n01095(ControlUnit/Mram__n010951:O) | NONE(*)(ControlUnit/StartStopAck)| 1     |
-------------------------------------------------------+----------------------------------+-------+
-(*) These 6 clock signal(s) are generated by combinatorial logic,
+---------------------------------------------------------------------------------------+------------------------------------+-------+
+Clock Signal                                                                           | Clock buffer(FF name)              | Load  |
+---------------------------------------------------------------------------------------+------------------------------------+-------+
+Clock                                                                                  | DCM_SP:CLKFX                       | 54    |
+ControlUnit/Mram__n01281(ControlUnit/Mram__n0128112:O)                                 | NONE(*)(ControlUnit/Select)        | 1     |
+ControlUnit/Mram__n01282(ControlUnit/Mram__n012821:O)                                  | NONE(*)(ControlUnit/BaudEnable)    | 1     |
+ControlUnit/Mram__n0128(ControlUnit/Mram__n012811:O)                                   | NONE(*)(ControlUnit/DelayLoopStart)| 1     |
+ControlUnit/Mram__n01283(ControlUnit/Mram__n012831:O)                                  | NONE(*)(ControlUnit/ReadOrWrite)   | 2     |
+ControlUnit/Mram__n01284(ControlUnit/Mram__n012841:O)                                  | NONE(*)(ControlUnit/StartStopAck)  | 1     |
+ControlUnit/State[2]_GND_10_o_Mux_29_o(ControlUnit/Mmux_State[2]_GND_10_o_Mux_29_o15:O)| NONE(*)(ControlUnit/NextState_0)   | 3     |
+ControlUnit/WriteLoad_G(ControlUnit/WriteLoad_G:O)                                     | NONE(*)(ControlUnit/WriteLoad)     | 1     |
+ControlUnit/ShiftOrHold_G(ControlUnit/ShiftOrHold_G:O)                                 | NONE(*)(ControlUnit/ShiftOrHold)   | 1     |
+---------------------------------------------------------------------------------------+------------------------------------+-------+
+(*) These 8 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
 Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
@@ -689,9 +757,9 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 2.039ns (Maximum Frequency: 490.417MHz)
-   Minimum input arrival time before clock: 3.858ns
-   Maximum output required time after clock: 4.764ns
+   Minimum period: 2.732ns (Maximum Frequency: 366.069MHz)
+   Minimum input arrival time before clock: 3.756ns
+   Maximum output required time after clock: 4.698ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -700,40 +768,52 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'Clock'
-  Clock period: 2.039ns (frequency: 490.417MHz)
-  Total number of paths / destination ports: 451 / 39
+  Clock period: 2.732ns (frequency: 366.069MHz)
+  Total number of paths / destination ports: 3705 / 59
 -------------------------------------------------------------------------
-Delay:               3.137ns (Levels of Logic = 10)
-  Source:            DataUnit/BaudUnit/baud_count_1 (FF)
-  Destination:       DataUnit/BaudUnit/baud_count_15 (FF)
+Delay:               4.203ns (Levels of Logic = 22)
+  Source:            ControlUnit/Timer/count_18 (FF)
+  Destination:       ControlUnit/Timer/count_19 (FF)
   Source Clock:      Clock rising 0.6X
   Destination Clock: Clock rising 0.6X
 
-  Data Path: DataUnit/BaudUnit/baud_count_1 to DataUnit/BaudUnit/baud_count_15
+  Data Path: ControlUnit/Timer/count_18 to ControlUnit/Timer/count_19
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              2   0.447   0.845  DataUnit/BaudUnit/baud_count_1 (DataUnit/BaudUnit/baud_count_1)
-     LUT3:I0->O            1   0.205   0.000  DataUnit/BaudUnit/Mcompar_GND_15_o_GND_15_o_equal_6_o_lut<0>1 (DataUnit/BaudUnit/Mcompar_GND_15_o_GND_15_o_equal_6_o_lut<0>)
-     MUXCY:S->O            1   0.172   0.000  DataUnit/BaudUnit/Mcompar_GND_15_o_GND_15_o_equal_6_o_cy<0> (DataUnit/BaudUnit/Mcompar_GND_15_o_GND_15_o_equal_6_o_cy<0>)
-     MUXCY:CI->O           1   0.019   0.000  DataUnit/BaudUnit/Mcompar_GND_15_o_GND_15_o_equal_6_o_cy<1> (DataUnit/BaudUnit/Mcompar_GND_15_o_GND_15_o_equal_6_o_cy<1>)
-     MUXCY:CI->O           1   0.019   0.000  DataUnit/BaudUnit/Mcompar_GND_15_o_GND_15_o_equal_6_o_cy<2> (DataUnit/BaudUnit/Mcompar_GND_15_o_GND_15_o_equal_6_o_cy<2>)
-     MUXCY:CI->O           1   0.019   0.000  DataUnit/BaudUnit/Mcompar_GND_15_o_GND_15_o_equal_6_o_cy<3> (DataUnit/BaudUnit/Mcompar_GND_15_o_GND_15_o_equal_6_o_cy<3>)
-     MUXCY:CI->O           1   0.019   0.000  DataUnit/BaudUnit/Mcompar_GND_15_o_GND_15_o_equal_6_o_cy<4> (DataUnit/BaudUnit/Mcompar_GND_15_o_GND_15_o_equal_6_o_cy<4>)
-     MUXCY:CI->O           1   0.019   0.000  DataUnit/BaudUnit/Mcompar_GND_15_o_GND_15_o_equal_6_o_cy<5> (DataUnit/BaudUnit/Mcompar_GND_15_o_GND_15_o_equal_6_o_cy<5>)
-     MUXCY:CI->O           1   0.019   0.000  DataUnit/BaudUnit/Mcompar_GND_15_o_GND_15_o_equal_6_o_cy<6> (DataUnit/BaudUnit/Mcompar_GND_15_o_GND_15_o_equal_6_o_cy<6>)
-     MUXCY:CI->O          17   0.019   1.028  DataUnit/BaudUnit/Mcompar_GND_15_o_GND_15_o_equal_6_o_cy<7> (DataUnit/BaudUnit/GND_15_o_GND_15_o_equal_6_o)
-     LUT3:I2->O            1   0.205   0.000  DataUnit/BaudUnit/Mmux_baud_count[15]_GND_15_o_mux_8_OUT21 (DataUnit/BaudUnit/baud_count[15]_GND_15_o_mux_8_OUT<10>)
-     FDR:D                     0.102          DataUnit/BaudUnit/baud_count_10
+     FDR:C->Q              4   0.447   0.931  ControlUnit/Timer/count_18 (ControlUnit/Timer/count_18)
+     LUT4:I0->O           20   0.203   1.197  ControlUnit/Timer/PWR_4_o_count[19]_LessThan_4_o21 (ControlUnit/Timer/PWR_4_o_count[19]_LessThan_4_o2)
+     LUT6:I4->O            1   0.203   0.579  ControlUnit/Timer/PWR_4_o_count[19]_LessThan_4_o_inv1 (ControlUnit/Timer/PWR_4_o_count[19]_LessThan_4_o_inv)
+     MUXCY:CI->O           1   0.019   0.000  ControlUnit/Timer/Mcount_count_cy<0> (ControlUnit/Timer/Mcount_count_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  ControlUnit/Timer/Mcount_count_cy<1> (ControlUnit/Timer/Mcount_count_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  ControlUnit/Timer/Mcount_count_cy<2> (ControlUnit/Timer/Mcount_count_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  ControlUnit/Timer/Mcount_count_cy<3> (ControlUnit/Timer/Mcount_count_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  ControlUnit/Timer/Mcount_count_cy<4> (ControlUnit/Timer/Mcount_count_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  ControlUnit/Timer/Mcount_count_cy<5> (ControlUnit/Timer/Mcount_count_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  ControlUnit/Timer/Mcount_count_cy<6> (ControlUnit/Timer/Mcount_count_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  ControlUnit/Timer/Mcount_count_cy<7> (ControlUnit/Timer/Mcount_count_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  ControlUnit/Timer/Mcount_count_cy<8> (ControlUnit/Timer/Mcount_count_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  ControlUnit/Timer/Mcount_count_cy<9> (ControlUnit/Timer/Mcount_count_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  ControlUnit/Timer/Mcount_count_cy<10> (ControlUnit/Timer/Mcount_count_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  ControlUnit/Timer/Mcount_count_cy<11> (ControlUnit/Timer/Mcount_count_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  ControlUnit/Timer/Mcount_count_cy<12> (ControlUnit/Timer/Mcount_count_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  ControlUnit/Timer/Mcount_count_cy<13> (ControlUnit/Timer/Mcount_count_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  ControlUnit/Timer/Mcount_count_cy<14> (ControlUnit/Timer/Mcount_count_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  ControlUnit/Timer/Mcount_count_cy<15> (ControlUnit/Timer/Mcount_count_cy<15>)
+     MUXCY:CI->O           1   0.019   0.000  ControlUnit/Timer/Mcount_count_cy<16> (ControlUnit/Timer/Mcount_count_cy<16>)
+     MUXCY:CI->O           1   0.019   0.000  ControlUnit/Timer/Mcount_count_cy<17> (ControlUnit/Timer/Mcount_count_cy<17>)
+     MUXCY:CI->O           0   0.019   0.000  ControlUnit/Timer/Mcount_count_cy<18> (ControlUnit/Timer/Mcount_count_cy<18>)
+     XORCY:CI->O           1   0.180   0.000  ControlUnit/Timer/Mcount_count_xor<19> (ControlUnit/Timer/Mcount_count19)
+     FDR:D                     0.102          ControlUnit/Timer/count_19
     ----------------------------------------
-    Total                      3.137ns (1.264ns logic, 1.873ns route)
-                                       (40.3% logic, 59.7% route)
+    Total                      4.203ns (1.496ns logic, 2.707ns route)
+                                       (35.6% logic, 64.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'Clock'
   Total number of paths / destination ports: 34 / 34
 -------------------------------------------------------------------------
-Offset:              3.858ns (Levels of Logic = 2)
+Offset:              3.756ns (Levels of Logic = 2)
   Source:            Reset (PAD)
   Destination:       ControlUnit/OneShotUnit/State_FSM_FFd2 (FF)
   Destination Clock: Clock rising 0.6X
@@ -742,32 +822,33 @@ Offset:              3.858ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            34   1.222   1.425  Reset_IBUF (Reset_IBUF)
-     LUT2:I0->O            1   0.203   0.579  ControlUnit/ClockI2C1 (ControlUnit/ClockI2C_0)
+     IBUF:I->O            34   1.222   1.321  Reset_IBUF (Reset_IBUF)
+     LUT2:I1->O            1   0.205   0.579  ControlUnit/ClockI2C1 (ControlUnit/ClockI2C_0)
      FDR:R                     0.430          ControlUnit/OneShotUnit/State_FSM_FFd2
     ----------------------------------------
-    Total                      3.858ns (1.855ns logic, 2.003ns route)
-                                       (48.1% logic, 51.9% route)
+    Total                      3.756ns (1.857ns logic, 1.899ns route)
+                                       (49.4% logic, 50.6% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'ControlUnit/Mram__n0109'
+Timing constraint: Default OFFSET IN BEFORE for Clock 'ControlUnit/State[2]_GND_10_o_Mux_29_o'
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
-Offset:              2.146ns (Levels of Logic = 2)
+Offset:              2.175ns (Levels of Logic = 3)
   Source:            Go (PAD)
   Destination:       ControlUnit/NextState_0 (LATCH)
-  Destination Clock: ControlUnit/Mram__n0109 falling
+  Destination Clock: ControlUnit/State[2]_GND_10_o_Mux_29_o falling
 
   Data Path: Go to ControlUnit/NextState_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             1   1.222   0.684  Go_IBUF (Go_IBUF)
-     LUT6:I4->O            1   0.203   0.000  ControlUnit/Mmux_State[2]_NextState[2]_wide_mux_28_OUT<0>11 (ControlUnit/State[2]_NextState[2]_wide_mux_28_OUT<0>)
+     IBUF:I->O             1   1.222   0.580  Go_IBUF (Go_IBUF)
+     LUT5:I4->O            1   0.205   0.000  ControlUnit/Mmux_State[2]_NextState[2]_wide_mux_28_OUT<0>13_F (N39)
+     MUXF7:I0->O           1   0.131   0.000  ControlUnit/Mmux_State[2]_NextState[2]_wide_mux_28_OUT<0>13 (ControlUnit/State[2]_NextState[2]_wide_mux_28_OUT<0>)
      LD:D                      0.037          ControlUnit/NextState_0
     ----------------------------------------
-    Total                      2.146ns (1.462ns logic, 0.684ns route)
-                                       (68.1% logic, 31.9% route)
+    Total                      2.175ns (1.595ns logic, 0.580ns route)
+                                       (73.3% logic, 26.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'Clock'
@@ -783,60 +864,60 @@ Offset:              4.453ns (Levels of Logic = 2)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDR:C->Q              3   0.447   0.651  DataUnit/ShiftUnit/ShiftOut (DataUnit/ShiftUnit/ShiftOut)
-     LUT3:I2->O            1   0.205   0.579  DataUnit/SDAUnit/Mmux_StartStopAck_ShiftOut_MUX_2204_o11 (SDA_OBUFT)
+     LUT3:I2->O            1   0.205   0.579  DataUnit/SDAUnit/Mmux_StartStopAck_ShiftOut_MUX_2253_o11 (SDA_OBUFT)
      OBUFT:I->O                2.571          SDA_OBUFT (SDA)
     ----------------------------------------
     Total                      4.453ns (3.223ns logic, 1.230ns route)
                                        (72.4% logic, 27.6% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'ControlUnit/Mram__n01092'
+Timing constraint: Default OFFSET OUT AFTER for Clock 'ControlUnit/Mram__n01281'
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
-Offset:              4.764ns (Levels of Logic = 2)
-  Source:            ControlUnit/ShiftOrHold (LATCH)
+Offset:              4.698ns (Levels of Logic = 2)
+  Source:            ControlUnit/Select (LATCH)
   Destination:       SDA (PAD)
-  Source Clock:      ControlUnit/Mram__n01092 falling
+  Source Clock:      ControlUnit/Mram__n01281 falling
 
-  Data Path: ControlUnit/ShiftOrHold to SDA
+  Data Path: ControlUnit/Select to SDA
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LD:G->Q               4   0.498   0.912  ControlUnit/ShiftOrHold (ControlUnit/ShiftOrHold)
-     LUT3:I0->O            1   0.205   0.579  DataUnit/SDAUnit/Mmux_StartStopAck_ShiftOut_MUX_2204_o11 (SDA_OBUFT)
+     LD:G->Q               2   0.498   0.845  ControlUnit/Select (ControlUnit/Select)
+     LUT3:I0->O            1   0.205   0.579  DataUnit/SDAUnit/Mmux_StartStopAck_ShiftOut_MUX_2253_o11 (SDA_OBUFT)
      OBUFT:I->O                2.571          SDA_OBUFT (SDA)
     ----------------------------------------
-    Total                      4.764ns (3.274ns logic, 1.490ns route)
-                                       (68.7% logic, 31.3% route)
+    Total                      4.698ns (3.274ns logic, 1.424ns route)
+                                       (69.7% logic, 30.3% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'ControlUnit/Mram__n01095'
+Timing constraint: Default OFFSET OUT AFTER for Clock 'ControlUnit/Mram__n01284'
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
 Offset:              4.572ns (Levels of Logic = 2)
   Source:            ControlUnit/StartStopAck (LATCH)
   Destination:       SDA (PAD)
-  Source Clock:      ControlUnit/Mram__n01095 falling
+  Source Clock:      ControlUnit/Mram__n01284 falling
 
   Data Path: ControlUnit/StartStopAck to SDA
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      LD:G->Q               2   0.498   0.721  ControlUnit/StartStopAck (ControlUnit/StartStopAck)
-     LUT3:I1->O            1   0.203   0.579  DataUnit/SDAUnit/Mmux_StartStopAck_ShiftOut_MUX_2204_o11 (SDA_OBUFT)
+     LUT3:I1->O            1   0.203   0.579  DataUnit/SDAUnit/Mmux_StartStopAck_ShiftOut_MUX_2253_o11 (SDA_OBUFT)
      OBUFT:I->O                2.571          SDA_OBUFT (SDA)
     ----------------------------------------
     Total                      4.572ns (3.272ns logic, 1.300ns route)
                                        (71.6% logic, 28.4% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'ControlUnit/Mram__n01094'
+Timing constraint: Default OFFSET OUT AFTER for Clock 'ControlUnit/Mram__n01283'
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
 Offset:              3.648ns (Levels of Logic = 1)
   Source:            ControlUnit/ReadOrWrite_1 (LATCH)
   Destination:       SDA (PAD)
-  Source Clock:      ControlUnit/Mram__n01094 falling
+  Source Clock:      ControlUnit/Mram__n01283 falling
 
   Data Path: ControlUnit/ReadOrWrite_1 to SDA
                                 Gate     Net
@@ -854,28 +935,46 @@ Cross Clock Domains Report:
 --------------------------
 
 Clock to Setup on destination clock Clock
-------------------------+---------+---------+---------+---------+
-                        | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
-------------------------+---------+---------+---------+---------+
-Clock                   |    3.137|         |         |         |
-ControlUnit/Mram__n0109 |         |    1.179|         |         |
-ControlUnit/Mram__n01091|         |    2.729|         |         |
-ControlUnit/Mram__n01092|         |    2.709|         |         |
-ControlUnit/Mram__n01093|         |    2.346|         |         |
-ControlUnit/Mram__n01094|         |    1.385|         |         |
-ControlUnit/Mram__n01095|         |    1.650|         |         |
-------------------------+---------+---------+---------+---------+
+--------------------------------------+---------+---------+---------+---------+
+                                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------------------+---------+---------+---------+---------+
+Clock                                 |    4.203|         |         |         |
+ControlUnit/Mram__n0128               |         |    2.020|         |         |
+ControlUnit/Mram__n01281              |         |    1.667|         |         |
+ControlUnit/Mram__n01282              |         |    2.346|         |         |
+ControlUnit/Mram__n01283              |         |    1.385|         |         |
+ControlUnit/Mram__n01284              |         |    1.650|         |         |
+ControlUnit/ShiftOrHold_G             |         |    2.415|         |         |
+ControlUnit/State[2]_GND_10_o_Mux_29_o|         |    1.179|         |         |
+ControlUnit/WriteLoad_G               |         |    2.855|         |         |
+--------------------------------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock ControlUnit/Mram__n0109
+Clock to Setup on destination clock ControlUnit/Mram__n0128
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-Clock          |         |         |    2.652|         |
+Clock          |         |         |    1.843|         |
 ---------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock ControlUnit/Mram__n01091
+Clock to Setup on destination clock ControlUnit/Mram__n01281
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+Clock          |         |         |    2.071|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock ControlUnit/Mram__n01282
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+Clock          |         |         |    1.945|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock ControlUnit/Mram__n01283
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
@@ -883,7 +982,7 @@ Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 Clock          |         |         |    1.967|         |
 ---------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock ControlUnit/Mram__n01092
+Clock to Setup on destination clock ControlUnit/Mram__n01284
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
@@ -891,42 +990,42 @@ Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 Clock          |         |         |    1.967|         |
 ---------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock ControlUnit/Mram__n01093
+Clock to Setup on destination clock ControlUnit/ShiftOrHold_G
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-Clock          |         |         |    1.850|         |
+Clock          |         |         |    2.071|         |
 ---------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock ControlUnit/Mram__n01094
+Clock to Setup on destination clock ControlUnit/State[2]_GND_10_o_Mux_29_o
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-Clock          |         |         |    1.850|         |
+Clock          |         |         |    2.873|         |
 ---------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock ControlUnit/Mram__n01095
+Clock to Setup on destination clock ControlUnit/WriteLoad_G
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-Clock          |         |         |    1.850|         |
+Clock          |         |         |    2.071|         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 12.00 secs
-Total CPU time to Xst completion: 11.44 secs
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 7.42 secs
  
 --> 
 
 
-Total memory usage is 405840 kilobytes
+Total memory usage is 405992 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   17 (   0 filtered)
+Number of warnings :   21 (   0 filtered)
 Number of infos    :    5 (   0 filtered)
 

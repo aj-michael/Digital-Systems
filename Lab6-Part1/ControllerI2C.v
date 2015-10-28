@@ -34,34 +34,27 @@ module ControllerI2C(Clock,ClockI2C,Go,Reset,BaudEnable,ReadOrWrite,Select,Shift
 	always @ (State)
 		case (State)
 		InitialState: begin
-				WriteLoad <= 0;
 				ReadOrWrite <= 0;
-				ShiftOrHold <= 0;
 				Select <= 0;
 				BaudEnable <= 0;
 				StartStopAck <= 1;
 				DelayLoopStart <= 1;
 			end
 		StartState: begin
-				WriteLoad <= 0;
 				BaudEnable <= 0;
 				StartStopAck <= 0;
 				DelayLoopStart <= 0;
 			end
 		LoadState: begin
 				DelayLoopStart <= 1;
-				//WriteLoad <= 1;
 				BaudEnable <= 1;
 			end
 		SendState: begin
 				BaudEnable <= 1;
-				//WriteLoad <= 0;
-				//ShiftOrHold <= 1;
 				Select <= 1;
 			end
 		AckState: begin
 				ReadOrWrite <= 1;
-				ShiftOrHold <= 0;
 				Select <= 0;
 			end
 		DelayState: begin
@@ -73,11 +66,11 @@ module ControllerI2C(Clock,ClockI2C,Go,Reset,BaudEnable,ReadOrWrite,Select,Shift
 			end
 		endcase
 		
-	always @ (State or Go or ClockI2C or posedge Timeout or DataCounter)
+	always @ (State or Go or ClockI2C or Timeout or DataCounter)
 		case (State)
 		//InitialState: NextState <= (ClockI2C == 0 ? InitialState : (Go ? StartState : InitialState));
 		InitialState: NextState <= Go == 0 ? InitialState : (ClockI2C == 0 ? InitialState : StartState);
-		StartState: NextState <= Timeout == 0 ? StartState : LoadState;
+		StartState: NextState <= Timeout == 0 ? NextState : LoadState;
 		LoadState: NextState <= DataCounter <= 4'd8 ? SendState : LoadState;
 		SendState: NextState <= ClockI2C == 0 ? SendState : (DataCounter == 0 ? AckState : SendState);
 		//AckState: NextState <= ClockI2C == 1 ? DelayState : AckState;
@@ -86,14 +79,22 @@ module ControllerI2C(Clock,ClockI2C,Go,Reset,BaudEnable,ReadOrWrite,Select,Shift
 		StopState: NextState <= ClockI2C == 0 ? StopState : InitialState;
 		endcase
 		
-	always @ (negedge OneShotI2C)
-		case (State)
+	
+	//always @ (OneShotI2C)
+	//	case (State)
+	//	SendState: ShiftOrHold <= 1;
+	//	LoadState: WriteLoad <= 1;
+	//	endcase
+		
+	//always @ (posedge ClockI2C)
+	//	begin ShiftOrHold <= 0; WriteLoad <= 0; end
+
+	always @ (OneShotI2C)
+		if (OneShotI2C == 1) begin ShiftOrHold <= 0; WriteLoad <= 0; end
+		else case (State)
 		SendState: ShiftOrHold <= 1;
 		LoadState: WriteLoad <= 1;
 		endcase
-		
-	always @ (posedge ClockI2C)
-		begin ShiftOrHold <= 0; WriteLoad <= 0; end
 		
 	always @ (posedge Clock or posedge Reset)
 		if (Reset == 1) begin DataCounter <= 4'd9; end
