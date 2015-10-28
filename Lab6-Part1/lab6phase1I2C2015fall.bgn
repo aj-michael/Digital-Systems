@@ -6,7 +6,7 @@ Loading device for application Rf_Device from file '6slx16.nph' in environment
 csg324, speed -3
 Opened constraints file lab6phase1I2C2015fall.pcf.
 
-Wed Oct 28 18:08:20 2015
+Wed Oct 28 18:44:19 2015
 
 /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/bitgen -intstyle ise -w -g DebugBitstream:No -g Binary:no -g CRC:Enable -g Reset_on_err:No -g ConfigRate:2 -g ProgPin:PullUp -g TckPin:PullUp -g TdiPin:PullUp -g TdoPin:PullUp -g TmsPin:PullUp -g UnusedPin:PullDown -g UserID:0xFFFFFFFF -g ExtMasterCclk_en:No -g SPI_buswidth:1 -g TIMER_CFG:0xFFFF -g multipin_wakeup:No -g StartUpClk:CClk -g DONE_cycle:4 -g GTS_cycle:5 -g GWE_cycle:6 -g LCK_cycle:NoWait -g Security:None -g DonePipe:Yes -g DriveDone:No -g en_sw_gsr:No -g drive_awake:No -g sw_clk:Startupclk -g sw_gwe_cycle:5 -g sw_gts_cycle:4 lab6phase1I2C2015fall.ncd 
 
@@ -130,28 +130,28 @@ There were 0 CONFIG constraint(s) processed from lab6phase1I2C2015fall.pcf.
 
 Running DRC.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   ControlUnit/State[2]_GND_10_o_Mux_28_o is sourced by a combinatorial pin.
+   ControlUnit/State[2]_GND_10_o_Mux_31_o is sourced by a combinatorial pin.
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net ControlUnit/Mram__n0133 is
+WARNING:PhysDesignRules:372 - Gated clock. Clock net ControlUnit/Mram__n0145 is
    sourced by a combinatorial pin. This is not good design practice. Use the CE
    pin to control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net ControlUnit/Mram__n01232 is
+WARNING:PhysDesignRules:372 - Gated clock. Clock net ControlUnit/Mram__n01342 is
    sourced by a combinatorial pin. This is not good design practice. Use the CE
    pin to control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net ControlUnit/Mram__n01231 is
+WARNING:PhysDesignRules:372 - Gated clock. Clock net ControlUnit/Mram__n0134 is
+   sourced by a combinatorial pin. This is not good design practice. Use the CE
+   pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net ControlUnit/Mram__n01343 is
+   sourced by a combinatorial pin. This is not good design practice. Use the CE
+   pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net ControlUnit/Mram__n01341 is
    sourced by a combinatorial pin. This is not good design practice. Use the CE
    pin to control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net ControlUnit/ShiftOrHold_G
    is sourced by a combinatorial pin. This is not good design practice. Use the
    CE pin to control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net ControlUnit/Mram__n0123 is
-   sourced by a combinatorial pin. This is not good design practice. Use the CE
-   pin to control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net ControlUnit/WriteLoad_G is
-   sourced by a combinatorial pin. This is not good design practice. Use the CE
-   pin to control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net ControlUnit/Mram__n01233 is
    sourced by a combinatorial pin. This is not good design practice. Use the CE
    pin to control the loading of data into the flip-flop.
 INFO:PhysDesignRules:1861 - To achieve optimal frequency synthesis performance

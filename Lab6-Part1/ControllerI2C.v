@@ -80,11 +80,11 @@ module ControllerI2C(Clock,ClockI2C,Go,Reset,BaudEnable,ReadOrWrite,Select,Shift
 		InitialState: NextState <= Go == 0 ? InitialState : (ClockI2C == 0 ? InitialState : StartState);
 		StartState: NextState <= Timeout == 0 ? StartState : LoadState;
 		LoadState: NextState <= DataCounter <= 4'd8 ? SendState : LoadState;
-		//SendState: NextState <= ClockI2C == 0 ? NextState : (DataCounter == 0 ? AckState : SendState);
 		SendState: NextState <= OneShotI2C == 1 ? NextState : (DataCounter == 0 ? AckState : SendState);
-		AckState: NextState <= OneShotI2C == 1 ? NextState : (DataCounter == 15 ? DelayState : AckState);
-		DelayState: NextState <= Timeout == 0 ? DelayState : DelayState;
-		//StopState: NextState <= ClockI2C == 0 ? StopState : InitialState;
+		AckState: NextState <= OneShotI2C == 0 ? NextState : (DataCounter == 15 ? DelayState : AckState);
+		//AckState: NextState <= ClockI2C == 1 ? DelayState : AckState;
+		DelayState: NextState <= Timeout == 0 ? StopState : DelayState;
+		StopState: NextState <= ClockI2C == 0 ? StopState : InitialState;
 		endcase
 
 	always @ (OneShotI2C)
