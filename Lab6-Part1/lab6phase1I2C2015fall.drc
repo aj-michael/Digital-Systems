@@ -1,27 +1,27 @@
 Release 14.7 Drc P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Wed Oct 28 16:18:35 2015
+Wed Oct 28 17:23:32 2015
 
 drc -z lab6phase1I2C2015fall.ncd lab6phase1I2C2015fall.pcf
 
-WARNING:PhysDesignRules:372 - Gated clock. Clock net ControlUnit/Mram__n01282 is
+WARNING:PhysDesignRules:372 - Gated clock. Clock net ControlUnit/Mram__n01181 is
    sourced by a combinatorial pin. This is not good design practice. Use the CE
    pin to control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net ControlUnit/Mram__n01283 is
+WARNING:PhysDesignRules:372 - Gated clock. Clock net ControlUnit/Mram__n0127 is
+   sourced by a combinatorial pin. This is not good design practice. Use the CE
+   pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net ControlUnit/Mram__n01183 is
    sourced by a combinatorial pin. This is not good design practice. Use the CE
    pin to control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   ControlUnit/State[2]_GND_10_o_Mux_29_o is sourced by a combinatorial pin.
+   ControlUnit/State[2]_GND_10_o_Mux_26_o is sourced by a combinatorial pin.
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net ControlUnit/Mram__n01284 is
+WARNING:PhysDesignRules:372 - Gated clock. Clock net ControlUnit/Mram__n0118 is
    sourced by a combinatorial pin. This is not good design practice. Use the CE
    pin to control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net ControlUnit/Mram__n01281 is
-   sourced by a combinatorial pin. This is not good design practice. Use the CE
-   pin to control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net ControlUnit/Mram__n0128 is
+WARNING:PhysDesignRules:372 - Gated clock. Clock net ControlUnit/Mram__n01182 is
    sourced by a combinatorial pin. This is not good design practice. Use the CE
    pin to control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net ControlUnit/ShiftOrHold_G

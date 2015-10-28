@@ -21,16 +21,12 @@ module lab6phase1I2C2015fall(Clock,Go,Reset,ClockLocked,SCL,SDA);
 
 	parameter BaudRate = 20'd40000;
 	parameter ClockFrequency = 30'd65000000;
-	parameter FirstByte = 8'b11010011;
+	parameter FirstByte = 8'b10101101;
 	
 	// Unconnected outputs
 	wire [7:0] DataUnitReceivedData;
-	
-	//BaudRateGeneratorI2C BaudUnit(ControllerBaudEnable,SCL,Reset,ClockOut,BaudRate,ClockFrequency);
-	//module BaudRateGeneratorI2C(Enable, ClockI2C, Reset, clock, BaudRate, ClockFrequency);
 
-	
 	ControllerI2C ControlUnit(ClockOut,SCL,Go,Reset,ControllerBaudEnable,ControllerReadOrWrite,ControllerSelect,ControllerShiftOrHold,ControllerStartStopAck,ControllerWriteLoad);
 	MasterDataUnitI2C DataUnit(BaudRate,ClockFrequency,FirstByte,ControllerBaudEnable,ClockOut,ControllerReadOrWrite,Reset,ControllerSelect,ControllerShiftOrHold,ControllerStartStopAck,ControllerWriteLoad,DataUnitReceivedData,SCL,SDA);
-	//Clock65MHz SystemClock(Clock,ClockOut,ClockLocked);
+	Clock65MHz SystemClock(Clock,ClockOut,ClockLocked);
 endmodule

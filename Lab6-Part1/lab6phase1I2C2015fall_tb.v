@@ -12,6 +12,7 @@ module lab6phase1I2C2015fall_tb;
 	wire BaudEnable=uut.ControlUnit.BaudEnable;
 	wire StartStopAck=uut.ControlUnit.StartStopAck;
 	wire ShiftOrHold=uut.DataUnit.ShiftOrHold;
+	wire ShiftDataOut=uut.DataUnit.ShiftDataOut;
 	
 	wire SDA;
 

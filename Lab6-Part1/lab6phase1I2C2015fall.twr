@@ -37,7 +37,7 @@ Setup/Hold to clock Clock
             |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
 Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------+------------+------------------+--------+
-Reset       |    5.649(R)|      SLOW  |   -1.722(R)|      FAST  |ClockOut          |   0.000|
+Reset       |    5.200(R)|      SLOW  |   -1.766(R)|      FAST  |ClockOut          |   0.000|
 ------------+------------+------------+------------+------------+------------------+--------+
 
 Clock Clock to Pad
@@ -45,8 +45,8 @@ Clock Clock to Pad
             |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
 Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
 ------------+-----------------+------------+-----------------+------------+------------------+--------+
-SCL         |         6.664(R)|      SLOW  |         4.068(R)|      FAST  |ClockOut          |   0.000|
-SDA         |         6.969(R)|      SLOW  |         4.190(R)|      FAST  |ClockOut          |   0.000|
+SCL         |         6.187(R)|      SLOW  |         3.756(R)|      FAST  |ClockOut          |   0.000|
+SDA         |         6.182(R)|      SLOW  |         3.716(R)|      FAST  |ClockOut          |   0.000|
 ------------+-----------------+------------+-----------------+------------+------------------+--------+
 
 Clock to Setup on destination clock Clock
@@ -54,11 +54,11 @@ Clock to Setup on destination clock Clock
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-Clock          |    4.372|         |         |         |
+Clock          |    3.991|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Wed Oct 28 16:18:31 2015 
+Analysis completed Wed Oct 28 17:23:29 2015 
 --------------------------------------------------------------------------------
 
 Trace Settings:

@@ -56,38 +56,33 @@ module ControllerI2C(Clock,ClockI2C,Go,Reset,BaudEnable,ReadOrWrite,Select,Shift
 		AckState: begin
 				ReadOrWrite <= 1;
 				Select <= 0;
+				DelayLoopStart <= 1;
 			end
 		DelayState: begin
-				ReadOrWrite <= 0;
 				BaudEnable <= 0;
+				Select <= 1;
+				ReadOrWrite <= 0;
+				StartStopAck <= 0;
+				DelayLoopStart <= 0;
 			end
 		StopState: begin
+				ReadOrWrite <= 1;
 				StartStopAck <= 1;
+				DelayLoopStart <= 1;
 			end
 		endcase
 		
 	always @ (State or Go or ClockI2C or Timeout or DataCounter)
 		case (State)
-		//InitialState: NextState <= (ClockI2C == 0 ? InitialState : (Go ? StartState : InitialState));
 		InitialState: NextState <= Go == 0 ? InitialState : (ClockI2C == 0 ? InitialState : StartState);
-		StartState: NextState <= Timeout == 0 ? NextState : LoadState;
+		StartState: NextState <= Timeout == 0 ? StartState : LoadState;
 		LoadState: NextState <= DataCounter <= 4'd8 ? SendState : LoadState;
-		SendState: NextState <= ClockI2C == 0 ? SendState : (DataCounter == 0 ? AckState : SendState);
-		//AckState: NextState <= ClockI2C == 1 ? DelayState : AckState;
+		//SendState: NextState <= ClockI2C == 0 ? NextState : (DataCounter == 0 ? AckState : SendState);
+		SendState: NextState <= OneShotI2C == 0 ? NextState : (DataCounter == 0 ? AckState : SendState);
 		AckState: NextState <= OneShotI2C == 0 ? DelayState : AckState;
-		DelayState: NextState <= ClockI2C == 0 ? DelayState : StopState;
-		StopState: NextState <= ClockI2C == 0 ? StopState : InitialState;
+		DelayState: NextState <= Timeout == 0 ? DelayState : DelayState;
+		//StopState: NextState <= ClockI2C == 0 ? StopState : InitialState;
 		endcase
-		
-	
-	//always @ (OneShotI2C)
-	//	case (State)
-	//	SendState: ShiftOrHold <= 1;
-	//	LoadState: WriteLoad <= 1;
-	//	endcase
-		
-	//always @ (posedge ClockI2C)
-	//	begin ShiftOrHold <= 0; WriteLoad <= 0; end
 
 	always @ (OneShotI2C)
 		if (OneShotI2C == 1) begin ShiftOrHold <= 0; WriteLoad <= 0; end
