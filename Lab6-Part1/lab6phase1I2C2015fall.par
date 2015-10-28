@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-2::  Wed Oct 28 17:23:21 2015
+2::  Wed Oct 28 18:08:08 2015
 
 par -w -intstyle ise -ol high -mt off lab6phase1I2C2015fall_map.ncd
 lab6phase1I2C2015fall.ncd lab6phase1I2C2015fall.pcf 
@@ -34,9 +34,9 @@ Slice Logic Utilization:
     Number used as AND/OR logics:                0
   Number of Slice LUTs:                         81 out of   9,112    1%
     Number used as logic:                       80 out of   9,112    1%
-      Number using O6 output only:              38
+      Number using O6 output only:              39
       Number using O5 output only:              15
-      Number using O5 and O6:                   27
+      Number using O5 and O6:                   26
       Number used as ROM:                        0
     Number used as Memory:                       0 out of   2,176    0%
     Number used exclusively as route-thrus:      1
@@ -47,10 +47,10 @@ Slice Logic Utilization:
 Slice Logic Distribution:
   Number of occupied Slices:                    35 out of   2,278    1%
   Number of MUXCYs used:                        40 out of   4,556    1%
-  Number of LUT Flip Flop pairs used:           90
-    Number with an unused Flip Flop:            37 out of      90   41%
-    Number with an unused LUT:                   9 out of      90   10%
-    Number of fully used LUT-FF pairs:          44 out of      90   48%
+  Number of LUT Flip Flop pairs used:           89
+    Number with an unused Flip Flop:            37 out of      89   41%
+    Number with an unused LUT:                   8 out of      89    8%
+    Number of fully used LUT-FF pairs:          44 out of      89   49%
     Number of slice register sites lost
       to control set restrictions:               0 out of  18,224    0%
 
@@ -108,13 +108,13 @@ Finished initial Timing Analysis.  REAL time: 3 secs
 Starting Router
 
 
-Phase  1  : 393 unrouted;      REAL time: 3 secs 
+Phase  1  : 394 unrouted;      REAL time: 3 secs 
 
-Phase  2  : 321 unrouted;      REAL time: 3 secs 
+Phase  2  : 322 unrouted;      REAL time: 3 secs 
 
-Phase  3  : 88 unrouted;      REAL time: 3 secs 
+Phase  3  : 82 unrouted;      REAL time: 3 secs 
 
-Phase  4  : 88 unrouted; (Par is working to improve performance)     REAL time: 3 secs 
+Phase  4  : 82 unrouted; (Par is working to improve performance)     REAL time: 3 secs 
 
 Updating file: lab6phase1I2C2015fall.ncd with current fully routed design.
 
@@ -150,7 +150,7 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net Clo | SETUP       |         N/A|     3.991ns|     N/A|           0
+  Autotimespec constraint for clock net Clo | SETUP       |         N/A|     3.584ns|     N/A|           0
   ckOut                                     | HOLD        |     0.404ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
