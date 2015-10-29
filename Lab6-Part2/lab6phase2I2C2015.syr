@@ -1,0 +1,934 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> 
+Reading design: lab6phase2I2C2015.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "lab6phase2I2C2015.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "lab6phase2I2C2015"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : lab6phase2I2C2015
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/a/workspace/Digital-Systems/Lab6-Part2/ipcore_dir/SystemClockUnit.v" into library work
+Parsing module <SystemClockUnit>.
+Analyzing Verilog file "/home/a/workspace/Digital-Systems/Lab6-Part2/ClockedOneShot.v" into library work
+Parsing module <ClockedPositiveOneShot>.
+Parsing module <ClockedNegativeOneShot>.
+Analyzing Verilog file "/home/a/workspace/Digital-Systems/Lab6-Part2/ShiftRegisterI2C2015fall.v" into library work
+Parsing module <ShiftRegisterI2C2015fall>.
+Analyzing Verilog file "/home/a/workspace/Digital-Systems/Lab6-Part2/SDAmodule.v" into library work
+Parsing module <SDAmodule>.
+Analyzing Verilog file "/home/a/workspace/Digital-Systems/Lab6-Part2/BaudRateGeneratorI2C.v" into library work
+Parsing module <BaudRateGeneratorI2C>.
+Analyzing Verilog file "/home/a/workspace/Digital-Systems/Lab6-Part2/Refreshing7Seg.v" into library work
+Parsing module <Refreshing7Seg>.
+Analyzing Verilog file "/home/a/workspace/Digital-Systems/Lab6-Part2/MasterDataUnitI2C.v" into library work
+Parsing module <MasterDataUnitI2C>.
+Analyzing Verilog file "/home/a/workspace/Digital-Systems/Lab6-Part2/DisplayMux.v" into library work
+Parsing module <DisplayMux>.
+Analyzing Verilog file "/home/a/workspace/Digital-Systems/Lab6-Part2/ControllerReadTempI2C.v" into library work
+Parsing module <ControllerReadTempI2C>.
+Analyzing Verilog file "/home/a/workspace/Digital-Systems/Lab6-Part2/SevenSegDriver.v" into library work
+Parsing module <SevenSegDriver>.
+Analyzing Verilog file "/home/a/workspace/Digital-Systems/Lab6-Part2/ReadTempI2C.v" into library work
+Parsing module <ReadTempI2C>.
+Analyzing Verilog file "/home/a/workspace/Digital-Systems/Lab6-Part2/OneTemperatureConverter.v" into library work
+Parsing module <OneTemperatureConverter>.
+Analyzing Verilog file "/home/a/workspace/Digital-Systems/Lab6-Part2/BCDto7Segment.v" into library work
+Parsing module <BCDto7Segment>.
+Analyzing Verilog file "/home/a/workspace/Digital-Systems/Lab6-Part2/lab6phase2I2C.v" into library work
+Parsing module <lab6phase2I2C2015>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <lab6phase2I2C2015>.
+
+Elaborating module <SystemClockUnit>.
+
+Elaborating module <IBUFG>.
+
+Elaborating module <DCM_SP(CLKDV_DIVIDE=2.0,CLKFX_DIVIDE=20,CLKFX_MULTIPLY=13,CLKIN_DIVIDE_BY_2="FALSE",CLKIN_PERIOD=10.0,CLKOUT_PHASE_SHIFT="NONE",CLK_FEEDBACK="1X",DESKEW_ADJUST="SYSTEM_SYNCHRONOUS",PHASE_SHIFT=0,STARTUP_WAIT="FALSE")>.
+WARNING:HDLCompiler:1127 - "/home/a/workspace/Digital-Systems/Lab6-Part2/ipcore_dir/SystemClockUnit.v" Line 129: Assignment to status_int ignored, since the identifier is never used
+
+Elaborating module <BUFG>.
+
+Elaborating module <ClockedPositiveOneShot>.
+WARNING:HDLCompiler:1127 - "/home/a/workspace/Digital-Systems/Lab6-Part2/lab6phase2I2C.v" Line 32: Assignment to Chip ignored, since the identifier is never used
+
+Elaborating module <ReadTempI2C>.
+
+Elaborating module <ControllerReadTempI2C>.
+
+Elaborating module <ClockedNegativeOneShot>.
+WARNING:HDLCompiler:634 - "/home/a/workspace/Digital-Systems/Lab6-Part2/ControllerReadTempI2C.v" Line 45: Net <clock> does not have a driver.
+
+Elaborating module <MasterDataUnitI2C>.
+
+Elaborating module <BaudRateGeneratorI2C>.
+
+Elaborating module <ShiftRegisterI2C2015fall>.
+
+Elaborating module <SDAmodule>.
+WARNING:HDLCompiler:189 - "/home/a/workspace/Digital-Systems/Lab6-Part2/lab6phase2I2C.v" Line 33: Size mismatch in connection of port <BaudRate>. Formal port size is 20-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:189 - "/home/a/workspace/Digital-Systems/Lab6-Part2/lab6phase2I2C.v" Line 34: Size mismatch in connection of port <ReceivedData>. Formal port size is 8-bit while actual signal size is 20-bit.
+
+Elaborating module <OneTemperatureConverter>.
+WARNING:HDLCompiler:413 - "/home/a/workspace/Digital-Systems/Lab6-Part2/OneTemperatureConverter.v" Line 14: Result of 14-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "/home/a/workspace/Digital-Systems/Lab6-Part2/OneTemperatureConverter.v" Line 17: Result of 8-bit expression is truncated to fit in 4-bit target.
+
+Elaborating module <BCDto7Segment>.
+
+Elaborating module <SevenSegDriver>.
+
+Elaborating module <DisplayMux>.
+
+Elaborating module <Refreshing7Seg>.
+WARNING:Xst:2972 - "/home/a/workspace/Digital-Systems/Lab6-Part2/ControllerReadTempI2C.v" line 45. All outputs of instance <OneShotNegativeUnit> of block <ClockedNegativeOneShot> are unconnected in block <ControllerReadTempI2C>. Underlying logic will be removed.
+WARNING:Xst:2972 - "/home/a/workspace/Digital-Systems/Lab6-Part2/ControllerReadTempI2C.v" line 46. All outputs of instance <OneShotPositiveUnit> of block <ClockedPositiveOneShot> are unconnected in block <ControllerReadTempI2C>. Underlying logic will be removed.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <lab6phase2I2C2015>.
+    Related source file is "/home/a/workspace/Digital-Systems/Lab6-Part2/lab6phase2I2C.v".
+        BaudRate = 8'b........
+        ClockFrequency = 1'b.
+WARNING:Xst:647 - Input <ChipSelect> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "/home/a/workspace/Digital-Systems/Lab6-Part2/lab6phase2I2C.v" line 33: Output port <ReceivedData> of the instance <ReadUnit> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/a/workspace/Digital-Systems/Lab6-Part2/lab6phase2I2C.v" line 33: Output port <Done> of the instance <ReadUnit> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <ReceivedData> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <SCL> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <DONE> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Found 8-bit register for signal <Temperature>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <lab6phase2I2C2015> synthesized.
+
+Synthesizing Unit <SystemClockUnit>.
+    Related source file is "/home/a/workspace/Digital-Systems/Lab6-Part2/ipcore_dir/SystemClockUnit.v".
+    Summary:
+	no macro.
+Unit <SystemClockUnit> synthesized.
+
+Synthesizing Unit <ClockedPositiveOneShot>.
+    Related source file is "/home/a/workspace/Digital-Systems/Lab6-Part2/ClockedOneShot.v".
+        State0 = 0
+        State1 = 1
+        State2 = 2
+        State3 = 3
+    Found 2-bit register for signal <State>.
+    Found finite state machine <FSM_0> for signal <State>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 6                                              |
+    | Inputs             | 1                                              |
+    | Outputs            | 1                                              |
+    | Clock              | CLOCK (rising_edge)                            |
+    | Reset              | Reset (positive)                               |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 00                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred   1 Finite State Machine(s).
+Unit <ClockedPositiveOneShot> synthesized.
+
+Synthesizing Unit <ReadTempI2C>.
+    Related source file is "/home/a/workspace/Digital-Systems/Lab6-Part2/ReadTempI2C.v".
+    Summary:
+	no macro.
+Unit <ReadTempI2C> synthesized.
+
+Synthesizing Unit <ControllerReadTempI2C>.
+    Related source file is "/home/a/workspace/Digital-Systems/Lab6-Part2/ControllerReadTempI2C.v".
+        InitialState = 3'b000
+        LoadState = 3'b001
+        WriteState = 3'b010
+        ReadState = 3'b011
+WARNING:Xst:647 - Input <Clock> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <SDA> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Start> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "/home/a/workspace/Digital-Systems/Lab6-Part2/ControllerReadTempI2C.v" line 45: Output port <OneShot> of the instance <OneShotNegativeUnit> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/a/workspace/Digital-Systems/Lab6-Part2/ControllerReadTempI2C.v" line 46: Output port <OneShot> of the instance <OneShotPositiveUnit> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <BaudEnable> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <Done> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <ReadOrWrite> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <Select> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <ShiftOrHold> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <StartStopAck> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <WriteLoad> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <clock> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Summary:
+	no macro.
+Unit <ControllerReadTempI2C> synthesized.
+
+Synthesizing Unit <ClockedNegativeOneShot>.
+    Related source file is "/home/a/workspace/Digital-Systems/Lab6-Part2/ClockedOneShot.v".
+        State0 = 0
+        State1 = 1
+        State2 = 2
+        State3 = 3
+    Found 2-bit register for signal <State>.
+    Found finite state machine <FSM_1> for signal <State>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 6                                              |
+    | Inputs             | 1                                              |
+    | Outputs            | 1                                              |
+    | Clock              | GND_9_o_GND_9_o_equal_3_o (rising_edge)        |
+    | Reset              | InputPulse (positive)                          |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 00                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred   1 Finite State Machine(s).
+Unit <ClockedNegativeOneShot> synthesized.
+
+Synthesizing Unit <MasterDataUnitI2C>.
+    Related source file is "/home/a/workspace/Digital-Systems/Lab6-Part2/MasterDataUnitI2C.v".
+        LENGTH = 8
+    Summary:
+	no macro.
+Unit <MasterDataUnitI2C> synthesized.
+
+Synthesizing Unit <BaudRateGeneratorI2C>.
+    Related source file is "/home/a/workspace/Digital-Systems/Lab6-Part2/BaudRateGeneratorI2C.v".
+    Found 16-bit register for signal <baud_count>.
+    Found 1-bit register for signal <ClockI2C>.
+    Found 16-bit adder for signal <baud_count[15]_GND_11_o_add_5_OUT> created at line 26.
+    Found 20x2-bit multiplier for signal <BaudRate[19]_PWR_12_o_MuLt_2_OUT> created at line 21.
+    Found 30-bit comparator equal for signal <GND_11_o_GND_11_o_equal_5_o> created at line 21
+    Summary:
+	inferred   1 Multiplier(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred  17 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <BaudRateGeneratorI2C> synthesized.
+
+Synthesizing Unit <div_30u_22u>.
+    Related source file is "".
+    Found 51-bit adder for signal <n2623> created at line 0.
+    Found 51-bit adder for signal <GND_13_o_b[21]_add_3_OUT> created at line 0.
+    Found 50-bit adder for signal <n2627> created at line 0.
+    Found 50-bit adder for signal <GND_13_o_b[21]_add_5_OUT> created at line 0.
+    Found 49-bit adder for signal <n2631> created at line 0.
+    Found 49-bit adder for signal <GND_13_o_b[21]_add_7_OUT> created at line 0.
+    Found 48-bit adder for signal <n2635> created at line 0.
+    Found 48-bit adder for signal <GND_13_o_b[21]_add_9_OUT> created at line 0.
+    Found 47-bit adder for signal <n2639> created at line 0.
+    Found 47-bit adder for signal <GND_13_o_b[21]_add_11_OUT> created at line 0.
+    Found 46-bit adder for signal <n2643> created at line 0.
+    Found 46-bit adder for signal <GND_13_o_b[21]_add_13_OUT> created at line 0.
+    Found 45-bit adder for signal <n2647> created at line 0.
+    Found 45-bit adder for signal <GND_13_o_b[21]_add_15_OUT> created at line 0.
+    Found 44-bit adder for signal <n2651> created at line 0.
+    Found 44-bit adder for signal <GND_13_o_b[21]_add_17_OUT> created at line 0.
+    Found 43-bit adder for signal <n2655> created at line 0.
+    Found 43-bit adder for signal <GND_13_o_b[21]_add_19_OUT> created at line 0.
+    Found 42-bit adder for signal <n2659> created at line 0.
+    Found 42-bit adder for signal <GND_13_o_b[21]_add_21_OUT> created at line 0.
+    Found 41-bit adder for signal <n2663> created at line 0.
+    Found 41-bit adder for signal <GND_13_o_b[21]_add_23_OUT> created at line 0.
+    Found 40-bit adder for signal <n2667> created at line 0.
+    Found 40-bit adder for signal <GND_13_o_b[21]_add_25_OUT> created at line 0.
+    Found 39-bit adder for signal <n2671> created at line 0.
+    Found 39-bit adder for signal <GND_13_o_b[21]_add_27_OUT> created at line 0.
+    Found 38-bit adder for signal <n2675> created at line 0.
+    Found 38-bit adder for signal <GND_13_o_b[21]_add_29_OUT> created at line 0.
+    Found 37-bit adder for signal <n2679> created at line 0.
+    Found 37-bit adder for signal <GND_13_o_b[21]_add_31_OUT> created at line 0.
+    Found 36-bit adder for signal <n2683> created at line 0.
+    Found 36-bit adder for signal <GND_13_o_b[21]_add_33_OUT> created at line 0.
+    Found 35-bit adder for signal <n2687> created at line 0.
+    Found 35-bit adder for signal <GND_13_o_b[21]_add_35_OUT> created at line 0.
+    Found 34-bit adder for signal <n2691> created at line 0.
+    Found 34-bit adder for signal <GND_13_o_b[21]_add_37_OUT> created at line 0.
+    Found 33-bit adder for signal <n2695> created at line 0.
+    Found 33-bit adder for signal <GND_13_o_b[21]_add_39_OUT> created at line 0.
+    Found 32-bit adder for signal <n2699> created at line 0.
+    Found 32-bit adder for signal <GND_13_o_b[21]_add_41_OUT> created at line 0.
+    Found 31-bit adder for signal <n2703> created at line 0.
+    Found 31-bit adder for signal <GND_13_o_b[21]_add_43_OUT> created at line 0.
+    Found 30-bit adder for signal <n2707> created at line 0.
+    Found 30-bit adder for signal <a[29]_b[21]_add_45_OUT> created at line 0.
+    Found 30-bit adder for signal <n2711> created at line 0.
+    Found 30-bit adder for signal <a[29]_GND_13_o_add_47_OUT> created at line 0.
+    Found 30-bit adder for signal <n2715> created at line 0.
+    Found 30-bit adder for signal <a[29]_GND_13_o_add_49_OUT> created at line 0.
+    Found 30-bit adder for signal <n2719> created at line 0.
+    Found 30-bit adder for signal <a[29]_GND_13_o_add_51_OUT> created at line 0.
+    Found 30-bit adder for signal <n2723> created at line 0.
+    Found 30-bit adder for signal <a[29]_GND_13_o_add_53_OUT> created at line 0.
+    Found 30-bit adder for signal <n2727> created at line 0.
+    Found 30-bit adder for signal <a[29]_GND_13_o_add_55_OUT[29:0]> created at line 0.
+    Found 30-bit adder for signal <n2731> created at line 0.
+    Found 30-bit adder for signal <a[29]_GND_13_o_add_57_OUT[29:0]> created at line 0.
+    Found 30-bit adder for signal <n2735> created at line 0.
+    Found 30-bit adder for signal <a[29]_GND_13_o_add_59_OUT[29:0]> created at line 0.
+    Found 52-bit adder for signal <GND_13_o_b[21]_add_1_OUT> created at line 0.
+    Found 52-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 51-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 50-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 49-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 48-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 47-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 46-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 45-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 44-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Found 43-bit comparator lessequal for signal <BUS_0010> created at line 0
+    Found 42-bit comparator lessequal for signal <BUS_0011> created at line 0
+    Found 41-bit comparator lessequal for signal <BUS_0012> created at line 0
+    Found 40-bit comparator lessequal for signal <BUS_0013> created at line 0
+    Found 39-bit comparator lessequal for signal <BUS_0014> created at line 0
+    Found 38-bit comparator lessequal for signal <BUS_0015> created at line 0
+    Found 37-bit comparator lessequal for signal <BUS_0016> created at line 0
+    Found 36-bit comparator lessequal for signal <BUS_0017> created at line 0
+    Found 35-bit comparator lessequal for signal <BUS_0018> created at line 0
+    Found 34-bit comparator lessequal for signal <BUS_0019> created at line 0
+    Found 33-bit comparator lessequal for signal <BUS_0020> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0021> created at line 0
+    Found 31-bit comparator lessequal for signal <BUS_0022> created at line 0
+    Found 30-bit comparator lessequal for signal <BUS_0023> created at line 0
+    Found 30-bit comparator lessequal for signal <BUS_0024> created at line 0
+    Found 30-bit comparator lessequal for signal <BUS_0025> created at line 0
+    Found 30-bit comparator lessequal for signal <BUS_0026> created at line 0
+    Found 30-bit comparator lessequal for signal <BUS_0027> created at line 0
+    Found 30-bit comparator lessequal for signal <BUS_0028> created at line 0
+    Found 30-bit comparator lessequal for signal <BUS_0029> created at line 0
+    Found 30-bit comparator lessequal for signal <BUS_0030> created at line 0
+    Found 30-bit comparator lessequal for signal <BUS_0031> created at line 0
+    Summary:
+	inferred  59 Adder/Subtractor(s).
+	inferred  31 Comparator(s).
+	inferred 813 Multiplexer(s).
+Unit <div_30u_22u> synthesized.
+
+Synthesizing Unit <ShiftRegisterI2C2015fall>.
+    Related source file is "/home/a/workspace/Digital-Systems/Lab6-Part2/ShiftRegisterI2C2015fall.v".
+    Found 8-bit register for signal <ReceivedData>.
+    Found 1-bit register for signal <ShiftOut>.
+    Summary:
+	inferred   9 D-type flip-flop(s).
+Unit <ShiftRegisterI2C2015fall> synthesized.
+
+Synthesizing Unit <SDAmodule>.
+    Related source file is "/home/a/workspace/Digital-Systems/Lab6-Part2/SDAmodule.v".
+    Found 1-bit tristate buffer for signal <SDA> created at line 15
+    Summary:
+	inferred   1 Multiplexer(s).
+	inferred   1 Tristate(s).
+Unit <SDAmodule> synthesized.
+
+Synthesizing Unit <OneTemperatureConverter>.
+    Related source file is "/home/a/workspace/Digital-Systems/Lab6-Part2/OneTemperatureConverter.v".
+    Found 14-bit adder for signal <n0010> created at line 14.
+    Found 8x5-bit multiplier for signal <Temp[7]_PWR_16_o_MuLt_0_OUT> created at line 14.
+    Summary:
+	inferred   1 Multiplier(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <OneTemperatureConverter> synthesized.
+
+Synthesizing Unit <div_13u_4u>.
+    Related source file is "".
+    Found 17-bit adder for signal <GND_20_o_b[3]_add_1_OUT> created at line 0.
+    Found 16-bit adder for signal <GND_20_o_b[3]_add_3_OUT> created at line 0.
+    Found 15-bit adder for signal <GND_20_o_b[3]_add_5_OUT> created at line 0.
+    Found 14-bit adder for signal <GND_20_o_b[3]_add_7_OUT> created at line 0.
+    Found 13-bit adder for signal <a[12]_b[3]_add_9_OUT> created at line 0.
+    Found 13-bit adder for signal <a[12]_GND_20_o_add_11_OUT> created at line 0.
+    Found 13-bit adder for signal <a[12]_GND_20_o_add_13_OUT> created at line 0.
+    Found 13-bit adder for signal <a[12]_GND_20_o_add_15_OUT> created at line 0.
+    Found 13-bit adder for signal <a[12]_GND_20_o_add_17_OUT> created at line 0.
+    Found 13-bit adder for signal <a[12]_GND_20_o_add_19_OUT> created at line 0.
+    Found 13-bit adder for signal <a[12]_GND_20_o_add_21_OUT[12:0]> created at line 0.
+    Found 13-bit adder for signal <a[12]_GND_20_o_add_23_OUT[12:0]> created at line 0.
+    Found 13-bit adder for signal <a[12]_GND_20_o_add_25_OUT[12:0]> created at line 0.
+    Found 17-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 15-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 13-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 13-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 13-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 13-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 13-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Found 13-bit comparator lessequal for signal <BUS_0010> created at line 0
+    Found 13-bit comparator lessequal for signal <BUS_0011> created at line 0
+    Found 13-bit comparator lessequal for signal <BUS_0012> created at line 0
+    Found 13-bit comparator lessequal for signal <BUS_0013> created at line 0
+    Found 13-bit comparator lessequal for signal <BUS_0014> created at line 0
+    Summary:
+	inferred  13 Adder/Subtractor(s).
+	inferred  14 Comparator(s).
+	inferred 133 Multiplexer(s).
+Unit <div_13u_4u> synthesized.
+
+Synthesizing Unit <div_14u_4u>.
+    Related source file is "".
+    Found 18-bit adder for signal <GND_21_o_b[3]_add_1_OUT> created at line 0.
+    Found 17-bit adder for signal <GND_21_o_b[3]_add_3_OUT> created at line 0.
+    Found 16-bit adder for signal <GND_21_o_b[3]_add_5_OUT> created at line 0.
+    Found 15-bit adder for signal <GND_21_o_b[3]_add_7_OUT> created at line 0.
+    Found 14-bit adder for signal <a[13]_b[3]_add_9_OUT> created at line 0.
+    Found 14-bit adder for signal <a[13]_GND_21_o_add_11_OUT> created at line 0.
+    Found 14-bit adder for signal <a[13]_GND_21_o_add_13_OUT> created at line 0.
+    Found 14-bit adder for signal <a[13]_GND_21_o_add_15_OUT> created at line 0.
+    Found 14-bit adder for signal <a[13]_GND_21_o_add_17_OUT> created at line 0.
+    Found 14-bit adder for signal <a[13]_GND_21_o_add_19_OUT> created at line 0.
+    Found 14-bit adder for signal <a[13]_GND_21_o_add_21_OUT> created at line 0.
+    Found 14-bit adder for signal <a[13]_GND_21_o_add_23_OUT[13:0]> created at line 0.
+    Found 14-bit adder for signal <a[13]_GND_21_o_add_25_OUT[13:0]> created at line 0.
+    Found 14-bit adder for signal <a[13]_GND_21_o_add_27_OUT[13:0]> created at line 0.
+    Found 18-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 17-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 15-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0010> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0011> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0012> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0013> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0014> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0015> created at line 0
+    Summary:
+	inferred  14 Adder/Subtractor(s).
+	inferred  15 Comparator(s).
+	inferred 157 Multiplexer(s).
+Unit <div_14u_4u> synthesized.
+
+Synthesizing Unit <mod_14u_4u>.
+    Related source file is "".
+    Found 18-bit adder for signal <GND_22_o_b[3]_add_1_OUT> created at line 0.
+    Found 17-bit adder for signal <GND_22_o_b[3]_add_3_OUT> created at line 0.
+    Found 16-bit adder for signal <GND_22_o_b[3]_add_5_OUT> created at line 0.
+    Found 15-bit adder for signal <GND_22_o_b[3]_add_7_OUT> created at line 0.
+    Found 14-bit adder for signal <a[13]_b[3]_add_9_OUT> created at line 0.
+    Found 14-bit adder for signal <a[13]_GND_22_o_add_11_OUT> created at line 0.
+    Found 14-bit adder for signal <a[13]_GND_22_o_add_13_OUT> created at line 0.
+    Found 14-bit adder for signal <a[13]_GND_22_o_add_15_OUT> created at line 0.
+    Found 14-bit adder for signal <a[13]_GND_22_o_add_17_OUT> created at line 0.
+    Found 14-bit adder for signal <a[13]_GND_22_o_add_19_OUT> created at line 0.
+    Found 14-bit adder for signal <a[13]_GND_22_o_add_21_OUT> created at line 0.
+    Found 14-bit adder for signal <a[13]_GND_22_o_add_23_OUT> created at line 0.
+    Found 14-bit adder for signal <a[13]_GND_22_o_add_25_OUT> created at line 0.
+    Found 14-bit adder for signal <a[13]_GND_22_o_add_27_OUT> created at line 0.
+    Found 14-bit adder for signal <a[13]_GND_22_o_add_29_OUT> created at line 0.
+    Found 18-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 17-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 15-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0010> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0011> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0012> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0013> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0014> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0015> created at line 0
+    Summary:
+	inferred  15 Adder/Subtractor(s).
+	inferred  15 Comparator(s).
+	inferred 197 Multiplexer(s).
+Unit <mod_14u_4u> synthesized.
+
+Synthesizing Unit <div_8u_4u>.
+    Related source file is "".
+    Found 12-bit adder for signal <GND_23_o_b[3]_add_1_OUT> created at line 0.
+    Found 11-bit adder for signal <GND_23_o_b[3]_add_3_OUT> created at line 0.
+    Found 10-bit adder for signal <GND_23_o_b[3]_add_5_OUT> created at line 0.
+    Found 9-bit adder for signal <GND_23_o_b[3]_add_7_OUT> created at line 0.
+    Found 8-bit adder for signal <a[7]_b[3]_add_9_OUT> created at line 0.
+    Found 8-bit adder for signal <a[7]_GND_23_o_add_11_OUT[7:0]> created at line 0.
+    Found 8-bit adder for signal <a[7]_GND_23_o_add_13_OUT[7:0]> created at line 0.
+    Found 8-bit adder for signal <a[7]_GND_23_o_add_15_OUT[7:0]> created at line 0.
+    Found 12-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 11-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 9-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 8-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 8-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 8-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 8-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 8-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Summary:
+	inferred   8 Adder/Subtractor(s).
+	inferred   9 Comparator(s).
+	inferred  43 Multiplexer(s).
+Unit <div_8u_4u> synthesized.
+
+Synthesizing Unit <mod_8u_4u>.
+    Related source file is "".
+    Found 12-bit adder for signal <GND_24_o_b[3]_add_1_OUT> created at line 0.
+    Found 11-bit adder for signal <GND_24_o_b[3]_add_3_OUT> created at line 0.
+    Found 10-bit adder for signal <GND_24_o_b[3]_add_5_OUT> created at line 0.
+    Found 9-bit adder for signal <GND_24_o_b[3]_add_7_OUT> created at line 0.
+    Found 8-bit adder for signal <a[7]_b[3]_add_9_OUT> created at line 0.
+    Found 8-bit adder for signal <a[7]_GND_24_o_add_11_OUT> created at line 0.
+    Found 8-bit adder for signal <a[7]_GND_24_o_add_13_OUT> created at line 0.
+    Found 8-bit adder for signal <a[7]_GND_24_o_add_15_OUT> created at line 0.
+    Found 8-bit adder for signal <a[7]_GND_24_o_add_17_OUT> created at line 0.
+    Found 12-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 11-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 9-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 8-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 8-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 8-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 8-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 8-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Summary:
+	inferred   9 Adder/Subtractor(s).
+	inferred   9 Comparator(s).
+	inferred  65 Multiplexer(s).
+Unit <mod_8u_4u> synthesized.
+
+Synthesizing Unit <BCDto7Segment>.
+    Related source file is "/home/a/workspace/Digital-Systems/Lab6-Part2/BCDto7Segment.v".
+    Found 16x8-bit Read Only RAM for signal <SEGMENTS>
+    Summary:
+	inferred   1 RAM(s).
+Unit <BCDto7Segment> synthesized.
+
+Synthesizing Unit <SevenSegDriver>.
+    Related source file is "/home/a/workspace/Digital-Systems/Lab6-Part2/SevenSegDriver.v".
+    Summary:
+	no macro.
+Unit <SevenSegDriver> synthesized.
+
+Synthesizing Unit <DisplayMux>.
+    Related source file is "/home/a/workspace/Digital-Systems/Lab6-Part2/DisplayMux.v".
+    Found 8-bit register for signal <Digit2>.
+    Found 8-bit register for signal <Digit1>.
+    Found 8-bit register for signal <Digit0>.
+    Found 8-bit register for signal <Digit3>.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+Unit <DisplayMux> synthesized.
+
+Synthesizing Unit <Refreshing7Seg>.
+    Related source file is "/home/a/workspace/Digital-Systems/Lab6-Part2/Refreshing7Seg.v".
+        Bits = 4
+        Divider = 10000
+        NumberOfBits = 22
+    Found 23-bit register for signal <count>.
+    Found 2-bit register for signal <Q>.
+    Found 2-bit adder for signal <Q[1]_GND_28_o_add_3_OUT> created at line 20.
+    Found 23-bit adder for signal <count[22]_GND_28_o_add_11_OUT> created at line 34.
+    Found 4x4-bit Read Only RAM for signal <Transistors>
+    Summary:
+	inferred   1 RAM(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred  25 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <Refreshing7Seg> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 5
+ 16x8-bit single-port Read Only RAM                    : 4
+ 4x4-bit single-port Read Only RAM                     : 1
+# Multipliers                                          : 2
+ 20x2-bit multiplier                                   : 1
+ 8x5-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 122
+ 10-bit adder                                          : 2
+ 11-bit adder                                          : 2
+ 12-bit adder                                          : 2
+ 13-bit adder                                          : 9
+ 14-bit adder                                          : 23
+ 15-bit adder                                          : 3
+ 16-bit adder                                          : 4
+ 17-bit adder                                          : 3
+ 18-bit adder                                          : 2
+ 2-bit adder                                           : 1
+ 23-bit adder                                          : 1
+ 30-bit adder                                          : 16
+ 31-bit adder                                          : 2
+ 32-bit adder                                          : 2
+ 33-bit adder                                          : 2
+ 34-bit adder                                          : 2
+ 35-bit adder                                          : 2
+ 36-bit adder                                          : 2
+ 37-bit adder                                          : 2
+ 38-bit adder                                          : 2
+ 39-bit adder                                          : 2
+ 40-bit adder                                          : 2
+ 41-bit adder                                          : 2
+ 42-bit adder                                          : 2
+ 43-bit adder                                          : 2
+ 44-bit adder                                          : 2
+ 45-bit adder                                          : 2
+ 46-bit adder                                          : 2
+ 47-bit adder                                          : 2
+ 48-bit adder                                          : 2
+ 49-bit adder                                          : 2
+ 50-bit adder                                          : 2
+ 51-bit adder                                          : 2
+ 52-bit adder                                          : 1
+ 8-bit adder                                           : 9
+ 9-bit adder                                           : 2
+# Registers                                            : 11
+ 1-bit register                                        : 2
+ 16-bit register                                       : 1
+ 2-bit register                                        : 1
+ 23-bit register                                       : 1
+ 8-bit register                                        : 6
+# Comparators                                          : 94
+ 10-bit comparator lessequal                           : 2
+ 11-bit comparator lessequal                           : 2
+ 12-bit comparator lessequal                           : 2
+ 13-bit comparator lessequal                           : 10
+ 14-bit comparator lessequal                           : 23
+ 15-bit comparator lessequal                           : 3
+ 16-bit comparator lessequal                           : 3
+ 17-bit comparator lessequal                           : 3
+ 18-bit comparator lessequal                           : 2
+ 30-bit comparator equal                               : 1
+ 30-bit comparator lessequal                           : 9
+ 31-bit comparator lessequal                           : 1
+ 32-bit comparator lessequal                           : 1
+ 33-bit comparator lessequal                           : 1
+ 34-bit comparator lessequal                           : 1
+ 35-bit comparator lessequal                           : 1
+ 36-bit comparator lessequal                           : 1
+ 37-bit comparator lessequal                           : 1
+ 38-bit comparator lessequal                           : 1
+ 39-bit comparator lessequal                           : 1
+ 40-bit comparator lessequal                           : 1
+ 41-bit comparator lessequal                           : 1
+ 42-bit comparator lessequal                           : 1
+ 43-bit comparator lessequal                           : 1
+ 44-bit comparator lessequal                           : 1
+ 45-bit comparator lessequal                           : 1
+ 46-bit comparator lessequal                           : 1
+ 47-bit comparator lessequal                           : 1
+ 48-bit comparator lessequal                           : 1
+ 49-bit comparator lessequal                           : 1
+ 50-bit comparator lessequal                           : 1
+ 51-bit comparator lessequal                           : 1
+ 52-bit comparator lessequal                           : 1
+ 8-bit comparator lessequal                            : 10
+ 9-bit comparator lessequal                            : 2
+# Multiplexers                                         : 1411
+ 1-bit 2-to-1 multiplexer                              : 1395
+ 13-bit 2-to-1 multiplexer                             : 3
+ 14-bit 2-to-1 multiplexer                             : 3
+ 16-bit 2-to-1 multiplexer                             : 1
+ 23-bit 2-to-1 multiplexer                             : 1
+ 30-bit 2-to-1 multiplexer                             : 3
+ 4-bit 2-to-1 multiplexer                              : 2
+ 8-bit 2-to-1 multiplexer                              : 3
+# Tristates                                            : 1
+ 1-bit tristate buffer                                 : 1
+# FSMs                                                 : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1290 - Hierarchical block <OneShotUnit1> is unconnected in block <ShiftUnit>.
+   It will be removed from the design.
+INFO:Xst:2261 - The FF/Latch <ReceivedData_7> in Unit <ShiftUnit> is equivalent to the following FF/Latch, which will be removed : <ShiftOut> 
+WARNING:Xst:1710 - FF/Latch <Temperature_7> (without init value) has a constant value of 0 in block <lab6phase2I2C2015>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Temperature_6> (without init value) has a constant value of 0 in block <lab6phase2I2C2015>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Temperature_5> (without init value) has a constant value of 0 in block <lab6phase2I2C2015>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Temperature_4> (without init value) has a constant value of 0 in block <lab6phase2I2C2015>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Temperature_3> (without init value) has a constant value of 0 in block <lab6phase2I2C2015>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Temperature_2> (without init value) has a constant value of 0 in block <lab6phase2I2C2015>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Temperature_1> (without init value) has a constant value of 0 in block <lab6phase2I2C2015>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Temperature_0> (without init value) has a constant value of 0 in block <lab6phase2I2C2015>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ReceivedData_0> (without init value) has a constant value of 0 in block <ShiftUnit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <baud_count_15> (without init value) has a constant value of 0 in block <BaudUnit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <baud_count_14> (without init value) has a constant value of 0 in block <BaudUnit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <baud_count_13> (without init value) has a constant value of 0 in block <BaudUnit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <baud_count_12> (without init value) has a constant value of 0 in block <BaudUnit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ClockI2C> (without init value) has a constant value of 1 in block <BaudUnit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <baud_count_0> (without init value) has a constant value of 0 in block <BaudUnit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <baud_count_1> (without init value) has a constant value of 0 in block <BaudUnit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <baud_count_2> (without init value) has a constant value of 0 in block <BaudUnit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <baud_count_3> (without init value) has a constant value of 0 in block <BaudUnit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <baud_count_4> (without init value) has a constant value of 0 in block <BaudUnit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <baud_count_5> (without init value) has a constant value of 0 in block <BaudUnit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <baud_count_6> (without init value) has a constant value of 0 in block <BaudUnit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <baud_count_7> (without init value) has a constant value of 0 in block <BaudUnit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <baud_count_8> (without init value) has a constant value of 0 in block <BaudUnit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <baud_count_9> (without init value) has a constant value of 0 in block <BaudUnit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <baud_count_10> (without init value) has a constant value of 0 in block <BaudUnit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <baud_count_11> (without init value) has a constant value of 0 in block <BaudUnit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ReceivedData_1> (without init value) has a constant value of 0 in block <ShiftUnit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ReceivedData_2> (without init value) has a constant value of 0 in block <ShiftUnit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ReceivedData_3> (without init value) has a constant value of 0 in block <ShiftUnit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ReceivedData_4> (without init value) has a constant value of 0 in block <ShiftUnit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ReceivedData_5> (without init value) has a constant value of 0 in block <ShiftUnit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ReceivedData_6> (without init value) has a constant value of 0 in block <ShiftUnit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ReceivedData_7> (without init value) has a constant value of 0 in block <ShiftUnit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1290 - Hierarchical block <StartOneShot> is unconnected in block <lab6phase2I2C2015>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <ClockFrequency[29]_BaudRate[19]_div_3> is unconnected in block <BaudUnit>.
+   It will be removed from the design.
+
+Synthesizing (advanced) Unit <BCDto7Segment>.
+INFO:Xst:3231 - The small RAM <Mram_SEGMENTS> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <BCDnumber>     |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <SEGMENTS>      |          |
+    -----------------------------------------------------------------------
+Unit <BCDto7Segment> synthesized (advanced).
+
+Synthesizing (advanced) Unit <BaudRateGeneratorI2C>.
+The following registers are absorbed into counter <baud_count>: 1 register on signal <baud_count>.
+Unit <BaudRateGeneratorI2C> synthesized (advanced).
+
+Synthesizing (advanced) Unit <Refreshing7Seg>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+The following registers are absorbed into counter <Q>: 1 register on signal <Q>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_Transistors> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 4-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <Q>             |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <Transistors>   |          |
+    -----------------------------------------------------------------------
+Unit <Refreshing7Seg> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 5
+ 16x8-bit single-port distributed Read Only RAM        : 4
+ 4x4-bit single-port distributed Read Only RAM         : 1
+# Multipliers                                          : 2
+ 20x2-bit multiplier                                   : 1
+ 8x5-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 90
+ 13-bit adder                                          : 13
+ 14-bit adder                                          : 29
+ 30-bit adder                                          : 1
+ 30-bit adder carry in                                 : 29
+ 4-bit adder                                           : 2
+ 8-bit adder                                           : 16
+# Counters                                             : 3
+ 16-bit up counter                                     : 1
+ 2-bit up counter                                      : 1
+ 23-bit up counter                                     : 1
+# Registers                                            : 50
+ Flip-Flops                                            : 50
+# Comparators                                          : 94
+ 10-bit comparator lessequal                           : 2
+ 11-bit comparator lessequal                           : 2
+ 12-bit comparator lessequal                           : 2
+ 13-bit comparator lessequal                           : 10
+ 14-bit comparator lessequal                           : 23
+ 15-bit comparator lessequal                           : 3
+ 16-bit comparator lessequal                           : 3
+ 17-bit comparator lessequal                           : 3
+ 18-bit comparator lessequal                           : 2
+ 30-bit comparator equal                               : 1
+ 30-bit comparator lessequal                           : 9
+ 31-bit comparator lessequal                           : 1
+ 32-bit comparator lessequal                           : 1
+ 33-bit comparator lessequal                           : 1
+ 34-bit comparator lessequal                           : 1
+ 35-bit comparator lessequal                           : 1
+ 36-bit comparator lessequal                           : 1
+ 37-bit comparator lessequal                           : 1
+ 38-bit comparator lessequal                           : 1
+ 39-bit comparator lessequal                           : 1
+ 40-bit comparator lessequal                           : 1
+ 41-bit comparator lessequal                           : 1
+ 42-bit comparator lessequal                           : 1
+ 43-bit comparator lessequal                           : 1
+ 44-bit comparator lessequal                           : 1
+ 45-bit comparator lessequal                           : 1
+ 46-bit comparator lessequal                           : 1
+ 47-bit comparator lessequal                           : 1
+ 48-bit comparator lessequal                           : 1
+ 49-bit comparator lessequal                           : 1
+ 50-bit comparator lessequal                           : 1
+ 51-bit comparator lessequal                           : 1
+ 52-bit comparator lessequal                           : 1
+ 8-bit comparator lessequal                            : 10
+ 9-bit comparator lessequal                            : 2
+# Multiplexers                                         : 1408
+ 1-bit 2-to-1 multiplexer                              : 1394
+ 13-bit 2-to-1 multiplexer                             : 3
+ 14-bit 2-to-1 multiplexer                             : 3
+ 30-bit 2-to-1 multiplexer                             : 3
+ 4-bit 2-to-1 multiplexer                              : 2
+ 8-bit 2-to-1 multiplexer                              : 3
+# FSMs                                                 : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <ClockI2C> (without init value) has a constant value of 1 in block <BaudRateGeneratorI2C>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2973 - All outputs of instance <ClockFrequency[29]_BaudRate[19]_div_3> of block <div_30u_22u> are unconnected in block <BaudRateGeneratorI2C>. Underlying logic will be removed.
+WARNING:Xst:1710 - FF/Latch <ReceivedData_0> (without init value) has a constant value of 0 in block <ShiftRegisterI2C2015fall>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ReceivedData_1> (without init value) has a constant value of 0 in block <ShiftRegisterI2C2015fall>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ReceivedData_2> (without init value) has a constant value of 0 in block <ShiftRegisterI2C2015fall>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ReceivedData_3> (without init value) has a constant value of 0 in block <ShiftRegisterI2C2015fall>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ReceivedData_4> (without init value) has a constant value of 0 in block <ShiftRegisterI2C2015fall>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ReceivedData_5> (without init value) has a constant value of 0 in block <ShiftRegisterI2C2015fall>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ReceivedData_6> (without init value) has a constant value of 0 in block <ShiftRegisterI2C2015fall>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ReceivedData_7> (without init value) has a constant value of 0 in block <ShiftRegisterI2C2015fall>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ShiftOut> (without init value) has a constant value of 0 in block <ShiftRegisterI2C2015fall>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Temperature_0> (without init value) has a constant value of 0 in block <lab6phase2I2C2015>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Temperature_1> (without init value) has a constant value of 0 in block <lab6phase2I2C2015>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Temperature_2> (without init value) has a constant value of 0 in block <lab6phase2I2C2015>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Temperature_3> (without init value) has a constant value of 0 in block <lab6phase2I2C2015>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Temperature_4> (without init value) has a constant value of 0 in block <lab6phase2I2C2015>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Temperature_5> (without init value) has a constant value of 0 in block <lab6phase2I2C2015>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Temperature_6> (without init value) has a constant value of 0 in block <lab6phase2I2C2015>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Temperature_7> (without init value) has a constant value of 0 in block <lab6phase2I2C2015>. This FF/Latch will be trimmed during the optimization process.
+
+ERROR:Xst:528 - Multi-source in Unit <lab6phase2I2C2015> on signal <Reset>; this signal is connected to multiple drivers.
+Drivers are: 
+   Primary input port <Reset>
+   Signal <ReadUnit/DataUnit/BaudUnit/ClockFrequency<23>> in Unit <BaudRateGeneratorI2C> is assigned to VCC
+
+
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 6.34 secs
+ 
+--> 
+
+
+Total memory usage is 412484 kilobytes
+
+Number of errors   :    1 (   0 filtered)
+Number of warnings :   79 (   0 filtered)
+Number of infos    :    7 (   0 filtered)
+
