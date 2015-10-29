@@ -142,15 +142,15 @@ Elaborating module <ControllerI2C>.
 Elaborating module <NegClockedOneShot>.
 
 Elaborating module <PosClockedOneShot>.
+WARNING:HDLCompiler:1127 - "/home/a/workspace/Digital-Systems/Lab6-Part1/ControllerI2C.v" Line 32: Assignment to RisingOneShotI2C ignored, since the identifier is never used
 
 Elaborating module <DelayLoop>.
 WARNING:HDLCompiler:91 - "/home/a/workspace/Digital-Systems/Lab6-Part1/ControllerI2C.v" Line 55: Signal <DataCounter> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 WARNING:HDLCompiler:91 - "/home/a/workspace/Digital-Systems/Lab6-Part1/ControllerI2C.v" Line 85: Signal <OneShotI2C> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/a/workspace/Digital-Systems/Lab6-Part1/ControllerI2C.v" Line 87: Signal <RisingOneShotI2C> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/a/workspace/Digital-Systems/Lab6-Part1/ControllerI2C.v" Line 95: Signal <State> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:413 - "/home/a/workspace/Digital-Systems/Lab6-Part1/ControllerI2C.v" Line 104: Result of 32-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:91 - "/home/a/workspace/Digital-Systems/Lab6-Part1/ControllerI2C.v" Line 96: Signal <State> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 WARNING:HDLCompiler:413 - "/home/a/workspace/Digital-Systems/Lab6-Part1/ControllerI2C.v" Line 105: Result of 32-bit expression is truncated to fit in 4-bit target.
 WARNING:HDLCompiler:413 - "/home/a/workspace/Digital-Systems/Lab6-Part1/ControllerI2C.v" Line 106: Result of 32-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "/home/a/workspace/Digital-Systems/Lab6-Part1/ControllerI2C.v" Line 107: Result of 32-bit expression is truncated to fit in 4-bit target.
 
 Elaborating module <MasterDataUnitI2C>.
 
@@ -169,6 +169,7 @@ Elaborating module <DCM_SP(CLKDV_DIVIDE=2.0,CLKFX_DIVIDE=20,CLKFX_MULTIPLY=13,CL
 WARNING:HDLCompiler:1127 - "/home/a/workspace/Digital-Systems/Lab6-Part1/ipcore_dir/Clock65MHz.v" Line 129: Assignment to status_int ignored, since the identifier is never used
 
 Elaborating module <BUFG>.
+WARNING:Xst:2972 - "/home/a/workspace/Digital-Systems/Lab6-Part1/ControllerI2C.v" line 32. All outputs of instance <RisingOneShotUnit> of block <PosClockedOneShot> are unconnected in block <ControllerI2C>. Underlying logic will be removed.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -193,12 +194,12 @@ Synthesizing Unit <ControllerI2C>.
         AckState = 3'b100
         DelayState = 3'b101
         StopState = 3'b110
+INFO:Xst:3210 - "/home/a/workspace/Digital-Systems/Lab6-Part1/ControllerI2C.v" line 32: Output port <OneShot> of the instance <RisingOneShotUnit> is unconnected or connected to loadless signal.
     Found 3-bit register for signal <State>.
     Found 4-bit register for signal <DataCounter>.
-    Found 5-bit subtractor for signal <GND_2_o_GND_2_o_sub_39_OUT> created at line 104.
-    Found 8x5-bit Read Only RAM for signal <_n0127>
-    Found 4x2-bit Read Only RAM for signal <_n0138>
-    Found 1-bit 7-to-1 multiplexer for signal <State[2]_NextState[2]_wide_mux_28_OUT<0>> created at line 80.
+    Found 5-bit subtractor for signal <GND_2_o_GND_2_o_sub_37_OUT> created at line 105.
+    Found 8x6-bit Read Only RAM for signal <_n0126>
+    Found 1-bit 7-to-1 multiplexer for signal <State[2]_NextState[2]_wide_mux_26_OUT<0>> created at line 80.
 WARNING:Xst:737 - Found 1-bit latch for signal <ReadOrWrite>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <Select>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <StartStopAck>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
@@ -211,12 +212,12 @@ WARNING:Xst:737 - Found 1-bit latch for signal <ShiftOrHold>. Latches may be gen
 WARNING:Xst:737 - Found 1-bit latch for signal <WriteLoad>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
     Found 4-bit comparator lessequal for signal <n0022> created at line 84
     Summary:
-	inferred   2 RAM(s).
+	inferred   1 RAM(s).
 	inferred   1 Adder/Subtractor(s).
 	inferred   7 D-type flip-flop(s).
 	inferred  10 Latch(s).
 	inferred   1 Comparator(s).
-	inferred  27 Multiplexer(s).
+	inferred  31 Multiplexer(s).
 Unit <ControllerI2C> synthesized.
 
 Synthesizing Unit <NegClockedOneShot>.
@@ -242,30 +243,6 @@ Synthesizing Unit <NegClockedOneShot>.
     Summary:
 	inferred   1 Finite State Machine(s).
 Unit <NegClockedOneShot> synthesized.
-
-Synthesizing Unit <PosClockedOneShot>.
-    Related source file is "/home/a/workspace/Digital-Systems/Lab6-Part1/ClockedOneShot.v".
-        State0 = 0
-        State1 = 1
-        State2 = 2
-        State3 = 3
-    Found 2-bit register for signal <State>.
-    Found finite state machine <FSM_1> for signal <State>.
-    -----------------------------------------------------------------------
-    | States             | 3                                              |
-    | Transitions        | 6                                              |
-    | Inputs             | 1                                              |
-    | Outputs            | 1                                              |
-    | Clock              | CLOCK (rising_edge)                            |
-    | Reset              | Reset (positive)                               |
-    | Reset type         | synchronous                                    |
-    | Reset State        | 00                                             |
-    | Encoding           | auto                                           |
-    | Implementation     | LUT                                            |
-    -----------------------------------------------------------------------
-    Summary:
-	inferred   1 Finite State Machine(s).
-Unit <PosClockedOneShot> synthesized.
 
 Synthesizing Unit <DelayLoop>.
     Related source file is "/home/a/workspace/Digital-Systems/Lab4-Part2-RAMwithHyperTerminalDisplay/DelayLoop.v".
@@ -428,9 +405,8 @@ Unit <Clock65MHz> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# RAMs                                                 : 2
- 4x2-bit single-port Read Only RAM                     : 1
- 8x5-bit single-port Read Only RAM                     : 1
+# RAMs                                                 : 1
+ 8x6-bit single-port Read Only RAM                     : 1
 # Multipliers                                          : 1
  20x2-bit multiplier                                   : 1
 # Adders/Subtractors                                   : 62
@@ -496,18 +472,19 @@ Macro Statistics
  50-bit comparator lessequal                           : 1
  51-bit comparator lessequal                           : 1
  52-bit comparator lessequal                           : 1
-# Multiplexers                                         : 846
- 1-bit 2-to-1 multiplexer                              : 836
+# Multiplexers                                         : 850
+ 1-bit 2-to-1 multiplexer                              : 839
  1-bit 7-to-1 multiplexer                              : 1
  16-bit 2-to-1 multiplexer                             : 2
  21-bit 2-to-1 multiplexer                             : 1
+ 3-bit 2-to-1 multiplexer                              : 1
  30-bit 2-to-1 multiplexer                             : 3
  32-bit 2-to-1 multiplexer                             : 1
  4-bit 2-to-1 multiplexer                              : 1
  8-bit 2-to-1 multiplexer                              : 1
 # Tristates                                            : 1
  1-bit tristate buffer                                 : 1
-# FSMs                                                 : 3
+# FSMs                                                 : 2
 
 =========================================================================
 
@@ -518,25 +495,14 @@ Macro Statistics
 WARNING:Xst:2677 - Node <ReceivedData_7> of sequential type is unconnected in block <ShiftUnit>.
 
 Synthesizing (advanced) Unit <ControllerI2C>.
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0127> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0126> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
     | Port A                                                              |
-    |     aspect ratio   | 8-word x 5-bit                      |          |
+    |     aspect ratio   | 8-word x 6-bit                      |          |
     |     weA            | connected to signal <GND>           | high     |
     |     addrA          | connected to signal <State>         |          |
-    |     diA            | connected to signal <GND>           |          |
-    |     doA            | connected to internal node          |          |
-    -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0138> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
-    -----------------------------------------------------------------------
-    | ram_type           | Distributed                         |          |
-    -----------------------------------------------------------------------
-    | Port A                                                              |
-    |     aspect ratio   | 4-word x 2-bit                      |          |
-    |     weA            | connected to signal <GND>           | high     |
-    |     addrA          | connected to signal <State<1:0>>    |          |
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
@@ -550,9 +516,8 @@ Unit <DelayLoop> synthesized (advanced).
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# RAMs                                                 : 2
- 4x2-bit single-port distributed Read Only RAM         : 1
- 8x5-bit single-port distributed Read Only RAM         : 1
+# RAMs                                                 : 1
+ 8x6-bit single-port distributed Read Only RAM         : 1
 # Multipliers                                          : 1
  17x2-bit multiplier                                   : 1
 # Adders/Subtractors                                   : 32
@@ -591,15 +556,16 @@ Macro Statistics
  50-bit comparator lessequal                           : 1
  51-bit comparator lessequal                           : 1
  52-bit comparator lessequal                           : 1
-# Multiplexers                                         : 844
- 1-bit 2-to-1 multiplexer                              : 835
+# Multiplexers                                         : 848
+ 1-bit 2-to-1 multiplexer                              : 838
  1-bit 7-to-1 multiplexer                              : 1
  16-bit 2-to-1 multiplexer                             : 2
+ 3-bit 2-to-1 multiplexer                              : 1
  30-bit 2-to-1 multiplexer                             : 3
  32-bit 2-to-1 multiplexer                             : 1
  4-bit 2-to-1 multiplexer                              : 1
  8-bit 2-to-1 multiplexer                              : 1
-# FSMs                                                 : 3
+# FSMs                                                 : 2
 
 =========================================================================
 
@@ -608,15 +574,6 @@ Macro Statistics
 =========================================================================
 Analyzing FSM <MFsm> for best encoding.
 Optimizing FSM <ControlUnit/FSM_0> on signal <State[1:3]> with one-hot encoding.
--------------------
- State | Encoding
--------------------
- 00    | 001
- 01    | 010
- 11    | 100
--------------------
-Analyzing FSM <MFsm> for best encoding.
-Optimizing FSM <ControlUnit/FSM_1> on signal <State[1:3]> with one-hot encoding.
 -------------------
  State | Encoding
 -------------------
@@ -694,8 +651,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 48
- Flip-Flops                                            : 48
+# Registers                                            : 46
+ Flip-Flops                                            : 46
 
 =========================================================================
 
@@ -718,25 +675,25 @@ Top Level Output File Name         : lab6phase1I2C2015fall.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 160
+# BELS                             : 162
 #      GND                         : 1
-#      INV                         : 4
+#      INV                         : 2
 #      LUT1                        : 15
 #      LUT2                        : 12
-#      LUT3                        : 30
-#      LUT4                        : 9
-#      LUT5                        : 6
-#      LUT6                        : 19
+#      LUT3                        : 31
+#      LUT4                        : 8
+#      LUT5                        : 10
+#      LUT6                        : 18
 #      MUXCY                       : 35
+#      MUXF7                       : 1
 #      VCC                         : 1
 #      XORCY                       : 28
-# FlipFlops/Latches                : 59
-#      FD                          : 2
+# FlipFlops/Latches                : 57
 #      FDC                         : 21
 #      FDP                         : 3
-#      FDR                         : 13
+#      FDR                         : 14
 #      FDRE                        : 7
-#      FDS                         : 2
+#      FDS                         : 1
 #      LD                          : 11
 # Clock Buffers                    : 2
 #      BUFG                        : 2
@@ -755,15 +712,15 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              58  out of  18224     0%  
- Number of Slice LUTs:                   95  out of   9112     1%  
-    Number used as Logic:                95  out of   9112     1%  
+ Number of Slice Registers:              56  out of  18224     0%  
+ Number of Slice LUTs:                   96  out of   9112     1%  
+    Number used as Logic:                96  out of   9112     1%  
 
 Slice Logic Distribution: 
  Number of LUT Flip Flop pairs used:     98
-   Number with an unused Flip Flop:      40  out of     98    40%  
-   Number with an unused LUT:             3  out of     98     3%  
-   Number of fully used LUT-FF pairs:    55  out of     98    56%  
+   Number with an unused Flip Flop:      42  out of     98    42%  
+   Number with an unused LUT:             2  out of     98     2%  
+   Number of fully used LUT-FF pairs:    54  out of     98    55%  
    Number of unique control sets:        13
 
 IO Utilization: 
@@ -795,13 +752,13 @@ Clock Information:
 ---------------------------------------------------------------------------------------+------------------------------------+-------+
 Clock Signal                                                                           | Clock buffer(FF name)              | Load  |
 ---------------------------------------------------------------------------------------+------------------------------------+-------+
-Clock                                                                                  | DCM_SP:CLKFX                       | 48    |
-ControlUnit/State[2]_GND_7_o_Mux_7_o(ControlUnit/Mmux_State[2]_GND_7_o_Mux_7_o11:O)    | NONE(*)(ControlUnit/ReadOrWrite)   | 2     |
+Clock                                                                                  | DCM_SP:CLKFX                       | 46    |
 ControlUnit/State[2]_GND_9_o_Mux_9_o(ControlUnit/Mmux_State[2]_GND_9_o_Mux_9_o11:O)    | NONE(*)(ControlUnit/StartStopAck)  | 1     |
-ControlUnit/Mram__n0138(ControlUnit/Mram__n013811:O)                                   | NONE(*)(ControlUnit/DelayLoopStart)| 1     |
-ControlUnit/Mram__n0127(ControlUnit/Mram__n012712:O)                                   | NONE(*)(ControlUnit/Select)        | 1     |
-ControlUnit/Mram__n01271(ControlUnit/Mram__n0127111:O)                                 | NONE(*)(ControlUnit/BaudEnable)    | 1     |
-ControlUnit/State[2]_GND_11_o_Mux_29_o(ControlUnit/Mmux_State[2]_GND_11_o_Mux_29_o11:O)| NONE(*)(ControlUnit/NextState_0)   | 3     |
+ControlUnit/State[2]_GND_7_o_Mux_7_o(ControlUnit/Mmux_State[2]_GND_7_o_Mux_7_o11:O)    | NONE(*)(ControlUnit/ReadOrWrite)   | 2     |
+ControlUnit/State[2]_GND_10_o_Mux_10_o(ControlUnit/Mmux_State[2]_GND_10_o_Mux_10_o11:O)| NONE(*)(ControlUnit/DelayLoopStart)| 1     |
+ControlUnit/Mram__n01261(ControlUnit/Mram__n0126111:O)                                 | NONE(*)(ControlUnit/BaudEnable)    | 1     |
+ControlUnit/Mram__n0126(ControlUnit/Mram__n012611:O)                                   | NONE(*)(ControlUnit/Select)        | 1     |
+ControlUnit/State[2]_GND_11_o_Mux_27_o(ControlUnit/Mmux_State[2]_GND_11_o_Mux_27_o11:O)| NONE(*)(ControlUnit/NextState_0)   | 3     |
 ControlUnit/WriteLoad_G(ControlUnit/WriteLoad_G:O)                                     | NONE(*)(ControlUnit/WriteLoad)     | 1     |
 ControlUnit/ShiftOrHold_G(ControlUnit/ShiftOrHold_G:O)                                 | NONE(*)(ControlUnit/ShiftOrHold)   | 1     |
 ---------------------------------------------------------------------------------------+------------------------------------+-------+
@@ -819,7 +776,7 @@ Timing Summary:
 Speed Grade: -3
 
    Minimum period: 2.472ns (Maximum Frequency: 404.496MHz)
-   Minimum input arrival time before clock: 3.074ns
+   Minimum input arrival time before clock: 3.756ns
    Maximum output required time after clock: 4.698ns
    Maximum combinational path delay: No path found
 
@@ -830,7 +787,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'Clock'
   Clock period: 2.472ns (frequency: 404.496MHz)
-  Total number of paths / destination ports: 1381 / 52
+  Total number of paths / destination ports: 1387 / 54
 -------------------------------------------------------------------------
 Delay:               3.803ns (Levels of Logic = 14)
   Source:            ControlUnit/Timer/count_6 (FF)
@@ -864,43 +821,44 @@ Delay:               3.803ns (Levels of Logic = 14)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'Clock'
-  Total number of paths / destination ports: 36 / 36
+  Total number of paths / destination ports: 34 / 34
 -------------------------------------------------------------------------
-Offset:              3.000ns (Levels of Logic = 1)
+Offset:              3.756ns (Levels of Logic = 2)
   Source:            Reset (PAD)
-  Destination:       ControlUnit/RisingOneShotUnit/State_FSM_FFd3 (FF)
+  Destination:       ControlUnit/OneShotUnit/State_FSM_FFd2 (FF)
   Destination Clock: Clock rising 0.6X
 
-  Data Path: Reset to ControlUnit/RisingOneShotUnit/State_FSM_FFd3
+  Data Path: Reset to ControlUnit/OneShotUnit/State_FSM_FFd2
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            36   1.222   1.348  Reset_IBUF (Reset_IBUF)
-     FDC:CLR                   0.430          ControlUnit/DataCounter_0
+     IBUF:I->O            34   1.222   1.321  Reset_IBUF (Reset_IBUF)
+     LUT2:I1->O            1   0.205   0.579  ControlUnit/ClockI2C1 (ControlUnit/ClockI2C_0)
+     FDR:R                     0.430          ControlUnit/OneShotUnit/State_FSM_FFd2
     ----------------------------------------
-    Total                      3.000ns (1.652ns logic, 1.348ns route)
-                                       (55.1% logic, 44.9% route)
+    Total                      3.756ns (1.857ns logic, 1.899ns route)
+                                       (49.4% logic, 50.6% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'ControlUnit/State[2]_GND_11_o_Mux_29_o'
+Timing constraint: Default OFFSET IN BEFORE for Clock 'ControlUnit/State[2]_GND_11_o_Mux_27_o'
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
-Offset:              3.074ns (Levels of Logic = 3)
+Offset:              2.403ns (Levels of Logic = 3)
   Source:            Go (PAD)
   Destination:       ControlUnit/NextState_0 (LATCH)
-  Destination Clock: ControlUnit/State[2]_GND_11_o_Mux_29_o falling
+  Destination Clock: ControlUnit/State[2]_GND_11_o_Mux_27_o falling
 
   Data Path: Go to ControlUnit/NextState_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             1   1.222   0.580  Go_IBUF (Go_IBUF)
-     LUT6:I5->O            1   0.205   0.827  ControlUnit/Mmux_State[2]_NextState[2]_wide_mux_28_OUT<0>2_SW0 (N5)
-     LUT6:I2->O            1   0.203   0.000  ControlUnit/Mmux_State[2]_NextState[2]_wide_mux_28_OUT<0>2 (ControlUnit/State[2]_NextState[2]_wide_mux_28_OUT<0>)
+     IBUF:I->O             1   1.222   0.808  Go_IBUF (Go_IBUF)
+     LUT5:I2->O            1   0.205   0.000  ControlUnit/Mmux_State[2]_NextState[2]_wide_mux_26_OUT<0>23_F (N19)
+     MUXF7:I0->O           1   0.131   0.000  ControlUnit/Mmux_State[2]_NextState[2]_wide_mux_26_OUT<0>23 (ControlUnit/State[2]_NextState[2]_wide_mux_26_OUT<0>)
      LD:D                      0.037          ControlUnit/NextState_0
     ----------------------------------------
-    Total                      3.074ns (1.667ns logic, 1.407ns route)
-                                       (54.2% logic, 45.8% route)
+    Total                      2.403ns (1.595ns logic, 0.808ns route)
+                                       (66.4% logic, 33.6% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'Clock'
@@ -916,27 +874,27 @@ Offset:              4.453ns (Levels of Logic = 2)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDR:C->Q              3   0.447   0.651  DataUnit/ShiftUnit/ShiftOut (DataUnit/ShiftUnit/ShiftOut)
-     LUT3:I2->O            1   0.205   0.579  DataUnit/SDAUnit/Mmux_StartStopAck_ShiftOut_MUX_2257_o11 (SDA_OBUFT)
+     LUT3:I2->O            1   0.205   0.579  DataUnit/SDAUnit/Mmux_StartStopAck_ShiftOut_MUX_2258_o11 (SDA_OBUFT)
      OBUFT:I->O                2.571          SDA_OBUFT (SDA)
     ----------------------------------------
     Total                      4.453ns (3.223ns logic, 1.230ns route)
                                        (72.4% logic, 27.6% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'ControlUnit/Mram__n0127'
+Timing constraint: Default OFFSET OUT AFTER for Clock 'ControlUnit/Mram__n0126'
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
 Offset:              4.698ns (Levels of Logic = 2)
   Source:            ControlUnit/Select (LATCH)
   Destination:       SDA (PAD)
-  Source Clock:      ControlUnit/Mram__n0127 falling
+  Source Clock:      ControlUnit/Mram__n0126 falling
 
   Data Path: ControlUnit/Select to SDA
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      LD:G->Q               2   0.498   0.845  ControlUnit/Select (ControlUnit/Select)
-     LUT3:I0->O            1   0.205   0.579  DataUnit/SDAUnit/Mmux_StartStopAck_ShiftOut_MUX_2257_o11 (SDA_OBUFT)
+     LUT3:I0->O            1   0.205   0.579  DataUnit/SDAUnit/Mmux_StartStopAck_ShiftOut_MUX_2258_o11 (SDA_OBUFT)
      OBUFT:I->O                2.571          SDA_OBUFT (SDA)
     ----------------------------------------
     Total                      4.698ns (3.274ns logic, 1.424ns route)
@@ -956,7 +914,7 @@ Offset:              4.572ns (Levels of Logic = 2)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      LD:G->Q               2   0.498   0.721  ControlUnit/StartStopAck (ControlUnit/StartStopAck)
-     LUT3:I1->O            1   0.203   0.579  DataUnit/SDAUnit/Mmux_StartStopAck_ShiftOut_MUX_2257_o11 (SDA_OBUFT)
+     LUT3:I1->O            1   0.203   0.579  DataUnit/SDAUnit/Mmux_StartStopAck_ShiftOut_MUX_2258_o11 (SDA_OBUFT)
      OBUFT:I->O                2.571          SDA_OBUFT (SDA)
     ----------------------------------------
     Total                      4.572ns (3.272ns logic, 1.300ns route)
@@ -992,38 +950,30 @@ Clock to Setup on destination clock Clock
 Source Clock                          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 --------------------------------------+---------+---------+---------+---------+
 Clock                                 |    3.803|         |         |         |
-ControlUnit/Mram__n0127               |         |    1.667|         |         |
-ControlUnit/Mram__n01271              |         |    2.346|         |         |
-ControlUnit/Mram__n0138               |         |    1.836|         |         |
+ControlUnit/Mram__n0126               |         |    1.667|         |         |
+ControlUnit/Mram__n01261              |         |    2.346|         |         |
 ControlUnit/ShiftOrHold_G             |         |    2.415|         |         |
-ControlUnit/State[2]_GND_11_o_Mux_29_o|         |    1.179|         |         |
+ControlUnit/State[2]_GND_10_o_Mux_10_o|         |    1.836|         |         |
+ControlUnit/State[2]_GND_11_o_Mux_27_o|         |    1.630|         |         |
 ControlUnit/State[2]_GND_7_o_Mux_7_o  |         |    1.385|         |         |
 ControlUnit/State[2]_GND_9_o_Mux_9_o  |         |    1.650|         |         |
 ControlUnit/WriteLoad_G               |         |    2.855|         |         |
 --------------------------------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock ControlUnit/Mram__n0127
+Clock to Setup on destination clock ControlUnit/Mram__n0126
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-Clock          |         |         |    2.124|         |
+Clock          |         |         |    2.224|         |
 ---------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock ControlUnit/Mram__n01271
+Clock to Setup on destination clock ControlUnit/Mram__n01261
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-Clock          |         |         |    1.967|         |
----------------+---------+---------+---------+---------+
-
-Clock to Setup on destination clock ControlUnit/Mram__n0138
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-Clock          |         |         |    2.340|         |
+Clock          |         |         |    2.110|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock ControlUnit/ShiftOrHold_G
@@ -1031,15 +981,23 @@ Clock to Setup on destination clock ControlUnit/ShiftOrHold_G
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-Clock          |         |         |    1.989|         |
+Clock          |         |         |    2.110|         |
 ---------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock ControlUnit/State[2]_GND_11_o_Mux_29_o
+Clock to Setup on destination clock ControlUnit/State[2]_GND_10_o_Mux_10_o
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-Clock          |         |         |    4.376|         |
+Clock          |         |         |    2.090|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock ControlUnit/State[2]_GND_11_o_Mux_27_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+Clock          |         |         |    4.507|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock ControlUnit/State[2]_GND_7_o_Mux_7_o
@@ -1047,7 +1005,7 @@ Clock to Setup on destination clock ControlUnit/State[2]_GND_7_o_Mux_7_o
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-Clock          |         |         |    1.967|         |
+Clock          |         |         |    2.110|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock ControlUnit/State[2]_GND_9_o_Mux_9_o
@@ -1055,7 +1013,7 @@ Clock to Setup on destination clock ControlUnit/State[2]_GND_9_o_Mux_9_o
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-Clock          |         |         |    1.989|         |
+Clock          |         |         |    2.090|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock ControlUnit/WriteLoad_G
@@ -1063,21 +1021,21 @@ Clock to Setup on destination clock ControlUnit/WriteLoad_G
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-Clock          |         |         |    1.967|         |
+Clock          |         |         |    2.110|         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 7.00 secs
-Total CPU time to Xst completion: 7.56 secs
+Total CPU time to Xst completion: 7.28 secs
  
 --> 
 
 
-Total memory usage is 406120 kilobytes
+Total memory usage is 406268 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   32 (   0 filtered)
+Number of warnings :   33 (   0 filtered)
 Number of infos    :    6 (   0 filtered)
 
