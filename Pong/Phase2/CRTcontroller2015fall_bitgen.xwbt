@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/a/workspace/Digital-Systems/Pong/Phase2/CRTcontroller2015fall.ncd
+OUTFILE=/home/a/workspace/Digital-Systems/Pong/Phase2/CRTcontroller2015fall.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=/home/a/workspace/Digital-Systems/Pong/Phase2
+LICENSE=WebPack
+USER_INFO=211111032_0_0_255
