@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.10 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.10 secs
  
 --> Reading design: PongWithSound.prj
 
@@ -108,8 +108,6 @@ Cores Search Directories           : {"ipcore_dir"  }
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "C:\Users\almisbmn\Google Drive\Documents\Academic\5th Year\Fall\ECE333\Digital-Systems\Pong\Phase3\TermProjectPhase3\ipcore_dir\Clock50MHz.v" into library work
-Parsing module <Clock50MHz>.
 Analyzing Verilog file "C:\Users\almisbmn\Google Drive\Documents\Academic\5th Year\Fall\ECE333\Digital-Systems\Pong\Phase3\TermProjectPhase3\WaveForm.v" into library work
 Parsing module <Waveform>.
 Analyzing Verilog file "C:\Users\almisbmn\Google Drive\Documents\Academic\5th Year\Fall\ECE333\Digital-Systems\Pong\Phase3\TermProjectPhase3\OneSecElapseTime.v" into library work
@@ -173,15 +171,6 @@ WARNING:HDLCompiler:413 - "C:\Users\almisbmn\Google Drive\Documents\Academic\5th
 Elaborating module <GameWithSound>.
 
 Elaborating module <PlaySound>.
-
-Elaborating module <Clock50MHz>.
-
-Elaborating module <IBUFG>.
-
-Elaborating module <DCM_SP(CLKDV_DIVIDE=2.0,CLKFX_DIVIDE=1,CLKFX_MULTIPLY=4,CLKIN_DIVIDE_BY_2="FALSE",CLKIN_PERIOD=10.0,CLKOUT_PHASE_SHIFT="NONE",CLK_FEEDBACK="1X",DESKEW_ADJUST="SYSTEM_SYNCHRONOUS",PHASE_SHIFT=0,STARTUP_WAIT="FALSE")>.
-WARNING:HDLCompiler:1127 - "C:\Users\almisbmn\Google Drive\Documents\Academic\5th Year\Fall\ECE333\Digital-Systems\Pong\Phase3\TermProjectPhase3\ipcore_dir\Clock50MHz.v" Line 129: Assignment to status_int ignored, since the identifier is never used
-
-Elaborating module <BUFG>.
 
 Elaborating module <Debouncer>.
 
@@ -359,52 +348,45 @@ Synthesizing Unit <GameWithSound>.
     Found 1-bit register for signal <ballYdir>.
     Found 3-bit register for signal <quadAr>.
     Found 9-bit subtractor for signal <paddlePosition[8]_GND_9_o_sub_10_OUT> created at line 55.
-    Found 10-bit subtractor for signal <ballX[9]_GND_9_o_sub_21_OUT> created at line 81.
-    Found 9-bit subtractor for signal <ballY[8]_GND_9_o_sub_24_OUT> created at line 86.
-    Found 6-bit subtractor for signal <missTimer[5]_GND_9_o_sub_56_OUT> created at line 135.
-    Found 10-bit adder for signal <ballX[9]_GND_9_o_add_19_OUT> created at line 79.
-    Found 9-bit adder for signal <ballY[8]_GND_9_o_add_22_OUT> created at line 84.
-    Found 10-bit adder for signal <n0163> created at line 99.
-    Found 10-bit adder for signal <n0164> created at line 99.
-    Found 11-bit adder for signal <n0166> created at line 100.
-    Found 10-bit adder for signal <n0168> created at line 100.
+    Found 10-bit subtractor for signal <ballX[9]_GND_9_o_sub_21_OUT> created at line 82.
+    Found 9-bit subtractor for signal <ballY[8]_GND_9_o_sub_24_OUT> created at line 87.
+    Found 6-bit subtractor for signal <missTimer[5]_GND_9_o_sub_56_OUT> created at line 136.
+    Found 10-bit adder for signal <ballX[9]_GND_9_o_add_19_OUT> created at line 80.
+    Found 9-bit adder for signal <ballY[8]_GND_9_o_add_22_OUT> created at line 85.
+    Found 10-bit adder for signal <n0163> created at line 100.
+    Found 10-bit adder for signal <n0164> created at line 100.
+    Found 11-bit adder for signal <n0166> created at line 101.
+    Found 10-bit adder for signal <n0168> created at line 101.
     Found 9-bit comparator greater for signal <paddlePosition[8]_PWR_11_o_LessThan_6_o> created at line 44
-    Found 9-bit comparator greater for signal <GND_9_o_paddlePosition[8]_LessThan_9_o> created at line 53
-    Found 10-bit comparator greater for signal <xpos[9]_PWR_11_o_LessThan_32_o> created at line 93
-    Found 10-bit comparator greater for signal <ypos[9]_GND_9_o_LessThan_33_o> created at line 93
-    Found 10-bit comparator lessequal for signal <n0040> created at line 94
-    Found 10-bit comparator lessequal for signal <n0043> created at line 95
-    Found 10-bit comparator lessequal for signal <n0046> created at line 96
-    Found 10-bit comparator lessequal for signal <n0049> created at line 97
-    Found 10-bit comparator lessequal for signal <n0056> created at line 99
-    Found 10-bit comparator lessequal for signal <n0059> created at line 99
-    Found 10-bit comparator lessequal for signal <n0062> created at line 99
-    Found 10-bit comparator lessequal for signal <n0065> created at line 99
-    Found 10-bit comparator lessequal for signal <n0068> created at line 100
-    Found 11-bit comparator lessequal for signal <n0071> created at line 100
-    Found 10-bit comparator lessequal for signal <n0074> created at line 100
-    Found 10-bit comparator lessequal for signal <n0078> created at line 100
+    Found 9-bit comparator lessequal for signal <GND_9_o_paddlePosition[8]_LessThan_9_o> created at line 53
+    Found 10-bit comparator greater for signal <xpos[9]_PWR_11_o_LessThan_32_o> created at line 94
+    Found 10-bit comparator greater for signal <ypos[9]_GND_9_o_LessThan_33_o> created at line 94
+    Found 10-bit comparator lessequal for signal <n0040> created at line 95
+    Found 10-bit comparator lessequal for signal <n0043> created at line 96
+    Found 10-bit comparator lessequal for signal <n0046> created at line 97
+    Found 10-bit comparator lessequal for signal <n0049> created at line 98
+    Found 10-bit comparator lessequal for signal <n0056> created at line 100
+    Found 10-bit comparator lessequal for signal <n0059> created at line 100
+    Found 10-bit comparator lessequal for signal <n0062> created at line 100
+    Found 10-bit comparator lessequal for signal <n0065> created at line 100
+    Found 10-bit comparator lessequal for signal <n0068> created at line 101
+    Found 11-bit comparator lessequal for signal <n0071> created at line 101
+    Found 10-bit comparator lessequal for signal <n0074> created at line 101
+    Found 10-bit comparator lessequal for signal <n0078> created at line 101
     Summary:
 	inferred   8 Adder/Subtractor(s).
 	inferred  45 D-type flip-flop(s).
 	inferred  16 Comparator(s).
-	inferred   2 Multiplexer(s).
+	inferred   1 Multiplexer(s).
 Unit <GameWithSound> synthesized.
 
 Synthesizing Unit <PlaySound>.
     Related source file is "C:\Users\almisbmn\Google Drive\Documents\Academic\5th Year\Fall\ECE333\Digital-Systems\Pong\Phase3\TermProjectPhase3\PlaySound.v".
         AddressBits = 5
         DataLength = 4
-INFO:Xst:3210 - "C:\Users\almisbmn\Google Drive\Documents\Academic\5th Year\Fall\ECE333\Digital-Systems\Pong\Phase3\TermProjectPhase3\PlaySound.v" line 14: Output port <LOCKED> of the instance <clockUnit> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <PlaySound> synthesized.
-
-Synthesizing Unit <Clock50MHz>.
-    Related source file is "C:\Users\almisbmn\Google Drive\Documents\Academic\5th Year\Fall\ECE333\Digital-Systems\Pong\Phase3\TermProjectPhase3\ipcore_dir\Clock50MHz.v".
-    Summary:
-	no macro.
-Unit <Clock50MHz> synthesized.
 
 Synthesizing Unit <Debouncer>.
     Related source file is "C:\Users\almisbmn\Google Drive\Documents\Academic\5th Year\Fall\ECE333\Digital-Systems\Pong\Phase3\TermProjectPhase3\debouncer.v".
@@ -435,7 +417,7 @@ Synthesizing Unit <DelayLoop>.
         Divider = 100000
         NumberOfBits = 27
     Found 27-bit register for signal <count>.
-    Found 27-bit adder for signal <count[26]_GND_16_o_add_4_OUT> created at line 21.
+    Found 27-bit adder for signal <count[26]_GND_12_o_add_4_OUT> created at line 21.
     Found 27-bit comparator lessequal for signal <n0002> created at line 20
     Summary:
 	inferred   1 Adder/Subtractor(s).
@@ -474,7 +456,7 @@ Synthesizing Unit <MusicSheetReader>.
         AddressBits = 5
     Found 1-bit register for signal <State>.
     Found 5-bit register for signal <CurrentAddress>.
-    Found 5-bit adder for signal <CurrentAddress[4]_GND_18_o_add_7_OUT> created at line 31.
+    Found 5-bit adder for signal <CurrentAddress[4]_GND_14_o_add_7_OUT> created at line 31.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred   6 D-type flip-flop(s).
@@ -631,7 +613,7 @@ Synthesizing Unit <PlayNote2>.
     Related source file is "C:\Users\almisbmn\Google Drive\Documents\Academic\5th Year\Fall\ECE333\Digital-Systems\Pong\Phase3\TermProjectPhase3\PlayNote2.v".
     Found 1-bit register for signal <State>.
     Found 4-bit register for signal <ElapseSeconds>.
-    Found 4-bit adder for signal <ElapseSeconds[3]_GND_21_o_add_7_OUT> created at line 26.
+    Found 4-bit adder for signal <ElapseSeconds[3]_GND_17_o_add_7_OUT> created at line 26.
     Found 4-bit comparator lessequal for signal <n0014> created at line 34
     Found 4-bit comparator equal for signal <Over> created at line 35
     Summary:
@@ -647,7 +629,7 @@ Synthesizing Unit <OneSecElapseTime>.
         OneSecondElapseTime = 20000000
     Found 1-bit register for signal <State>.
     Found 26-bit register for signal <SecondsCounter>.
-    Found 26-bit adder for signal <SecondsCounter[25]_GND_22_o_add_8_OUT> created at line 29.
+    Found 26-bit adder for signal <SecondsCounter[25]_GND_18_o_add_8_OUT> created at line 29.
     Found 26-bit comparator lessequal for signal <n0009> created at line 28
     Summary:
 	inferred   1 Adder/Subtractor(s).
@@ -691,7 +673,7 @@ Synthesizing Unit <Waveform>.
         NumberOfBits = 20
     Found 1-bit register for signal <Waveform>.
     Found 20-bit register for signal <WaveformCounter>.
-    Found 20-bit adder for signal <WaveformCounter[19]_GND_26_o_add_4_OUT> created at line 21.
+    Found 20-bit adder for signal <WaveformCounter[19]_GND_22_o_add_4_OUT> created at line 21.
     Found 20-bit comparator greater for signal <n0002> created at line 19
     Summary:
 	inferred   1 Adder/Subtractor(s).
@@ -754,9 +736,10 @@ Macro Statistics
  27-bit comparator lessequal                           : 1
  4-bit comparator equal                                : 1
  4-bit comparator lessequal                            : 1
- 9-bit comparator greater                              : 2
-# Multiplexers                                         : 120
- 1-bit 2-to-1 multiplexer                              : 84
+ 9-bit comparator greater                              : 1
+ 9-bit comparator lessequal                            : 1
+# Multiplexers                                         : 119
+ 1-bit 2-to-1 multiplexer                              : 83
  1-bit 4-to-1 multiplexer                              : 2
  10-bit 2-to-1 multiplexer                             : 22
  20-bit 2-to-1 multiplexer                             : 3
@@ -991,9 +974,10 @@ Macro Statistics
  27-bit comparator lessequal                           : 1
  4-bit comparator equal                                : 1
  4-bit comparator lessequal                            : 1
- 9-bit comparator greater                              : 2
-# Multiplexers                                         : 115
- 1-bit 2-to-1 multiplexer                              : 84
+ 9-bit comparator greater                              : 1
+ 9-bit comparator lessequal                            : 1
+# Multiplexers                                         : 114
+ 1-bit 2-to-1 multiplexer                              : 83
  1-bit 20-to-1 multiplexer                             : 4
  1-bit 4-to-1 multiplexer                              : 2
  10-bit 2-to-1 multiplexer                             : 21
@@ -1193,7 +1177,7 @@ Optimizing FSM <VGAdisplay/vsyncModule/FSM_0> on signal <State[1:3]> with one-ho
  11    | 100
 -------------------
 Analyzing FSM <MFsm> for best encoding.
-Optimizing FSM <game_inst/PlayMusic/FSM_1> on signal <State[1:2]> with gray encoding.
+Optimizing FSM <game_inst/FSM_1> on signal <State[1:2]> with gray encoding.
 -------------------
  State | Encoding
 -------------------
@@ -1203,7 +1187,7 @@ Optimizing FSM <game_inst/PlayMusic/FSM_1> on signal <State[1:2]> with gray enco
  11    | 10
 -------------------
 Analyzing FSM <MFsm> for best encoding.
-Optimizing FSM <game_inst/PlayMusic/FSM_2> on signal <State[1:3]> with one-hot encoding.
+Optimizing FSM <game_inst/FSM_2> on signal <State[1:3]> with one-hot encoding.
 -------------------
  State | Encoding
 -------------------
@@ -1260,8 +1244,6 @@ Optimizing unit <GameWithSound> ...
 WARNING:Xst:1710 - FF/Latch <ballX_0> (without init value) has a constant value of 0 in block <GameWithSound>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ballY_0> (without init value) has a constant value of 0 in block <GameWithSound>. This FF/Latch will be trimmed during the optimization process.
 
-Optimizing unit <PlaySound> ...
-
 Optimizing unit <MusicSheetReader> ...
 
 Optimizing unit <MusicScore> ...
@@ -1271,26 +1253,26 @@ Optimizing unit <PlayNote2> ...
 Optimizing unit <OneSecElapseTime> ...
 
 Optimizing unit <Waveform> ...
-WARNING:Xst:1710 - FF/Latch <game_inst/PlayMusic/PlayDebounce/Timer/count_17> (without init value) has a constant value of 0 in block <PongWithSound>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <game_inst/PlayMusic/PlayDebounce/Timer/count_18> (without init value) has a constant value of 0 in block <PongWithSound>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <game_inst/PlayMusic/PlayDebounce/Timer/count_19> (without init value) has a constant value of 0 in block <PongWithSound>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <game_inst/PlayMusic/PlayDebounce/Timer/count_20> (without init value) has a constant value of 0 in block <PongWithSound>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <game_inst/PlayMusic/PlayDebounce/Timer/count_21> (without init value) has a constant value of 0 in block <PongWithSound>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <game_inst/PlayMusic/PlayDebounce/Timer/count_22> (without init value) has a constant value of 0 in block <PongWithSound>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <game_inst/PlayMusic/PlayDebounce/Timer/count_23> (without init value) has a constant value of 0 in block <PongWithSound>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <game_inst/PlayMusic/PlayDebounce/Timer/count_24> (without init value) has a constant value of 0 in block <PongWithSound>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <game_inst/PlayMusic/PlayDebounce/Timer/count_25> (without init value) has a constant value of 0 in block <PongWithSound>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <game_inst/PlayMusic/PlayDebounce/Timer/count_26> (without init value) has a constant value of 0 in block <PongWithSound>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <game_inst/PlayMusic/PlayNoteUnit/Timer/SecondsCounter_25> (without init value) has a constant value of 0 in block <PongWithSound>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <game_inst/PlayMusic/NoteUnit/NoteCWave/WaveformCounter_19> (without init value) has a constant value of 0 in block <PongWithSound>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <game_inst/PlayMusic/NoteUnit/NoteCWave/WaveformCounter_18> (without init value) has a constant value of 0 in block <PongWithSound>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <game_inst/PlayMusic/NoteUnit/NoteCWave/WaveformCounter_17> (without init value) has a constant value of 0 in block <PongWithSound>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <game_inst/PlayMusic/NoteUnit/NoteDWave/WaveformCounter_19> (without init value) has a constant value of 0 in block <PongWithSound>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <game_inst/PlayMusic/NoteUnit/NoteDWave/WaveformCounter_18> (without init value) has a constant value of 0 in block <PongWithSound>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <game_inst/PlayMusic/NoteUnit/NoteDWave/WaveformCounter_17> (without init value) has a constant value of 0 in block <PongWithSound>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <game_inst/PlayMusic/NoteUnit/NoteEWave/WaveformCounter_19> (without init value) has a constant value of 0 in block <PongWithSound>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <game_inst/PlayMusic/NoteUnit/NoteEWave/WaveformCounter_17> (without init value) has a constant value of 0 in block <PongWithSound>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <game_inst/PlayMusic/NoteUnit/NoteEWave/WaveformCounter_18> (without init value) has a constant value of 0 in block <PongWithSound>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <game_inst/PlayMusic/NoteUnit/NoteEWave/WaveformCounter_17> (without init value) has a constant value of 0 in block <PongWithSound>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <game_inst/PlayMusic/NoteUnit/NoteEWave/WaveformCounter_19> (without init value) has a constant value of 0 in block <PongWithSound>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <game_inst/PlayMusic/NoteUnit/NoteDWave/WaveformCounter_17> (without init value) has a constant value of 0 in block <PongWithSound>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <game_inst/PlayMusic/NoteUnit/NoteDWave/WaveformCounter_18> (without init value) has a constant value of 0 in block <PongWithSound>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <game_inst/PlayMusic/NoteUnit/NoteDWave/WaveformCounter_19> (without init value) has a constant value of 0 in block <PongWithSound>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <game_inst/PlayMusic/NoteUnit/NoteCWave/WaveformCounter_17> (without init value) has a constant value of 0 in block <PongWithSound>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <game_inst/PlayMusic/NoteUnit/NoteCWave/WaveformCounter_18> (without init value) has a constant value of 0 in block <PongWithSound>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <game_inst/PlayMusic/NoteUnit/NoteCWave/WaveformCounter_19> (without init value) has a constant value of 0 in block <PongWithSound>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <game_inst/PlayMusic/PlayNoteUnit/Timer/SecondsCounter_25> (without init value) has a constant value of 0 in block <PongWithSound>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <game_inst/PlayMusic/PlayDebounce/Timer/count_17> (without init value) has a constant value of 0 in block <PongWithSound>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <game_inst/PlayMusic/PlayDebounce/Timer/count_18> (without init value) has a constant value of 0 in block <PongWithSound>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <game_inst/PlayMusic/PlayDebounce/Timer/count_19> (without init value) has a constant value of 0 in block <PongWithSound>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <game_inst/PlayMusic/PlayDebounce/Timer/count_20> (without init value) has a constant value of 0 in block <PongWithSound>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <game_inst/PlayMusic/PlayDebounce/Timer/count_21> (without init value) has a constant value of 0 in block <PongWithSound>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <game_inst/PlayMusic/PlayDebounce/Timer/count_22> (without init value) has a constant value of 0 in block <PongWithSound>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <game_inst/PlayMusic/PlayDebounce/Timer/count_23> (without init value) has a constant value of 0 in block <PongWithSound>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <game_inst/PlayMusic/PlayDebounce/Timer/count_24> (without init value) has a constant value of 0 in block <PongWithSound>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <game_inst/PlayMusic/PlayDebounce/Timer/count_25> (without init value) has a constant value of 0 in block <PongWithSound>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <game_inst/PlayMusic/PlayDebounce/Timer/count_26> (without init value) has a constant value of 0 in block <PongWithSound>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <game_inst/ballX_0> (without init value) has a constant value of 0 in block <PongWithSound>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <game_inst/ballY_0> (without init value) has a constant value of 0 in block <PongWithSound>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <VGAdisplay/CRTclockUnit2015fall/counter_9> (without init value) has a constant value of 0 in block <PongWithSound>. This FF/Latch will be trimmed during the optimization process.
@@ -1304,86 +1286,252 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <VGAdisplay/CRTclock
 INFO:Xst:2261 - The FF/Latch <game_inst/ballY_1> in Unit <PongWithSound> is equivalent to the following FF/Latch, which will be removed : <game_inst/ballX_1> 
 
 Mapping all equations...
-ERROR:Xst:2035 - Port <Clock> has illegal connections. This port is connected to an input buffer and other components.
-Input Buffer:
-   Port <I> of node <game_inst/PlayMusic/clockUnit/clkin1_buf> (IBUFG) in unit <PongWithSound>
-Other Components:
-   Port <C> of node <VGAdisplay/CRTclockUnit2015fall/counter_0> (FDC) in unit <PongWithSound>
-   Port <C> of node <VGAdisplay/CRTclockUnit2015fall/counter_1> (FDC) in unit <PongWithSound>
-   Port <C> of node <VGAdisplay/hsyncModule/PixelClockUnit/State_FSM_FFd3> (FDS) in unit <PongWithSound>
-   Port <C> of node <VGAdisplay/hsyncModule/PixelClockUnit/State_FSM_FFd2> (FDR) in unit <PongWithSound>
-   Port <C> of node <VGAdisplay/hsyncModule/XPositionCounter/Q_8> (FDCP) in unit <PongWithSound>
-   Port <C> of node <VGAdisplay/hsyncModule/XPositionCounter/Q_9> (FDCP) in unit <PongWithSound>
-   Port <C> of node <VGAdisplay/hsyncModule/XPositionCounter/Q_5> (FDCP) in unit <PongWithSound>
-   Port <C> of node <VGAdisplay/hsyncModule/XPositionCounter/Q_7> (FDCP) in unit <PongWithSound>
-   Port <C> of node <VGAdisplay/hsyncModule/XPositionCounter/Q_6> (FDCP) in unit <PongWithSound>
-   Port <C> of node <VGAdisplay/hsyncModule/XPositionCounter/Q_2> (FDCP) in unit <PongWithSound>
-   Port <C> of node <VGAdisplay/hsyncModule/XPositionCounter/Q_4> (FDCP) in unit <PongWithSound>
-   Port <C> of node <VGAdisplay/hsyncModule/XPositionCounter/Q_3> (FDCP) in unit <PongWithSound>
-   Port <C> of node <VGAdisplay/hsyncModule/XPositionCounter/Q_1> (FDCP) in unit <PongWithSound>
-   Port <C> of node <VGAdisplay/hsyncModule/XPositionCounter/Q_0> (FDCP) in unit <PongWithSound>
-   Port <C> of node <VGAdisplay/vsyncModule/RestartUnit/State_FSM_FFd3> (FDS) in unit <PongWithSound>
-   Port <C> of node <VGAdisplay/vsyncModule/RestartUnit/State_FSM_FFd2> (FDR) in unit <PongWithSound>
-   Port <C> of node <VGAdisplay/vsyncModule/YPositionCounter/Q_8> (FDCP) in unit <PongWithSound>
-   Port <C> of node <VGAdisplay/vsyncModule/YPositionCounter/Q_9> (FDCP) in unit <PongWithSound>
-   Port <C> of node <VGAdisplay/vsyncModule/YPositionCounter/Q_5> (FDCP) in unit <PongWithSound>
-   Port <C> of node <VGAdisplay/vsyncModule/YPositionCounter/Q_7> (FDCP) in unit <PongWithSound>
-   Port <C> of node <VGAdisplay/vsyncModule/YPositionCounter/Q_6> (FDCP) in unit <PongWithSound>
-   Port <C> of node <VGAdisplay/vsyncModule/YPositionCounter/Q_2> (FDCP) in unit <PongWithSound>
-   Port <C> of node <VGAdisplay/vsyncModule/YPositionCounter/Q_4> (FDCP) in unit <PongWithSound>
-   Port <C> of node <VGAdisplay/vsyncModule/YPositionCounter/Q_3> (FDCP) in unit <PongWithSound>
-   Port <C> of node <VGAdisplay/vsyncModule/YPositionCounter/Q_1> (FDCP) in unit <PongWithSound>
-   Port <C> of node <VGAdisplay/vsyncModule/YPositionCounter/Q_0> (FDCP) in unit <PongWithSound>
-   Port <C> of node <game_inst/quadBr_0> (FD) in unit <PongWithSound>
-   Port <C> of node <game_inst/quadBr_1> (FD) in unit <PongWithSound>
-   Port <C> of node <game_inst/quadBr_2> (FD) in unit <PongWithSound>
-   Port <C> of node <game_inst/bounceY> (FDRS) in unit <PongWithSound>
-   Port <C> of node <game_inst/quadAr_0> (FD) in unit <PongWithSound>
-   Port <C> of node <game_inst/quadAr_1> (FD) in unit <PongWithSound>
-   Port <C> of node <game_inst/quadAr_2> (FD) in unit <PongWithSound>
-   Port <C> of node <game_inst/bounceX> (FDRS) in unit <PongWithSound>
-   Port <C> of node <game_inst/ballXdir> (FDSE) in unit <PongWithSound>
-   Port <C> of node <game_inst/ballYdir> (FDSE) in unit <PongWithSound>
-   Port <C> of node <game_inst/paddlePosition_2> (FDE) in unit <PongWithSound>
-   Port <C> of node <game_inst/paddlePosition_3> (FDE) in unit <PongWithSound>
-   Port <C> of node <game_inst/paddlePosition_4> (FDE) in unit <PongWithSound>
-   Port <C> of node <game_inst/paddlePosition_5> (FDE) in unit <PongWithSound>
-   Port <C> of node <game_inst/paddlePosition_6> (FDE) in unit <PongWithSound>
-   Port <C> of node <game_inst/paddlePosition_7> (FDE) in unit <PongWithSound>
-   Port <C> of node <game_inst/paddlePosition_8> (FDE) in unit <PongWithSound>
-   Port <C> of node <game_inst/PlayAgain> (FDE) in unit <PongWithSound>
-   Port <C> of node <game_inst/missTimer_0> (FDSE) in unit <PongWithSound>
-   Port <C> of node <game_inst/missTimer_1> (FDSE) in unit <PongWithSound>
-   Port <C> of node <game_inst/missTimer_2> (FDSE) in unit <PongWithSound>
-   Port <C> of node <game_inst/missTimer_3> (FDSE) in unit <PongWithSound>
-   Port <C> of node <game_inst/missTimer_4> (FDSE) in unit <PongWithSound>
-   Port <C> of node <game_inst/missTimer_5> (FDSE) in unit <PongWithSound>
-   Port <C> of node <game_inst/ballX_3> (FDRE) in unit <PongWithSound>
-   Port <C> of node <game_inst/ballX_2> (FDRE) in unit <PongWithSound>
-   Port <C> of node <game_inst/ballX_6> (FDSE) in unit <PongWithSound>
-   Port <C> of node <game_inst/ballX_4> (FDRE) in unit <PongWithSound>
-   Port <C> of node <game_inst/ballX_5> (FDSE) in unit <PongWithSound>
-   Port <C> of node <game_inst/ballX_7> (FDSE) in unit <PongWithSound>
-   Port <C> of node <game_inst/ballX_8> (FDSE) in unit <PongWithSound>
-   Port <C> of node <game_inst/ballX_9> (FDRE) in unit <PongWithSound>
-   Port <C> of node <game_inst/ballY_2> (FDSE) in unit <PongWithSound>
-   Port <C> of node <game_inst/ballY_1> (FDRE) in unit <PongWithSound>
-   Port <C> of node <game_inst/ballY_5> (FDSE) in unit <PongWithSound>
-   Port <C> of node <game_inst/ballY_3> (FDSE) in unit <PongWithSound>
-   Port <C> of node <game_inst/ballY_4> (FDRE) in unit <PongWithSound>
-   Port <C> of node <game_inst/ballY_8> (FDSE) in unit <PongWithSound>
-   Port <C> of node <game_inst/ballY_6> (FDRE) in unit <PongWithSound>
-   Port <C> of node <game_inst/ballY_7> (FDRE) in unit <PongWithSound>
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block PongWithSound, actual ratio is 7.
+FlipFlop VGAdisplay/hsyncModule/XPositionCounter/Q_0 has been replicated 1 time(s)
+FlipFlop VGAdisplay/hsyncModule/XPositionCounter/Q_1 has been replicated 1 time(s)
+FlipFlop VGAdisplay/hsyncModule/XPositionCounter/Q_2 has been replicated 2 time(s)
+FlipFlop VGAdisplay/hsyncModule/XPositionCounter/Q_3 has been replicated 2 time(s)
+FlipFlop VGAdisplay/hsyncModule/XPositionCounter/Q_4 has been replicated 2 time(s)
+FlipFlop VGAdisplay/hsyncModule/XPositionCounter/Q_5 has been replicated 2 time(s)
+FlipFlop VGAdisplay/hsyncModule/XPositionCounter/Q_6 has been replicated 1 time(s)
+FlipFlop VGAdisplay/vsyncModule/YPositionCounter/Q_0 has been replicated 1 time(s)
+FlipFlop VGAdisplay/vsyncModule/YPositionCounter/Q_1 has been replicated 1 time(s)
+FlipFlop VGAdisplay/vsyncModule/YPositionCounter/Q_2 has been replicated 1 time(s)
+FlipFlop VGAdisplay/vsyncModule/YPositionCounter/Q_3 has been replicated 1 time(s)
+FlipFlop VGAdisplay/vsyncModule/YPositionCounter/Q_4 has been replicated 1 time(s)
+FlipFlop VGAdisplay/vsyncModule/YPositionCounter/Q_5 has been replicated 2 time(s)
+FlipFlop VGAdisplay/vsyncModule/YPositionCounter/Q_6 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+Processing Unit <PongWithSound> :
+	Found 2-bit shift register for signal <game_inst/quadAr_1>.
+	Found 2-bit shift register for signal <game_inst/quadBr_1>.
+Unit <PongWithSound> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 204
+ Flip-Flops                                            : 204
+# Shift Registers                                      : 2
+ 2-bit shift register                                  : 2
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : PongWithSound.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 846
+#      GND                         : 1
+#      INV                         : 11
+#      LUT2                        : 75
+#      LUT3                        : 131
+#      LUT4                        : 108
+#      LUT5                        : 107
+#      LUT6                        : 124
+#      MUXCY                       : 179
+#      MUXF7                       : 14
+#      VCC                         : 1
+#      XORCY                       : 95
+# FlipFlops/Latches                : 206
+#      FD                          : 8
+#      FDC                         : 69
+#      FDCE                        : 12
+#      FDE                         : 17
+#      FDR                         : 24
+#      FDRE                        : 63
+#      FDS                         : 3
+#      FDSE                        : 10
+# Shift Registers                  : 2
+#      SRLC16E                     : 2
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 14
+#      IBUF                        : 3
+#      OBUF                        : 11
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
 
 
-Total REAL time to Xst completion: 11.00 secs
-Total CPU time to Xst completion: 11.00 secs
+Slice Logic Utilization: 
+ Number of Slice Registers:             206  out of  18224     1%  
+ Number of Slice LUTs:                  558  out of   9112     6%  
+    Number used as Logic:               556  out of   9112     6%  
+    Number used as Memory:                2  out of   2176     0%  
+       Number used as SRL:                2
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    578
+   Number with an unused Flip Flop:     372  out of    578    64%  
+   Number with an unused LUT:            20  out of    578     3%  
+   Number of fully used LUT-FF pairs:   186  out of    578    32%  
+   Number of unique control sets:        25
+
+IO Utilization: 
+ Number of IOs:                          15
+ Number of bonded IOBs:                  15  out of    232     6%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+Clock                              | BUFGP                  | 208   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 6.048ns (Maximum Frequency: 165.353MHz)
+   Minimum input arrival time before clock: 4.544ns
+   Maximum output required time after clock: 9.913ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Clock'
+  Clock period: 6.048ns (frequency: 165.353MHz)
+  Total number of paths / destination ports: 58449 / 338
+-------------------------------------------------------------------------
+Delay:               6.048ns (Levels of Logic = 5)
+  Source:            VGAdisplay/vsyncModule/YPositionCounter/Q_8 (FF)
+  Destination:       VGAdisplay/vsyncModule/YPositionCounter/Q_9 (FF)
+  Source Clock:      Clock rising
+  Destination Clock: Clock rising
+
+  Data Path: VGAdisplay/vsyncModule/YPositionCounter/Q_8 to VGAdisplay/vsyncModule/YPositionCounter/Q_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             17   0.447   1.132  VGAdisplay/vsyncModule/YPositionCounter/Q_8 (VGAdisplay/vsyncModule/YPositionCounter/Q_8)
+     LUT5:I3->O           12   0.203   0.908  VGAdisplay/vsyncModule/YPositionCounter/Q[9]_BeginCount[9]_equal_6_o10_SW0 (N9)
+     MUXF7:S->O            7   0.148   1.002  VGAdisplay/vsyncModule/YPositionCounter/Mmux_NextQ3_rs_cy<2>11_SW0 (N35)
+     LUT6:I3->O            4   0.205   0.912  VGAdisplay/vsyncModule/YPositionCounter/Mmux_NextQ3_rs_cy<2>11 (VGAdisplay/vsyncModule/YPositionCounter/Mmux_NextQ3_rs_cy<2>1)
+     LUT6:I3->O            1   0.205   0.580  VGAdisplay/vsyncModule/YPositionCounter/Mmux_NextQ3_rs_cy<5>1_SW0_SW1 (N125)
+     LUT6:I5->O            1   0.205   0.000  VGAdisplay/vsyncModule/YPositionCounter/Mmux_NextQ3_rs_xor<9>11 (VGAdisplay/vsyncModule/YPositionCounter/Mmux_NextQ3_split<9>)
+     FDC:D                     0.102          VGAdisplay/vsyncModule/YPositionCounter/Q_9
+    ----------------------------------------
+    Total                      6.048ns (1.515ns logic, 4.533ns route)
+                                       (25.1% logic, 74.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Clock'
+  Total number of paths / destination ports: 153 / 153
+-------------------------------------------------------------------------
+Offset:              4.544ns (Levels of Logic = 2)
+  Source:            Reset (PAD)
+  Destination:       game_inst/PlayMusic/Sheet/TimeOutput_3 (FF)
+  Destination Clock: Clock rising
+
+  Data Path: Reset to game_inst/PlayMusic/Sheet/TimeOutput_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           144   1.222   1.992  Reset_IBUF (Reset_IBUF)
+     INV:I->O              8   0.206   0.802  game_inst/PlayMusic/Sheet/Reset_inv1_INV_0 (game_inst/PlayMusic/Sheet/Reset_inv)
+     FDE:CE                    0.322          game_inst/PlayMusic/Sheet/KeyOutput_0
+    ----------------------------------------
+    Total                      4.544ns (1.750ns logic, 2.794ns route)
+                                       (38.5% logic, 61.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Clock'
+  Total number of paths / destination ports: 1655 / 7
+-------------------------------------------------------------------------
+Offset:              9.913ns (Levels of Logic = 7)
+  Source:            game_inst/ballY_1 (FF)
+  Destination:       blue<0> (PAD)
+  Source Clock:      Clock rising
+
+  Data Path: game_inst/ballY_1 to blue<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            27   0.447   1.221  game_inst/ballY_1 (game_inst/ballY_1)
+     LUT5:I4->O            4   0.205   0.684  game_inst/Madd_n0166_cy<5>11 (game_inst/Madd_n0166_cy<5>)
+     LUT5:I4->O            2   0.205   0.961  game_inst/Madd_n0166_xor<9>11 (game_inst/n0166<9>)
+     LUT5:I0->O            0   0.203   0.000  game_inst/Mcompar_GND_9_o_BUS_0006_LessThan_46_o_lutdi4 (game_inst/Mcompar_GND_9_o_BUS_0006_LessThan_46_o_lutdi4)
+     MUXCY:DI->O           9   0.339   1.077  game_inst/Mcompar_GND_9_o_BUS_0006_LessThan_46_o_cy<4> (game_inst/GND_9_o_BUS_0006_LessThan_46_o)
+     LUT4:I0->O            3   0.203   1.015  game_inst/ball1 (game_inst/ball)
+     LUT6:I0->O            1   0.203   0.579  game_inst/blue<0> (blue_0_OBUF)
+     OBUF:I->O                 2.571          blue_0_OBUF (blue<0>)
+    ----------------------------------------
+    Total                      9.913ns (4.376ns logic, 5.537ns route)
+                                       (44.1% logic, 55.9% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock Clock
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+Clock          |    6.048|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 12.00 secs
+Total CPU time to Xst completion: 12.62 secs
  
 --> 
 
-Total memory usage is 263508 kilobytes
+Total memory usage is 264212 kilobytes
 
-Number of errors   :    1 (   0 filtered)
-Number of warnings :  334 (   0 filtered)
-Number of infos    :   12 (   0 filtered)
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  333 (   0 filtered)
+Number of infos    :   11 (   0 filtered)
 

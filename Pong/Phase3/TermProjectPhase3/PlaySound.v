@@ -5,13 +5,12 @@
 //Play a music score stored in the RAM in MusicSheet.v
 //PlayAgain - play the score stored in MusicSheet when a positive pulse appears on PlayAgain
 
-module PlaySound(PlayAgain, Speaker, Reset, Clock100MHz);
-input PlayAgain, Reset, Clock100MHz;
+module PlaySound(PlayAgain, Speaker, Reset, Clock);
+input PlayAgain, Reset, Clock;
 output Speaker;
 
 wire Clock;
 
-Clock50MHz clockUnit(Clock100MHz, Clock, );
 parameter AddressBits=5;
 parameter DataLength=4;
 wire [2:0] NoteArray;	//three notes

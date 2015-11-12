@@ -54,6 +54,7 @@ begin
 			begin
 			paddlePosition <= paddlePosition - 3'd4;
 			PlayAgain <= 1;
+			PlayAgain <= 0;
 			end
 		else
 			PlayAgain <= 0;

@@ -1,4 +1,3 @@
-verilog work "ipcore_dir/Clock50MHz.v"
 verilog work "WaveForm.v"
 verilog work "OneSecElapseTime.v"
 verilog work "NoteMap.v"
