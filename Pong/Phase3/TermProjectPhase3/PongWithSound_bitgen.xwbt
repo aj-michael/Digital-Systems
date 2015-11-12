@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\almisbmn\Google Drive\Documents\Academic\5th Year\Fall\ECE333\Digital-Systems\Pong\Phase3\TermProjectPhase3\PongWithSound.ncd
+OUTFILE=C:\Users\almisbmn\Google Drive\Documents\Academic\5th Year\Fall\ECE333\Digital-Systems\Pong\Phase3\TermProjectPhase3\PongWithSound.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=C:\Users\almisbmn\Google Drive\Documents\Academic\5th Year\Fall\ECE333\Digital-Systems\Pong\Phase3\TermProjectPhase3
+LICENSE=WebPack
+USER_INFO=174114502_1777496879_210571720_904
