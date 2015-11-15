@@ -1,0 +1,25 @@
+NET "Clock" LOC = V10;
+NET "Reset" LOC = C9; //BTND
+NET "Speaker" LOC = E11; //JD4
+
+NET "rota" LOC = N10;
+NET "rotb" LOC = P11;
+
+NET "partyMode" LOC = T5;
+NET "growSquares" LOC = V8;
+NET "shiftX" LOC = U8;
+NET "shiftY" LOC = N8;
+
+NET "red[0]" LOC = U7;
+NET "red[1]" LOC = V7;
+NET "red[2]" LOC = N7;
+
+NET "green[0]" LOC = P8;
+NET "green[1]" LOC = T6;
+NET "green[2]" LOC = V6;
+
+NET "blue[0]" LOC = R7;
+NET "blue[1]" LOC = T7;
+
+NET "hsync" LOC = N6;
+NET "vsync" LOC = P7;

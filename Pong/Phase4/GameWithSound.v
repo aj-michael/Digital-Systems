@@ -23,6 +23,10 @@ module GameWithSound(input clk25, input Reset,
 				input [9:0] ypos,
 				input rota,
 				input rotb,
+				input partyMode,
+				input growSquares,
+				input shiftX,
+				input shiftY,
 				output [2:0] red,
 				output [2:0] green,
 				output [1:0] blue,
@@ -85,6 +89,10 @@ wire endOfFrame = (xpos == 0 && ypos == 480);
 	
 always @(posedge clk25) begin
 	if (endOfFrame) begin // update ball position at end of each frame
+		colorSweep <= colorSweep + 1;
+		if (colorSweep[6:0] == 7'b1000000) sideLength <= sideLength + 1;
+		if (shiftX) xShift <= xShift + 1;
+		if (shiftY) yShift <= yShift + 1;
 		if (ballX == 0 && ballY == 0) begin // cheesy reset handling, assumes initial value of 0
 			ballX <= 480;
 			ballY <= 300;
@@ -111,24 +119,51 @@ wire bottom = (visible && ypos >= 476);
 wire left = (visible && xpos <= 3);
 wire right = (visible && xpos >= 636);
 wire border = (visible && (left || right || top));
-wire paddle = (xpos >= paddlePosition+4 && xpos <= paddlePosition+124 && ypos >= 440 && ypos <= 447);
+
+wire paddleSides = (xpos >= paddlePosition+4 && xpos <= paddlePosition+14 && ypos >= 390 && ypos <= 440)
+                                                                                || (xpos >= paddlePosition+114 && xpos <= paddlePosition+124 && ypos >= 390 && ypos <= 440);
+wire paddle = (xpos >= paddlePosition+4 && xpos <= paddlePosition+124 && ypos >= 440 && ypos <= 447) || paddleSides;
+wire paddleYbounce = (xpos >= paddlePosition+4 && xpos <= paddlePosition+124 && ypos >= 440 && ypos <= 447)
+                                                                                   || (xpos >= paddlePosition+4 && xpos <= paddlePosition+14 && ypos == 390)
+                                                                                   || (xpos >= paddlePosition+114 && xpos <= paddlePosition+124 && ypos == 390);
+																											  
 wire ball = (xpos >= ballX && xpos <= ballX+7 && ypos >= ballY && ypos <= ballY+7);
 wire background = (visible && !(border || paddle || ball));
-wire checkerboard = (xpos[5] ^ ypos[5]);
+wire checkerboard = (xposShift[growSquares ? sideLength+1 : 5] ^ yposShift[growSquares ? sideLength+1 : 5]);
 wire missed = visible && missTimer != 0;
 
-assign red   = { missed || border || paddle, 2'b0 };
-assign green = { !missed && (border || paddle || ball), digitPixel, digitPixel };
-assign blue  = { !missed && (border || ball) || digitPixel, background && checkerboard || digitPixel}; 
+reg [9:0] xShift, yShift;
+wire [9:0] xposShift, yposShift;
+assign xposShift = xpos + xShift;
+assign yposShift = ypos + yShift;
+reg [2:0] sideLength;
 
+
+wire [2:0] gameRed;
+wire [2:0] gameGreen;
+wire [1:0] gameBlue;
+assign gameRed   = { missed || border || paddle, background && checkerboard || digitPixel, 1'b0 };
+assign gameGreen = { !missed && (border || paddle || ball), digitPixel, digitPixel };
+assign gameBlue  = { !missed && (border || ball), background && checkerboard || digitPixel};
+reg  [11:0] colorSweep;
+wire [2:0] partyRed;
+wire [2:0] partyGreen;
+wire [1:0] partyBlue;
+assign partyRed   = gameRed   ^ {colorSweep[8], colorSweep[6], colorSweep[10]};
+assign partyGreen = gameGreen ^ {colorSweep[5], colorSweep[2], colorSweep[7]};
+assign partyBlue  = gameBlue  | {colorSweep[9], 1'b1};
+
+assign red =   partyMode && !digitPixel ? partyRed : gameRed;
+assign green = partyMode && !digitPixel ? partyGreen : gameGreen;
+assign blue =  partyMode && !digitPixel ? partyBlue : gameBlue;
 		
 // ball collision	
 always @(posedge clk25) begin
 	if (!endOfFrame) begin
 		PlayAgain1 <= 0;
-		if (ball && (left || right))
+		if (ball && (left || right || paddleSides))
 			bounceX <= 1;
-		if (ball && (top || bottom || (paddle && ballYdir)))
+		if (ball && (top || bottom || (paddleYbounce && ballYdir)))
 			bounceY <= 1;
 		if (ball && bottom)
 			begin

@@ -19,7 +19,7 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module PongWithSound(
-   input Clock, Reset, rota, rotb,
+   input Clock, Reset, rota, rotb, partyMode, growSquares, shiftX, shiftY,
 	output [2:0] red,
    output [2:0] green,
    output [1:0] blue,
@@ -34,5 +34,5 @@ module PongWithSound(
 	parameter [9:0] SystemClockFreq=10'd100, CRTClockFreq=10'd25; //MHz 
 	
 	CRTcontroller2015fall VGAdisplay(NumberofPixels, NumberofLines, SystemClockFreq, CRTClockFreq, hsync, vsync, xpos, ypos, Reset, Clock);
-	GameWithSound game_inst(Clock, Reset, xpos, ypos, rota, rotb, red, green, blue, Speaker);
+	GameWithSound game_inst(Clock, Reset, xpos, ypos, rota, rotb, partyMode, growSquares, shiftX, shiftY, red, green, blue, Speaker);
 endmodule
