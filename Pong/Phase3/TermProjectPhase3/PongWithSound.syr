@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Reading design: PongWithSound.prj
 
@@ -136,6 +136,8 @@ Analyzing Verilog file "C:\Users\almisbmn\Google Drive\Documents\Academic\5th Ye
 Parsing module <ClockedNegativeOneShot>.
 Analyzing Verilog file "C:\Users\almisbmn\Google Drive\Documents\Academic\5th Year\Fall\ECE333\Digital-Systems\Pong\Phase3\TermProjectPhase3\vsyncModule.v" into library work
 Parsing module <vsyncModule>.
+Analyzing Verilog file "C:\Users\almisbmn\Google Drive\Documents\Academic\5th Year\Fall\ECE333\Digital-Systems\Pong\Phase3\TermProjectPhase3\VGA7SegDisplay.v" into library work
+Parsing module <VGA7SegDisplay>.
 Analyzing Verilog file "C:\Users\almisbmn\Google Drive\Documents\Academic\5th Year\Fall\ECE333\Digital-Systems\Pong\Phase3\TermProjectPhase3\PlaySound.v" into library work
 Parsing module <PlaySound>.
 Analyzing Verilog file "C:\Users\almisbmn\Google Drive\Documents\Academic\5th Year\Fall\ECE333\Digital-Systems\Pong\Phase3\TermProjectPhase3\hsyncModule.v" into library work
@@ -170,6 +172,11 @@ WARNING:HDLCompiler:413 - "C:\Users\almisbmn\Google Drive\Documents\Academic\5th
 
 Elaborating module <GameWithSound>.
 
+Elaborating module <VGA7SegDisplay>.
+WARNING:HDLCompiler:189 - "C:\Users\almisbmn\Google Drive\Documents\Academic\5th Year\Fall\ECE333\Digital-Systems\Pong\Phase3\TermProjectPhase3\GameWithSound.v" Line 47: Size mismatch in connection of port <digitXPosition>. Formal port size is 10-bit while actual signal size is 9-bit.
+WARNING:HDLCompiler:189 - "C:\Users\almisbmn\Google Drive\Documents\Academic\5th Year\Fall\ECE333\Digital-Systems\Pong\Phase3\TermProjectPhase3\GameWithSound.v" Line 48: Size mismatch in connection of port <digitXPosition>. Formal port size is 10-bit while actual signal size is 9-bit.
+WARNING:HDLCompiler:413 - "C:\Users\almisbmn\Google Drive\Documents\Academic\5th Year\Fall\ECE333\Digital-Systems\Pong\Phase3\TermProjectPhase3\GameWithSound.v" Line 153: Result of 5-bit expression is truncated to fit in 4-bit target.
+
 Elaborating module <PlaySound>.
 
 Elaborating module <Debouncer>.
@@ -181,6 +188,7 @@ Elaborating module <ClockedOneShot>.
 Elaborating module <MusicSheetReader>.
 
 Elaborating module <MusicScore>.
+WARNING:HDLCompiler:413 - "C:\Users\almisbmn\Google Drive\Documents\Academic\5th Year\Fall\ECE333\Digital-Systems\Pong\Phase3\TermProjectPhase3\MusicScore.v" Line 18: Result of 32-bit expression is truncated to fit in 4-bit target.
 
 Elaborating module <PlayNote2>.
 
@@ -338,47 +346,128 @@ Synthesizing Unit <GameWithSound>.
     Related source file is "C:\Users\almisbmn\Google Drive\Documents\Academic\5th Year\Fall\ECE333\Digital-Systems\Pong\Phase3\TermProjectPhase3\GameWithSound.v".
     Found 3-bit register for signal <quadBr>.
     Found 9-bit register for signal <paddlePosition>.
+    Found 2-bit register for signal <Choice>.
     Found 1-bit register for signal <PlayAgain>.
     Found 10-bit register for signal <ballX>.
     Found 9-bit register for signal <ballY>.
+    Found 1-bit register for signal <PlayAgain1>.
     Found 1-bit register for signal <bounceX>.
     Found 1-bit register for signal <bounceY>.
     Found 6-bit register for signal <missTimer>.
+    Found 4-bit register for signal <score>.
     Found 1-bit register for signal <ballXdir>.
     Found 1-bit register for signal <ballYdir>.
     Found 3-bit register for signal <quadAr>.
-    Found 9-bit subtractor for signal <paddlePosition[8]_GND_9_o_sub_10_OUT> created at line 55.
-    Found 10-bit subtractor for signal <ballX[9]_GND_9_o_sub_21_OUT> created at line 82.
-    Found 9-bit subtractor for signal <ballY[8]_GND_9_o_sub_24_OUT> created at line 87.
-    Found 6-bit subtractor for signal <missTimer[5]_GND_9_o_sub_56_OUT> created at line 136.
-    Found 10-bit adder for signal <ballX[9]_GND_9_o_add_19_OUT> created at line 80.
-    Found 9-bit adder for signal <ballY[8]_GND_9_o_add_22_OUT> created at line 85.
-    Found 10-bit adder for signal <n0163> created at line 100.
-    Found 10-bit adder for signal <n0164> created at line 100.
-    Found 11-bit adder for signal <n0166> created at line 101.
-    Found 10-bit adder for signal <n0168> created at line 101.
-    Found 9-bit comparator greater for signal <paddlePosition[8]_PWR_11_o_LessThan_6_o> created at line 44
-    Found 9-bit comparator lessequal for signal <GND_9_o_paddlePosition[8]_LessThan_9_o> created at line 53
-    Found 10-bit comparator greater for signal <xpos[9]_PWR_11_o_LessThan_32_o> created at line 94
-    Found 10-bit comparator greater for signal <ypos[9]_GND_9_o_LessThan_33_o> created at line 94
-    Found 10-bit comparator lessequal for signal <n0040> created at line 95
-    Found 10-bit comparator lessequal for signal <n0043> created at line 96
-    Found 10-bit comparator lessequal for signal <n0046> created at line 97
-    Found 10-bit comparator lessequal for signal <n0049> created at line 98
-    Found 10-bit comparator lessequal for signal <n0056> created at line 100
-    Found 10-bit comparator lessequal for signal <n0059> created at line 100
-    Found 10-bit comparator lessequal for signal <n0062> created at line 100
-    Found 10-bit comparator lessequal for signal <n0065> created at line 100
-    Found 10-bit comparator lessequal for signal <n0068> created at line 101
-    Found 11-bit comparator lessequal for signal <n0071> created at line 101
-    Found 10-bit comparator lessequal for signal <n0074> created at line 101
-    Found 10-bit comparator lessequal for signal <n0078> created at line 101
+    Found 9-bit subtractor for signal <paddlePosition[8]_GND_9_o_sub_13_OUT> created at line 69.
+    Found 10-bit subtractor for signal <ballX[9]_GND_9_o_sub_28_OUT> created at line 96.
+    Found 9-bit subtractor for signal <ballY[8]_GND_9_o_sub_31_OUT> created at line 101.
+    Found 6-bit subtractor for signal <missTimer[5]_GND_9_o_sub_67_OUT> created at line 166.
+    Found 10-bit adder for signal <ballX[9]_GND_9_o_add_26_OUT> created at line 94.
+    Found 9-bit adder for signal <ballY[8]_GND_9_o_add_29_OUT> created at line 99.
+    Found 10-bit adder for signal <n0198> created at line 114.
+    Found 10-bit adder for signal <n0199> created at line 114.
+    Found 11-bit adder for signal <n0201> created at line 115.
+    Found 10-bit adder for signal <n0203> created at line 115.
+    Found 4-bit adder for signal <score[3]_GND_9_o_add_62_OUT> created at line 153.
+    Found 9-bit comparator greater for signal <paddlePosition[8]_PWR_11_o_LessThan_8_o> created at line 57
+    Found 9-bit comparator greater for signal <GND_9_o_paddlePosition[8]_LessThan_12_o> created at line 67
+    Found 10-bit comparator greater for signal <xpos[9]_PWR_11_o_LessThan_39_o> created at line 108
+    Found 10-bit comparator greater for signal <ypos[9]_GND_9_o_LessThan_40_o> created at line 108
+    Found 10-bit comparator lessequal for signal <n0046> created at line 109
+    Found 10-bit comparator lessequal for signal <n0049> created at line 110
+    Found 10-bit comparator lessequal for signal <n0052> created at line 111
+    Found 10-bit comparator lessequal for signal <n0055> created at line 112
+    Found 10-bit comparator lessequal for signal <n0062> created at line 114
+    Found 10-bit comparator lessequal for signal <n0065> created at line 114
+    Found 10-bit comparator lessequal for signal <n0068> created at line 114
+    Found 10-bit comparator lessequal for signal <n0071> created at line 114
+    Found 10-bit comparator lessequal for signal <n0074> created at line 115
+    Found 11-bit comparator lessequal for signal <n0077> created at line 115
+    Found 10-bit comparator lessequal for signal <n0080> created at line 115
+    Found 10-bit comparator lessequal for signal <n0084> created at line 115
     Summary:
-	inferred   8 Adder/Subtractor(s).
-	inferred  45 D-type flip-flop(s).
+	inferred   9 Adder/Subtractor(s).
+	inferred  52 D-type flip-flop(s).
 	inferred  16 Comparator(s).
-	inferred   1 Multiplexer(s).
+	inferred   2 Multiplexer(s).
 Unit <GameWithSound> synthesized.
+
+Synthesizing Unit <mod_4u_4u>.
+    Related source file is "".
+    Found 8-bit adder for signal <GND_10_o_b[3]_add_1_OUT> created at line 0.
+    Found 7-bit adder for signal <GND_10_o_b[3]_add_3_OUT> created at line 0.
+    Found 6-bit adder for signal <GND_10_o_b[3]_add_5_OUT> created at line 0.
+    Found 5-bit adder for signal <GND_10_o_b[3]_add_7_OUT> created at line 0.
+    Found 4-bit adder for signal <a[3]_b[3]_add_9_OUT[3:0]> created at line 0.
+    Found 8-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 7-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 6-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 5-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 4-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Summary:
+	inferred   5 Adder/Subtractor(s).
+	inferred   5 Comparator(s).
+	inferred  14 Multiplexer(s).
+Unit <mod_4u_4u> synthesized.
+
+Synthesizing Unit <div_4u_4u>.
+    Related source file is "".
+    Found 8-bit adder for signal <GND_11_o_b[3]_add_1_OUT> created at line 0.
+    Found 7-bit adder for signal <GND_11_o_b[3]_add_3_OUT> created at line 0.
+    Found 6-bit adder for signal <GND_11_o_b[3]_add_5_OUT> created at line 0.
+    Found 5-bit adder for signal <GND_11_o_b[3]_add_7_OUT> created at line 0.
+    Found 8-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 7-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 6-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 5-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 4-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred   5 Comparator(s).
+	inferred  13 Multiplexer(s).
+Unit <div_4u_4u> synthesized.
+
+Synthesizing Unit <VGA7SegDisplay>.
+    Related source file is "C:\Users\almisbmn\Google Drive\Documents\Academic\5th Year\Fall\ECE333\Digital-Systems\Pong\Phase3\TermProjectPhase3\VGA7SegDisplay.v".
+        SegmentWidth = 10'b0000010100
+        SegmentHeight = 10'b0000011100
+        lineWidth = 10'b0000000100
+    Found 12-bit subtractor for signal <GND_12_o_GND_12_o_sub_4_OUT> created at line 20.
+    Found 12-bit subtractor for signal <GND_12_o_GND_12_o_sub_8_OUT> created at line 20.
+    Found 10-bit subtractor for signal <digitXPosition[9]_GND_12_o_sub_11_OUT> created at line 21.
+    Found 12-bit subtractor for signal <GND_12_o_GND_12_o_sub_14_OUT> created at line 21.
+    Found 12-bit subtractor for signal <GND_12_o_GND_12_o_sub_18_OUT> created at line 21.
+    Found 12-bit subtractor for signal <GND_12_o_GND_12_o_sub_30_OUT> created at line 22.
+    Found 10-bit subtractor for signal <digitYPosition[9]_GND_12_o_sub_38_OUT> created at line 23.
+    Found 12-bit subtractor for signal <GND_12_o_GND_12_o_sub_45_OUT> created at line 24.
+    Found 11-bit adder for signal <n0135[10:0]> created at line 20.
+    Found 11-bit adder for signal <n0137[10:0]> created at line 20.
+    Found 11-bit adder for signal <n0139[10:0]> created at line 20.
+    Found 11-bit adder for signal <n0141[10:0]> created at line 21.
+    Found 12-bit adder for signal <n0122> created at line 22.
+    Found 11-bit adder for signal <n0145[10:0]> created at line 22.
+    Found 11-bit adder for signal <n0130> created at line 26.
+    Found 11-bit adder for signal <n0133> created at line 26.
+    Found 1-bit 13-to-1 multiplexer for signal <digitpixel> created at line 29.
+    Found 10-bit comparator lessequal for signal <n0001> created at line 20
+    Found 32-bit comparator lessequal for signal <n0005> created at line 20
+    Found 10-bit comparator lessequal for signal <n0008> created at line 20
+    Found 32-bit comparator lessequal for signal <n0013> created at line 20
+    Found 10-bit comparator lessequal for signal <n0017> created at line 21
+    Found 32-bit comparator lessequal for signal <n0020> created at line 21
+    Found 32-bit comparator lessequal for signal <n0026> created at line 21
+    Found 12-bit comparator lessequal for signal <n0030> created at line 22
+    Found 32-bit comparator lessequal for signal <n0035> created at line 22
+    Found 10-bit comparator lessequal for signal <n0039> created at line 23
+    Found 10-bit comparator lessequal for signal <n0043> created at line 24
+    Found 32-bit comparator lessequal for signal <n0046> created at line 24
+    Found 11-bit comparator lessequal for signal <n0055> created at line 26
+    Found 11-bit comparator lessequal for signal <n0059> created at line 26
+    Summary:
+	inferred  16 Adder/Subtractor(s).
+	inferred  14 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <VGA7SegDisplay> synthesized.
 
 Synthesizing Unit <PlaySound>.
     Related source file is "C:\Users\almisbmn\Google Drive\Documents\Academic\5th Year\Fall\ECE333\Digital-Systems\Pong\Phase3\TermProjectPhase3\PlaySound.v".
@@ -417,7 +506,7 @@ Synthesizing Unit <DelayLoop>.
         Divider = 100000
         NumberOfBits = 27
     Found 27-bit register for signal <count>.
-    Found 27-bit adder for signal <count[26]_GND_12_o_add_4_OUT> created at line 21.
+    Found 27-bit adder for signal <count[26]_GND_15_o_add_4_OUT> created at line 21.
     Found 27-bit comparator lessequal for signal <n0002> created at line 20
     Summary:
 	inferred   1 Adder/Subtractor(s).
@@ -456,7 +545,7 @@ Synthesizing Unit <MusicSheetReader>.
         AddressBits = 5
     Found 1-bit register for signal <State>.
     Found 5-bit register for signal <CurrentAddress>.
-    Found 5-bit adder for signal <CurrentAddress[4]_GND_14_o_add_7_OUT> created at line 31.
+    Found 5-bit adder for signal <CurrentAddress[4]_GND_17_o_add_7_OUT> created at line 31.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred   6 D-type flip-flop(s).
@@ -467,36 +556,50 @@ Synthesizing Unit <MusicScore>.
     Related source file is "C:\Users\almisbmn\Google Drive\Documents\Academic\5th Year\Fall\ECE333\Digital-Systems\Pong\Phase3\TermProjectPhase3\MusicScore.v".
         DataLength = 4
         AddressBits = 5
-        MemorySize = 20
-    Found 1-bit register for signal <Keys<1><1>>.
-    Found 1-bit register for signal <Keys<2><1>>.
+        MemorySize = 40
+        Music1 = 0
+        Music2 = 12
+        Music3 = 24
     Found 1-bit register for signal <Keys<2><0>>.
-    Found 1-bit register for signal <Keys<3><1>>.
-    Found 1-bit register for signal <Keys<3><0>>.
-    Found 1-bit register for signal <Keys<4><1>>.
-    Found 1-bit register for signal <Keys<5><0>>.
     Found 1-bit register for signal <Keys<6><0>>.
     Found 1-bit register for signal <Keys<7><1>>.
-    Found 1-bit register for signal <Keys<8><1>>.
     Found 1-bit register for signal <Keys<8><0>>.
-    Found 1-bit register for signal <Keys<9><1>>.
     Found 1-bit register for signal <Keys<10><0>>.
-    Found 1-bit register for signal <Times<0><1>>.
-    Found 1-bit register for signal <Times<1><0>>.
-    Found 1-bit register for signal <Times<2><0>>.
-    Found 1-bit register for signal <Times<3><0>>.
-    Found 1-bit register for signal <Times<4><0>>.
-    Found 1-bit register for signal <Times<5><0>>.
-    Found 1-bit register for signal <Times<6><0>>.
+    Found 1-bit register for signal <Keys<12><1>>.
+    Found 1-bit register for signal <Keys<16><1>>.
+    Found 1-bit register for signal <Keys<19><1>>.
+    Found 1-bit register for signal <Keys<20><1>>.
+    Found 1-bit register for signal <Keys<21><1>>.
+    Found 1-bit register for signal <Keys<21><0>>.
+    Found 1-bit register for signal <Keys<24><1>>.
+    Found 1-bit register for signal <Keys<24><0>>.
+    Found 1-bit register for signal <Keys<27><1>>.
+    Found 1-bit register for signal <Keys<27><0>>.
+    Found 1-bit register for signal <Keys<28><1>>.
+    Found 1-bit register for signal <Keys<29><1>>.
+    Found 1-bit register for signal <Keys<29><0>>.
+    Found 1-bit register for signal <Keys<30><1>>.
+    Found 1-bit register for signal <Keys<30><0>>.
+    Found 1-bit register for signal <Keys<31><1>>.
     Found 1-bit register for signal <Times<7><0>>.
     Found 1-bit register for signal <Times<8><0>>.
     Found 1-bit register for signal <Times<9><0>>.
     Found 1-bit register for signal <Times<10><1>>.
-    Found 1-bit register for signal <Keys<0><0>>.
+    Found 1-bit register for signal <Times<14><1>>.
+    Found 1-bit register for signal <Times<15><0>>.
+    Found 1-bit register for signal <Times<16><0>>.
+    Found 1-bit register for signal <Times<17><0>>.
+    Found 1-bit register for signal <Times<18><2>>.
+    Found 1-bit register for signal <Times<20><0>>.
+    Found 1-bit register for signal <Times<21><0>>.
+    Found 1-bit register for signal <Times<27><0>>.
+    Found 1-bit register for signal <Times<28><0>>.
+    Found 1-bit register for signal <Times<29><0>>.
     Found 1-bit register for signal <Keys<0><2>>.
     Found 1-bit register for signal <Keys<0><1>>.
     Found 1-bit register for signal <Keys<1><3>>.
     Found 1-bit register for signal <Keys<1><2>>.
+    Found 1-bit register for signal <Keys<1><1>>.
     Found 1-bit register for signal <Keys<1><0>>.
     Found 1-bit register for signal <Keys<2><3>>.
     Found 1-bit register for signal <Keys<2><2>>.
@@ -526,21 +629,77 @@ Synthesizing Unit <MusicScore>.
     Found 1-bit register for signal <Keys<11><2>>.
     Found 1-bit register for signal <Keys<11><1>>.
     Found 1-bit register for signal <Keys<11><0>>.
+    Found 1-bit register for signal <Keys<12><3>>.
+    Found 1-bit register for signal <Keys<12><2>>.
+    Found 1-bit register for signal <Keys<12><0>>.
+    Found 1-bit register for signal <Keys<13><3>>.
+    Found 1-bit register for signal <Keys<13><2>>.
+    Found 1-bit register for signal <Keys<13><1>>.
+    Found 1-bit register for signal <Keys<13><0>>.
+    Found 1-bit register for signal <Keys<14><3>>.
+    Found 1-bit register for signal <Keys<14><2>>.
+    Found 1-bit register for signal <Keys<15><3>>.
+    Found 1-bit register for signal <Keys<15><2>>.
+    Found 1-bit register for signal <Keys<15><1>>.
+    Found 1-bit register for signal <Keys<16><3>>.
+    Found 1-bit register for signal <Keys<16><2>>.
+    Found 1-bit register for signal <Keys<16><0>>.
+    Found 1-bit register for signal <Keys<17><3>>.
+    Found 1-bit register for signal <Keys<17><2>>.
+    Found 1-bit register for signal <Keys<17><1>>.
+    Found 1-bit register for signal <Keys<18><3>>.
+    Found 1-bit register for signal <Keys<18><2>>.
+    Found 1-bit register for signal <Keys<19><3>>.
+    Found 1-bit register for signal <Keys<19><2>>.
+    Found 1-bit register for signal <Keys<19><0>>.
+    Found 1-bit register for signal <Keys<20><3>>.
+    Found 1-bit register for signal <Keys<20><2>>.
+    Found 1-bit register for signal <Keys<20><0>>.
+    Found 1-bit register for signal <Keys<21><3>>.
+    Found 1-bit register for signal <Keys<21><2>>.
+    Found 1-bit register for signal <Keys<22><3>>.
+    Found 1-bit register for signal <Keys<22><2>>.
+    Found 1-bit register for signal <Keys<22><0>>.
+    Found 1-bit register for signal <Keys<23><3>>.
+    Found 1-bit register for signal <Keys<23><2>>.
+    Found 1-bit register for signal <Keys<23><1>>.
+    Found 1-bit register for signal <Keys<23><0>>.
+    Found 1-bit register for signal <Keys<24><3>>.
+    Found 1-bit register for signal <Keys<24><2>>.
+    Found 1-bit register for signal <Keys<25><3>>.
+    Found 1-bit register for signal <Keys<25><2>>.
+    Found 1-bit register for signal <Keys<25><1>>.
+    Found 1-bit register for signal <Keys<25><0>>.
+    Found 1-bit register for signal <Keys<26><3>>.
+    Found 1-bit register for signal <Keys<26><2>>.
+    Found 1-bit register for signal <Keys<26><1>>.
+    Found 1-bit register for signal <Keys<27><3>>.
+    Found 1-bit register for signal <Keys<27><2>>.
+    Found 1-bit register for signal <Keys<28><3>>.
+    Found 1-bit register for signal <Keys<28><2>>.
+    Found 1-bit register for signal <Keys<28><0>>.
+    Found 1-bit register for signal <Keys<29><3>>.
+    Found 1-bit register for signal <Keys<29><2>>.
+    Found 1-bit register for signal <Keys<30><3>>.
+    Found 1-bit register for signal <Keys<30><2>>.
+    Found 1-bit register for signal <Keys<31><3>>.
+    Found 1-bit register for signal <Keys<31><2>>.
+    Found 1-bit register for signal <Keys<31><0>>.
     Found 1-bit register for signal <Times<0><3>>.
-    Found 1-bit register for signal <Times<0><2>>.
+    Found 1-bit register for signal <Times<0><1>>.
     Found 1-bit register for signal <Times<0><0>>.
     Found 1-bit register for signal <Times<1><3>>.
     Found 1-bit register for signal <Times<1><2>>.
     Found 1-bit register for signal <Times<1><1>>.
+    Found 1-bit register for signal <Times<1><0>>.
     Found 1-bit register for signal <Times<2><3>>.
     Found 1-bit register for signal <Times<2><2>>.
     Found 1-bit register for signal <Times<2><1>>.
     Found 1-bit register for signal <Times<3><3>>.
     Found 1-bit register for signal <Times<3><2>>.
-    Found 1-bit register for signal <Times<3><1>>.
+    Found 1-bit register for signal <Times<3><0>>.
     Found 1-bit register for signal <Times<4><3>>.
     Found 1-bit register for signal <Times<4><2>>.
-    Found 1-bit register for signal <Times<4><1>>.
     Found 1-bit register for signal <Times<5><3>>.
     Found 1-bit register for signal <Times<5><2>>.
     Found 1-bit register for signal <Times<5><1>>.
@@ -563,27 +722,7 @@ Synthesizing Unit <MusicScore>.
     Found 1-bit register for signal <Times<11><2>>.
     Found 1-bit register for signal <Times<11><1>>.
     Found 1-bit register for signal <Times<11><0>>.
-    Found 1-bit register for signal <Keys<0><3>>.
-    Found 4-bit register for signal <KeyOutput>.
-    Found 4-bit register for signal <TimeOutput>.
-    Found 1-bit register for signal <Keys<12><3>>.
-    Found 1-bit register for signal <Keys<13><3>>.
-    Found 1-bit register for signal <Keys<13><2>>.
-    Found 1-bit register for signal <Keys<13><0>>.
-    Found 1-bit register for signal <Keys<14><3>>.
-    Found 1-bit register for signal <Keys<14><2>>.
-    Found 1-bit register for signal <Keys<15><3>>.
-    Found 1-bit register for signal <Keys<15><2>>.
-    Found 1-bit register for signal <Keys<15><0>>.
-    Found 1-bit register for signal <Keys<16><3>>.
-    Found 1-bit register for signal <Keys<17><3>>.
-    Found 1-bit register for signal <Keys<17><2>>.
-    Found 1-bit register for signal <Keys<18><2>>.
-    Found 1-bit register for signal <Keys<19><3>>.
-    Found 1-bit register for signal <Keys<19><2>>.
-    Found 1-bit register for signal <Keys<19><1>>.
-    Found 1-bit register for signal <Keys<19><0>>.
-    Found 1-bit register for signal <Times<12><2>>.
+    Found 1-bit register for signal <Times<12><3>>.
     Found 1-bit register for signal <Times<12><1>>.
     Found 1-bit register for signal <Times<12><0>>.
     Found 1-bit register for signal <Times<13><3>>.
@@ -591,29 +730,73 @@ Synthesizing Unit <MusicScore>.
     Found 1-bit register for signal <Times<13><1>>.
     Found 1-bit register for signal <Times<13><0>>.
     Found 1-bit register for signal <Times<14><3>>.
-    Found 1-bit register for signal <Times<14><1>>.
+    Found 1-bit register for signal <Times<14><2>>.
     Found 1-bit register for signal <Times<14><0>>.
+    Found 1-bit register for signal <Times<15><3>>.
+    Found 1-bit register for signal <Times<15><2>>.
     Found 1-bit register for signal <Times<15><1>>.
+    Found 1-bit register for signal <Times<16><3>>.
     Found 1-bit register for signal <Times<16><2>>.
-    Found 1-bit register for signal <Times<17><0>>.
+    Found 1-bit register for signal <Times<16><1>>.
+    Found 1-bit register for signal <Times<17><3>>.
+    Found 1-bit register for signal <Times<17><2>>.
+    Found 1-bit register for signal <Times<17><1>>.
     Found 1-bit register for signal <Times<18><3>>.
-    Found 1-bit register for signal <Times<18><2>>.
     Found 1-bit register for signal <Times<18><1>>.
     Found 1-bit register for signal <Times<18><0>>.
     Found 1-bit register for signal <Times<19><3>>.
+    Found 1-bit register for signal <Times<19><2>>.
     Found 1-bit register for signal <Times<19><1>>.
-    Found 4-bit 20-to-1 multiplexer for signal <KeyOutput[3]_Address[4]_mux_46_OUT> created at line 31.
-    Found 4-bit 20-to-1 multiplexer for signal <TimeOutput[3]_Address[4]_mux_47_OUT> created at line 31.
+    Found 1-bit register for signal <Times<20><3>>.
+    Found 1-bit register for signal <Times<20><2>>.
+    Found 1-bit register for signal <Times<20><1>>.
+    Found 1-bit register for signal <Times<21><3>>.
+    Found 1-bit register for signal <Times<21><2>>.
+    Found 1-bit register for signal <Times<21><1>>.
+    Found 1-bit register for signal <Times<23><3>>.
+    Found 1-bit register for signal <Times<23><2>>.
+    Found 1-bit register for signal <Times<23><1>>.
+    Found 1-bit register for signal <Times<23><0>>.
+    Found 1-bit register for signal <Times<24><3>>.
+    Found 1-bit register for signal <Times<24><1>>.
+    Found 1-bit register for signal <Times<24><0>>.
+    Found 1-bit register for signal <Times<25><3>>.
+    Found 1-bit register for signal <Times<25><2>>.
+    Found 1-bit register for signal <Times<25><1>>.
+    Found 1-bit register for signal <Times<25><0>>.
+    Found 1-bit register for signal <Times<26><3>>.
+    Found 1-bit register for signal <Times<26><2>>.
+    Found 1-bit register for signal <Times<26><1>>.
+    Found 1-bit register for signal <Times<27><3>>.
+    Found 1-bit register for signal <Times<27><2>>.
+    Found 1-bit register for signal <Times<28><3>>.
+    Found 1-bit register for signal <Times<28><2>>.
+    Found 1-bit register for signal <Times<29><3>>.
+    Found 1-bit register for signal <Times<29><2>>.
+    Found 1-bit register for signal <Times<29><1>>.
+    Found 1-bit register for signal <Times<30><3>>.
+    Found 1-bit register for signal <Times<30><2>>.
+    Found 1-bit register for signal <Times<30><1>>.
+    Found 1-bit register for signal <Times<31><3>>.
+    Found 1-bit register for signal <Times<31><2>>.
+    Found 1-bit register for signal <Times<31><1>>.
+    Found 1-bit register for signal <Keys<0><3>>.
+    Found 4-bit register for signal <KeyOutput>.
+    Found 4-bit register for signal <TimeOutput>.
+    Found 5-bit adder for signal <Address[4]_GND_18_o_add_4_OUT> created at line 65.
+    Found 4-bit 32-to-1 multiplexer for signal <KeyOutput[3]_Address[4]_mux_74_OUT> created at line 65.
+    Found 4-bit 32-to-1 multiplexer for signal <TimeOutput[3]_Address[4]_mux_75_OUT> created at line 65.
     Summary:
-	inferred 140 D-type flip-flop(s).
-	inferred   2 Multiplexer(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred 229 D-type flip-flop(s).
+	inferred   3 Multiplexer(s).
 Unit <MusicScore> synthesized.
 
 Synthesizing Unit <PlayNote2>.
     Related source file is "C:\Users\almisbmn\Google Drive\Documents\Academic\5th Year\Fall\ECE333\Digital-Systems\Pong\Phase3\TermProjectPhase3\PlayNote2.v".
     Found 1-bit register for signal <State>.
     Found 4-bit register for signal <ElapseSeconds>.
-    Found 4-bit adder for signal <ElapseSeconds[3]_GND_17_o_add_7_OUT> created at line 26.
+    Found 4-bit adder for signal <ElapseSeconds[3]_GND_68_o_add_7_OUT> created at line 26.
     Found 4-bit comparator lessequal for signal <n0014> created at line 34
     Found 4-bit comparator equal for signal <Over> created at line 35
     Summary:
@@ -629,7 +812,7 @@ Synthesizing Unit <OneSecElapseTime>.
         OneSecondElapseTime = 20000000
     Found 1-bit register for signal <State>.
     Found 26-bit register for signal <SecondsCounter>.
-    Found 26-bit adder for signal <SecondsCounter[25]_GND_18_o_add_8_OUT> created at line 29.
+    Found 26-bit adder for signal <SecondsCounter[25]_GND_69_o_add_8_OUT> created at line 29.
     Found 26-bit comparator lessequal for signal <n0009> created at line 28
     Summary:
 	inferred   1 Adder/Subtractor(s).
@@ -673,7 +856,7 @@ Synthesizing Unit <Waveform>.
         NumberOfBits = 20
     Found 1-bit register for signal <Waveform>.
     Found 20-bit register for signal <WaveformCounter>.
-    Found 20-bit adder for signal <WaveformCounter[19]_GND_22_o_add_4_OUT> created at line 21.
+    Found 20-bit adder for signal <WaveformCounter[19]_GND_73_o_add_4_OUT> created at line 21.
     Found 20-bit comparator greater for signal <n0002> created at line 19
     Summary:
 	inferred   1 Adder/Subtractor(s).
@@ -686,12 +869,13 @@ Unit <Waveform> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 28
+# Adders/Subtractors                                   : 71
  10-bit adder                                          : 4
  10-bit addsub                                         : 3
- 10-bit subtractor                                     : 1
- 11-bit adder                                          : 2
- 12-bit adder                                          : 1
+ 10-bit subtractor                                     : 5
+ 11-bit adder                                          : 16
+ 12-bit adder                                          : 3
+ 12-bit subtractor                                     : 12
  13-bit adder                                          : 1
  14-bit adder                                          : 1
  15-bit adder                                          : 1
@@ -702,28 +886,32 @@ Macro Statistics
  20-bit adder                                          : 3
  26-bit adder                                          : 1
  27-bit adder                                          : 1
- 4-bit adder                                           : 1
- 5-bit adder                                           : 1
+ 4-bit adder                                           : 3
+ 5-bit adder                                           : 4
+ 6-bit adder                                           : 2
  6-bit subtractor                                      : 1
+ 7-bit adder                                           : 2
+ 8-bit adder                                           : 2
  9-bit addsub                                          : 1
  9-bit subtractor                                      : 1
-# Registers                                            : 173
- 1-bit register                                        : 151
+# Registers                                            : 274
+ 1-bit register                                        : 253
  10-bit register                                       : 2
+ 2-bit register                                        : 1
  20-bit register                                       : 6
  26-bit register                                       : 1
  27-bit register                                       : 1
  3-bit register                                        : 2
- 4-bit register                                        : 6
+ 4-bit register                                        : 4
  5-bit register                                        : 1
  6-bit register                                        : 1
  9-bit register                                        : 2
-# Comparators                                          : 43
+# Comparators                                          : 81
  10-bit comparator equal                               : 3
  10-bit comparator greater                             : 4
- 10-bit comparator lessequal                           : 17
- 11-bit comparator lessequal                           : 2
- 12-bit comparator lessequal                           : 1
+ 10-bit comparator lessequal                           : 27
+ 11-bit comparator lessequal                           : 6
+ 12-bit comparator lessequal                           : 3
  13-bit comparator lessequal                           : 1
  14-bit comparator lessequal                           : 1
  15-bit comparator lessequal                           : 1
@@ -734,20 +922,26 @@ Macro Statistics
  20-bit comparator greater                             : 3
  26-bit comparator lessequal                           : 1
  27-bit comparator lessequal                           : 1
+ 32-bit comparator lessequal                           : 12
  4-bit comparator equal                                : 1
- 4-bit comparator lessequal                            : 1
- 9-bit comparator greater                              : 1
- 9-bit comparator lessequal                            : 1
-# Multiplexers                                         : 119
- 1-bit 2-to-1 multiplexer                              : 83
+ 4-bit comparator lessequal                            : 3
+ 5-bit comparator lessequal                            : 2
+ 6-bit comparator lessequal                            : 2
+ 7-bit comparator lessequal                            : 2
+ 8-bit comparator lessequal                            : 2
+ 9-bit comparator greater                              : 2
+# Multiplexers                                         : 150
+ 1-bit 13-to-1 multiplexer                             : 2
+ 1-bit 2-to-1 multiplexer                              : 108
  1-bit 4-to-1 multiplexer                              : 2
  10-bit 2-to-1 multiplexer                             : 22
  20-bit 2-to-1 multiplexer                             : 3
  26-bit 2-to-1 multiplexer                             : 1
  27-bit 2-to-1 multiplexer                             : 1
  3-bit 2-to-1 multiplexer                              : 2
- 4-bit 2-to-1 multiplexer                              : 1
- 4-bit 20-to-1 multiplexer                             : 2
+ 32-bit 2-to-1 multiplexer                             : 1
+ 4-bit 2-to-1 multiplexer                              : 4
+ 4-bit 32-to-1 multiplexer                             : 2
  5-bit 2-to-1 multiplexer                              : 1
  9-bit 2-to-1 multiplexer                              : 1
 # FSMs                                                 : 4
@@ -766,105 +960,206 @@ INFO:Xst:2261 - The FF/Latch <NoteC_2> in Unit <UnitInput> is equivalent to the 
 INFO:Xst:2261 - The FF/Latch <NoteD_0> in Unit <UnitInput> is equivalent to the following 7 FFs/Latches, which will be removed : <NoteD_2> <NoteD_3> <NoteD_7> <NoteD_10> <NoteD_11> <NoteD_14> <NoteD_16> 
 INFO:Xst:2261 - The FF/Latch <NoteE_0> in Unit <UnitInput> is equivalent to the following 5 FFs/Latches, which will be removed : <NoteE_1> <NoteE_6> <NoteE_11> <NoteE_13> <NoteE_16> 
 INFO:Xst:2261 - The FF/Latch <NoteC_0> in Unit <UnitInput> is equivalent to the following 37 FFs/Latches, which will be removed : <NoteC_1> <NoteC_3> <NoteC_4> <NoteC_5> <NoteC_7> <NoteC_9> <NoteC_11> <NoteC_15> <NoteC_17> <NoteC_18> <NoteC_19> <NoteD_1> <NoteD_4> <NoteD_5> <NoteD_6> <NoteD_8> <NoteD_9> <NoteD_12> <NoteD_13> <NoteD_15> <NoteD_17> <NoteD_18> <NoteD_19> <NoteE_2> <NoteE_3> <NoteE_4> <NoteE_5> <NoteE_7> <NoteE_8> <NoteE_9> <NoteE_10> <NoteE_12> <NoteE_14> <NoteE_15> <NoteE_17> <NoteE_18> <NoteE_19> 
-WARNING:Xst:1710 - FF/Latch <Keys<13>_0> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Keys<13>_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Keys<13>_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Keys<12>_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Keys_0_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Times_11_0> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Times_11_1> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Times_11_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Times_11_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Times_10_0> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Times_10_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Times_10_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Times_9_1> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Times_9_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Times_9_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Times_8_1> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Times_3_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Times_3_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Times_3_1> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Times_4_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <Times_4_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Times_4_1> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <Times_5_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Times_5_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <Times_5_1> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <Times_6_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <Times_6_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <Times_6_1> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_7_1> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <Times_7_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <Times_7_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Times_7_1> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <Times_8_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <Times_8_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_8_1> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_9_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_10_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_9_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_9_1> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_10_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_10_0> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_11_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_11_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_12_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_11_1> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_11_0> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_12_1> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_12_0> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_13_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_13_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_26_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_27_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_27_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_28_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_28_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_28_0> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_29_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_29_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_30_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_30_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_31_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_31_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_31_0> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_0_0> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_0_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_0_1> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_1_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_1_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_1_1> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_1_0> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_2_1> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_2_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_2_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_3_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_3_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_3_0> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_4_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_5_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_24_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_23_1> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_23_0> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_24_1> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_24_0> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_25_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_25_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_26_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_25_1> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_25_0> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_26_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_26_1> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_27_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_27_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_29_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_28_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_28_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_29_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_29_1> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_30_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_30_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_31_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_30_1> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_31_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_31_1> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_0_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <NoteC_0> (without init value) has a constant value of 0 in block <UnitInput>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Times_31> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Times_21> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Times_11> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Times_01> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Times_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Times_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Times_1> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Times_0> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Keys_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Keys_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Keys_1> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Keys_0> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Times<19>_1> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Times<19>_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Times<17>_0> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Keys<14>_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Keys<14>_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Keys<15>_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Keys<15>_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Keys<15>_0> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Keys<16>_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Keys<17>_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Keys<17>_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Keys<18>_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Times<12>_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Times<12>_1> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Times<12>_0> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Times<14>_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Times<14>_1> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Times<14>_0> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Times<15>_1> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Times<16>_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Keys_3_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Keys_2_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Keys_2_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Keys_1_0> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Keys_1_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Keys_1_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Keys_0_1> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Choice_1> (without init value) has a constant value of 0 in block <game_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_14_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_13_1> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_13_0> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_14_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_14_0> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_15_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_15_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_16_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_15_1> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_16_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_16_1> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_17_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_17_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_17_1> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_18_0> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_18_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_18_1> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_19_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_19_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_19_1> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_20_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_21_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_20_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_20_1> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_21_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_21_1> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_23_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_23_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_17_0> (without init value) has a constant value of 1 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_18_2> (without init value) has a constant value of 1 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_20_0> (without init value) has a constant value of 1 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_21_0> (without init value) has a constant value of 1 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_29_0> (without init value) has a constant value of 1 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_27_0> (without init value) has a constant value of 1 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_28_0> (without init value) has a constant value of 1 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <Keys_0_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Keys_0_0> (without init value) has a constant value of 1 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Times_10_1> (without init value) has a constant value of 1 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Times_9_0> (without init value) has a constant value of 1 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Times_8_0> (without init value) has a constant value of 1 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Times_7_0> (without init value) has a constant value of 1 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Times_6_0> (without init value) has a constant value of 1 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Times_5_0> (without init value) has a constant value of 1 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Times_4_0> (without init value) has a constant value of 1 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Keys_1_1> (without init value) has a constant value of 1 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Keys_2_1> (without init value) has a constant value of 1 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_0_1> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_1_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_1_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_2_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_1_1> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_1_0> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_2_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_3_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_3_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_4_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_5_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_4_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_4_0> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_5_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_5_1> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_6_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_6_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_7_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_6_1> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_7_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <Keys_2_0> (without init value) has a constant value of 1 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Keys_3_1> (without init value) has a constant value of 1 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Keys_3_0> (without init value) has a constant value of 1 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Keys_4_1> (without init value) has a constant value of 1 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Keys_5_0> (without init value) has a constant value of 1 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <Keys_6_0> (without init value) has a constant value of 1 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <Keys_7_1> (without init value) has a constant value of 1 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Keys_8_1> (without init value) has a constant value of 1 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <Keys_8_0> (without init value) has a constant value of 1 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Keys_9_1> (without init value) has a constant value of 1 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <Keys_10_0> (without init value) has a constant value of 1 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Times_0_1> (without init value) has a constant value of 1 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Times_1_0> (without init value) has a constant value of 1 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Times_2_0> (without init value) has a constant value of 1 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Times_3_0> (without init value) has a constant value of 1 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_12_1> (without init value) has a constant value of 1 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_16_1> (without init value) has a constant value of 1 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_19_1> (without init value) has a constant value of 1 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_20_1> (without init value) has a constant value of 1 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_21_1> (without init value) has a constant value of 1 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_21_0> (without init value) has a constant value of 1 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_27_1> (without init value) has a constant value of 1 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_24_1> (without init value) has a constant value of 1 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_24_0> (without init value) has a constant value of 1 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_27_0> (without init value) has a constant value of 1 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_28_1> (without init value) has a constant value of 1 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_29_1> (without init value) has a constant value of 1 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_29_0> (without init value) has a constant value of 1 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_31_1> (without init value) has a constant value of 1 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_30_1> (without init value) has a constant value of 1 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_30_0> (without init value) has a constant value of 1 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_7_0> (without init value) has a constant value of 1 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_8_0> (without init value) has a constant value of 1 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_9_0> (without init value) has a constant value of 1 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_10_1> (without init value) has a constant value of 1 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_16_0> (without init value) has a constant value of 1 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_14_1> (without init value) has a constant value of 1 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_15_0> (without init value) has a constant value of 1 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_16_0> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_17_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_17_1> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_18_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_18_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_19_0> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_19_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_19_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_20_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_20_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_20_0> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_21_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_22_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_21_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_22_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_22_0> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_23_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_23_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_23_1> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_24_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_23_0> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_24_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_25_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_25_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_25_1> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_25_0> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_26_1> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_26_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_7_0> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_8_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_8_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_9_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_9_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <Keys_9_0> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <Keys_10_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <Keys_10_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
@@ -872,33 +1167,22 @@ WARNING:Xst:1710 - FF/Latch <Keys_10_1> (without init value) has a constant valu
 WARNING:Xst:1710 - FF/Latch <Keys_11_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <Keys_11_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <Keys_11_1> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_12_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <Keys_11_0> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Times_0_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Times_0_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Times_0_0> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Times_1_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Times_1_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Times_1_1> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Times_2_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Times_2_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Times_2_1> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Keys_3_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Keys_4_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Keys_4_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Keys_4_0> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Keys_5_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Keys_5_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Keys_5_1> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Keys_6_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Keys_6_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Keys_6_1> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Keys_7_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Keys_7_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Keys_7_0> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Keys_8_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Keys_8_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Keys_9_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Keys_9_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_12_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_12_0> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_13_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_13_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_13_1> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_14_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_13_0> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_14_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_15_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_15_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_15_1> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_16_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_17_3> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Keys_16_2> (without init value) has a constant value of 0 in block <Sheet>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:2404 -  FFs/Latches <NoteE<19:17>> (without init value) have a constant value of 0 in block <InputModule>.
 WARNING:Xst:2404 -  FFs/Latches <NoteD<19:17>> (without init value) have a constant value of 0 in block <InputModule>.
 WARNING:Xst:2404 -  FFs/Latches <NoteC<19:17>> (without init value) have a constant value of 0 in block <InputModule>.
@@ -915,6 +1199,7 @@ Synthesizing (advanced) Unit <GameWithSound>.
 The following registers are absorbed into accumulator <ballX>: 1 register on signal <ballX>.
 The following registers are absorbed into accumulator <ballY>: 1 register on signal <ballY>.
 The following registers are absorbed into counter <missTimer>: 1 register on signal <missTimer>.
+The following registers are absorbed into counter <score>: 1 register on signal <score>.
 Unit <GameWithSound> synthesized (advanced).
 
 Synthesizing (advanced) Unit <MusicSheetReader>.
@@ -937,31 +1222,35 @@ Unit <Waveform> synthesized (advanced).
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 17
+# Adders/Subtractors                                   : 57
  10-bit adder                                          : 12
  10-bit addsub                                         : 2
- 10-bit subtractor                                     : 1
- 11-bit adder                                          : 1
+ 10-bit subtractor                                     : 5
+ 11-bit adder                                          : 13
+ 12-bit adder                                          : 4
+ 12-bit subtractor                                     : 10
+ 4-bit adder                                           : 9
+ 5-bit adder                                           : 1
  9-bit subtractor                                      : 1
-# Counters                                             : 9
+# Counters                                             : 10
  10-bit up counter                                     : 1
  20-bit up counter                                     : 3
  26-bit up counter                                     : 1
  27-bit up counter                                     : 1
- 4-bit up counter                                      : 1
+ 4-bit up counter                                      : 2
  5-bit up counter                                      : 1
  6-bit down counter                                    : 1
 # Accumulators                                         : 2
  10-bit updown accumulator                             : 1
  9-bit updown accumulator                              : 1
-# Registers                                            : 237
- Flip-Flops                                            : 237
-# Comparators                                          : 43
+# Registers                                            : 329
+ Flip-Flops                                            : 329
+# Comparators                                          : 81
  10-bit comparator equal                               : 3
  10-bit comparator greater                             : 4
- 10-bit comparator lessequal                           : 17
- 11-bit comparator lessequal                           : 2
- 12-bit comparator lessequal                           : 1
+ 10-bit comparator lessequal                           : 27
+ 11-bit comparator lessequal                           : 6
+ 12-bit comparator lessequal                           : 3
  13-bit comparator lessequal                           : 1
  14-bit comparator lessequal                           : 1
  15-bit comparator lessequal                           : 1
@@ -972,17 +1261,23 @@ Macro Statistics
  20-bit comparator greater                             : 3
  26-bit comparator lessequal                           : 1
  27-bit comparator lessequal                           : 1
+ 32-bit comparator lessequal                           : 12
  4-bit comparator equal                                : 1
- 4-bit comparator lessequal                            : 1
- 9-bit comparator greater                              : 1
- 9-bit comparator lessequal                            : 1
-# Multiplexers                                         : 114
- 1-bit 2-to-1 multiplexer                              : 83
- 1-bit 20-to-1 multiplexer                             : 4
+ 4-bit comparator lessequal                            : 3
+ 5-bit comparator lessequal                            : 2
+ 6-bit comparator lessequal                            : 2
+ 7-bit comparator lessequal                            : 2
+ 8-bit comparator lessequal                            : 2
+ 9-bit comparator greater                              : 2
+# Multiplexers                                         : 148
+ 1-bit 13-to-1 multiplexer                             : 2
+ 1-bit 2-to-1 multiplexer                              : 108
+ 1-bit 32-to-1 multiplexer                             : 8
  1-bit 4-to-1 multiplexer                              : 2
  10-bit 2-to-1 multiplexer                             : 21
  3-bit 2-to-1 multiplexer                              : 2
- 4-bit 20-to-1 multiplexer                             : 1
+ 32-bit 2-to-1 multiplexer                             : 1
+ 4-bit 2-to-1 multiplexer                              : 3
  9-bit 2-to-1 multiplexer                              : 1
 # FSMs                                                 : 4
 # Xors                                                 : 5
@@ -994,138 +1289,228 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:1710 - FF/Latch <Keys<13>_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys<13>_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys<12>_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_0_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_11_0> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_11_1> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_11_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_11_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_10_0> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_10_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_10_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_9_1> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_9_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_9_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_8_1> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_8_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_2_1> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_3_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_3_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_3_1> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_4_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Choice_1> (without init value) has a constant value of 0 in block <GameWithSound>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Times_5_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_4_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_4_1> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_5_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_5_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_5_1> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_6_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_6_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_6_1> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_7_1> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_7_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_7_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_7_1> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_8_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_31> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_21> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_11> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_01> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_1> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_0> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_1> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_0> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times<19>_1> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times<19>_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times<17>_0> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times<16>_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys<13>_0> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys<14>_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys<14>_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys<15>_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys<15>_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys<15>_0> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys<16>_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys<17>_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys<17>_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys<18>_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times<12>_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times<12>_1> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times<12>_0> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times<14>_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times<14>_1> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times<14>_0> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times<15>_1> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_3_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_2_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_2_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_1_0> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_1_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_1_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_0_1> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_0_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_0_0> (without init value) has a constant value of 1 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_10_1> (without init value) has a constant value of 1 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_9_0> (without init value) has a constant value of 1 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_8_0> (without init value) has a constant value of 1 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_7_0> (without init value) has a constant value of 1 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_6_0> (without init value) has a constant value of 1 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_5_0> (without init value) has a constant value of 1 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_4_0> (without init value) has a constant value of 1 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_1_1> (without init value) has a constant value of 1 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_2_1> (without init value) has a constant value of 1 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_2_0> (without init value) has a constant value of 1 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_3_1> (without init value) has a constant value of 1 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_3_0> (without init value) has a constant value of 1 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_4_1> (without init value) has a constant value of 1 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_5_0> (without init value) has a constant value of 1 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_6_0> (without init value) has a constant value of 1 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_7_1> (without init value) has a constant value of 1 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_8_1> (without init value) has a constant value of 1 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_8_0> (without init value) has a constant value of 1 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_9_1> (without init value) has a constant value of 1 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_10_0> (without init value) has a constant value of 1 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_0_1> (without init value) has a constant value of 1 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_1_0> (without init value) has a constant value of 1 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_2_0> (without init value) has a constant value of 1 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_3_0> (without init value) has a constant value of 1 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_2_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_2_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_1_1> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_1_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_1_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_8_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_8_1> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_9_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_10_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_9_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_9_1> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_10_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_10_0> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_11_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_11_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_12_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_11_1> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_11_0> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_12_1> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_12_0> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_13_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_26_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_26_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_27_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_27_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_28_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_28_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_28_0> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_29_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_29_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_30_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_30_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_31_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_31_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_31_0> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_0_0> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_0_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_0_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_11_0> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_11_1> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_11_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_11_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_10_1> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_10_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_10_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_9_0> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_0_1> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_1_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_1_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_1_1> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_1_0> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_2_1> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_2_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_2_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_3_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_3_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_3_0> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_4_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_23_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_24_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_23_1> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_23_0> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_24_1> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_24_0> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_25_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_25_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_26_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_25_1> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_25_0> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_26_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_26_1> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_27_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_27_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_29_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_28_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_28_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_29_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_29_1> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_30_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_30_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_31_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_30_1> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_31_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_31_1> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_0_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_13_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_14_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_13_1> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_13_0> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_14_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_14_0> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_15_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_15_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_16_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_15_1> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_16_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_16_1> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_17_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_17_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_17_1> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_18_0> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_18_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_18_1> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_19_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_19_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_19_1> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_20_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_21_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_20_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_20_1> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_21_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_21_1> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_23_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_17_0> (without init value) has a constant value of 1 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_18_2> (without init value) has a constant value of 1 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_20_0> (without init value) has a constant value of 1 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_21_0> (without init value) has a constant value of 1 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_29_0> (without init value) has a constant value of 1 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_27_0> (without init value) has a constant value of 1 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_28_0> (without init value) has a constant value of 1 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_0_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_0_1> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_1_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_1_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_2_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_1_1> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_1_0> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_2_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_3_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_3_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_4_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_5_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_4_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_4_0> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_5_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_5_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_5_1> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_6_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_6_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_6_1> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_7_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_7_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_6_1> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_2_0> (without init value) has a constant value of 1 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_6_0> (without init value) has a constant value of 1 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_7_1> (without init value) has a constant value of 1 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_8_0> (without init value) has a constant value of 1 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_10_0> (without init value) has a constant value of 1 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_12_1> (without init value) has a constant value of 1 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_16_1> (without init value) has a constant value of 1 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_19_1> (without init value) has a constant value of 1 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_20_1> (without init value) has a constant value of 1 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_21_1> (without init value) has a constant value of 1 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_21_0> (without init value) has a constant value of 1 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_27_1> (without init value) has a constant value of 1 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_24_1> (without init value) has a constant value of 1 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_24_0> (without init value) has a constant value of 1 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_27_0> (without init value) has a constant value of 1 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_28_1> (without init value) has a constant value of 1 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_29_1> (without init value) has a constant value of 1 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_29_0> (without init value) has a constant value of 1 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_31_1> (without init value) has a constant value of 1 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_30_1> (without init value) has a constant value of 1 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_30_0> (without init value) has a constant value of 1 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_7_0> (without init value) has a constant value of 1 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_8_0> (without init value) has a constant value of 1 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_9_0> (without init value) has a constant value of 1 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_10_1> (without init value) has a constant value of 1 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_16_0> (without init value) has a constant value of 1 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_14_1> (without init value) has a constant value of 1 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Times_15_0> (without init value) has a constant value of 1 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_16_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_16_0> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_17_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_17_1> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_18_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_18_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_19_0> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_19_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_19_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_20_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_20_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_20_0> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_21_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_22_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_21_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_22_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_22_0> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_23_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_23_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_23_1> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_24_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_23_0> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_24_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_25_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_25_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_25_1> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_25_0> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_26_1> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_7_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_7_0> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_8_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_8_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_9_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_9_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_9_0> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_10_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_10_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_10_1> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_11_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_11_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_11_1> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_12_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_11_0> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_12_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_12_0> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_13_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_13_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_13_1> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_14_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_13_0> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_14_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_15_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_15_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_15_1> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_16_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Keys_17_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <NoteD_15> (without init value) has a constant value of 0 in block <InputModule>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <NoteD_13> (without init value) has a constant value of 0 in block <InputModule>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <NoteD_12> (without init value) has a constant value of 0 in block <InputModule>. This FF/Latch will be trimmed during the optimization process.
@@ -1197,6 +1582,8 @@ Optimizing FSM <game_inst/FSM_2> on signal <State[1:3]> with one-hot encoding.
 -------------------
 WARNING:Xst:1710 - FF/Latch <paddlePosition_0> (without init value) has a constant value of 0 in block <GameWithSound>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <paddlePosition_1> (without init value) has a constant value of 0 in block <GameWithSound>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <KeyOutput_2> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <KeyOutput_3> (without init value) has a constant value of 0 in block <MusicScore>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:3002 - This design contains one or more registers/latches that are directly
    incompatible with the Spartan6 architecture. The two primary causes of this is
    either a register or latch described with both an asynchronous set and
@@ -1244,9 +1631,9 @@ Optimizing unit <GameWithSound> ...
 WARNING:Xst:1710 - FF/Latch <ballX_0> (without init value) has a constant value of 0 in block <GameWithSound>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ballY_0> (without init value) has a constant value of 0 in block <GameWithSound>. This FF/Latch will be trimmed during the optimization process.
 
-Optimizing unit <MusicSheetReader> ...
-
 Optimizing unit <MusicScore> ...
+
+Optimizing unit <MusicSheetReader> ...
 
 Optimizing unit <PlayNote2> ...
 
@@ -1287,35 +1674,41 @@ INFO:Xst:2261 - The FF/Latch <game_inst/ballY_1> in Unit <PongWithSound> is equi
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block PongWithSound, actual ratio is 7.
+Found area constraint ratio of 100 (+ 5) on block PongWithSound, actual ratio is 8.
 FlipFlop VGAdisplay/hsyncModule/XPositionCounter/Q_0 has been replicated 1 time(s)
 FlipFlop VGAdisplay/hsyncModule/XPositionCounter/Q_1 has been replicated 1 time(s)
-FlipFlop VGAdisplay/hsyncModule/XPositionCounter/Q_2 has been replicated 2 time(s)
-FlipFlop VGAdisplay/hsyncModule/XPositionCounter/Q_3 has been replicated 2 time(s)
+FlipFlop VGAdisplay/hsyncModule/XPositionCounter/Q_2 has been replicated 1 time(s)
+FlipFlop VGAdisplay/hsyncModule/XPositionCounter/Q_3 has been replicated 1 time(s)
 FlipFlop VGAdisplay/hsyncModule/XPositionCounter/Q_4 has been replicated 2 time(s)
 FlipFlop VGAdisplay/hsyncModule/XPositionCounter/Q_5 has been replicated 2 time(s)
 FlipFlop VGAdisplay/hsyncModule/XPositionCounter/Q_6 has been replicated 1 time(s)
+FlipFlop VGAdisplay/hsyncModule/XPositionCounter/Q_7 has been replicated 2 time(s)
+FlipFlop VGAdisplay/hsyncModule/XPositionCounter/Q_8 has been replicated 1 time(s)
+FlipFlop VGAdisplay/hsyncModule/XPositionCounter/Q_9 has been replicated 1 time(s)
 FlipFlop VGAdisplay/vsyncModule/YPositionCounter/Q_0 has been replicated 1 time(s)
 FlipFlop VGAdisplay/vsyncModule/YPositionCounter/Q_1 has been replicated 1 time(s)
 FlipFlop VGAdisplay/vsyncModule/YPositionCounter/Q_2 has been replicated 1 time(s)
 FlipFlop VGAdisplay/vsyncModule/YPositionCounter/Q_3 has been replicated 1 time(s)
-FlipFlop VGAdisplay/vsyncModule/YPositionCounter/Q_4 has been replicated 1 time(s)
+FlipFlop VGAdisplay/vsyncModule/YPositionCounter/Q_4 has been replicated 3 time(s)
 FlipFlop VGAdisplay/vsyncModule/YPositionCounter/Q_5 has been replicated 2 time(s)
-FlipFlop VGAdisplay/vsyncModule/YPositionCounter/Q_6 has been replicated 1 time(s)
+FlipFlop VGAdisplay/vsyncModule/YPositionCounter/Q_6 has been replicated 2 time(s)
+FlipFlop VGAdisplay/vsyncModule/YPositionCounter/Q_7 has been replicated 2 time(s)
+FlipFlop VGAdisplay/vsyncModule/YPositionCounter/Q_8 has been replicated 1 time(s)
+FlipFlop VGAdisplay/vsyncModule/YPositionCounter/Q_9 has been replicated 1 time(s)
 
 Final Macro Processing ...
 
 Processing Unit <PongWithSound> :
-	Found 2-bit shift register for signal <game_inst/quadAr_1>.
 	Found 2-bit shift register for signal <game_inst/quadBr_1>.
+	Found 2-bit shift register for signal <game_inst/quadAr_1>.
 Unit <PongWithSound> processed.
 
 =========================================================================
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 204
- Flip-Flops                                            : 204
+# Registers                                            : 217
+ Flip-Flops                                            : 217
 # Shift Registers                                      : 2
  2-bit shift register                                  : 2
 
@@ -1340,25 +1733,25 @@ Top Level Output File Name         : PongWithSound.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 846
+# BELS                             : 910
 #      GND                         : 1
-#      INV                         : 11
-#      LUT2                        : 75
-#      LUT3                        : 131
-#      LUT4                        : 108
-#      LUT5                        : 107
-#      LUT6                        : 124
-#      MUXCY                       : 179
-#      MUXF7                       : 14
+#      INV                         : 10
+#      LUT2                        : 78
+#      LUT3                        : 147
+#      LUT4                        : 122
+#      LUT5                        : 106
+#      LUT6                        : 155
+#      MUXCY                       : 177
+#      MUXF7                       : 18
 #      VCC                         : 1
 #      XORCY                       : 95
-# FlipFlops/Latches                : 206
-#      FD                          : 8
-#      FDC                         : 69
+# FlipFlops/Latches                : 219
+#      FD                          : 12
+#      FDC                         : 78
 #      FDCE                        : 12
-#      FDE                         : 17
+#      FDE                         : 16
 #      FDR                         : 24
-#      FDRE                        : 63
+#      FDRE                        : 64
 #      FDS                         : 3
 #      FDSE                        : 10
 # Shift Registers                  : 2
@@ -1376,18 +1769,18 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             206  out of  18224     1%  
- Number of Slice LUTs:                  558  out of   9112     6%  
-    Number used as Logic:               556  out of   9112     6%  
+ Number of Slice Registers:             219  out of  18224     1%  
+ Number of Slice LUTs:                  620  out of   9112     6%  
+    Number used as Logic:               618  out of   9112     6%  
     Number used as Memory:                2  out of   2176     0%  
        Number used as SRL:                2
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    578
-   Number with an unused Flip Flop:     372  out of    578    64%  
-   Number with an unused LUT:            20  out of    578     3%  
-   Number of fully used LUT-FF pairs:   186  out of    578    32%  
-   Number of unique control sets:        25
+ Number of LUT Flip Flop pairs used:    647
+   Number with an unused Flip Flop:     428  out of    647    66%  
+   Number with an unused LUT:            27  out of    647     4%  
+   Number of fully used LUT-FF pairs:   192  out of    647    29%  
+   Number of unique control sets:        27
 
 IO Utilization: 
  Number of IOs:                          15
@@ -1417,7 +1810,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-Clock                              | BUFGP                  | 208   |
+Clock                              | BUFGP                  | 221   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -1428,9 +1821,9 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 6.048ns (Maximum Frequency: 165.353MHz)
-   Minimum input arrival time before clock: 4.544ns
-   Maximum output required time after clock: 9.913ns
+   Minimum period: 6.109ns (Maximum Frequency: 163.697MHz)
+   Minimum input arrival time before clock: 4.549ns
+   Maximum output required time after clock: 14.416ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -1439,74 +1832,80 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'Clock'
-  Clock period: 6.048ns (frequency: 165.353MHz)
-  Total number of paths / destination ports: 58449 / 338
+  Clock period: 6.109ns (frequency: 163.697MHz)
+  Total number of paths / destination ports: 63165 / 354
 -------------------------------------------------------------------------
-Delay:               6.048ns (Levels of Logic = 5)
-  Source:            VGAdisplay/vsyncModule/YPositionCounter/Q_8 (FF)
-  Destination:       VGAdisplay/vsyncModule/YPositionCounter/Q_9 (FF)
+Delay:               6.109ns (Levels of Logic = 6)
+  Source:            VGAdisplay/vsyncModule/YPositionCounter/Q_4_1 (FF)
+  Destination:       VGAdisplay/vsyncModule/YPositionCounter/Q_8 (FF)
   Source Clock:      Clock rising
   Destination Clock: Clock rising
 
-  Data Path: VGAdisplay/vsyncModule/YPositionCounter/Q_8 to VGAdisplay/vsyncModule/YPositionCounter/Q_9
+  Data Path: VGAdisplay/vsyncModule/YPositionCounter/Q_4_1 to VGAdisplay/vsyncModule/YPositionCounter/Q_8
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q             17   0.447   1.132  VGAdisplay/vsyncModule/YPositionCounter/Q_8 (VGAdisplay/vsyncModule/YPositionCounter/Q_8)
-     LUT5:I3->O           12   0.203   0.908  VGAdisplay/vsyncModule/YPositionCounter/Q[9]_BeginCount[9]_equal_6_o10_SW0 (N9)
-     MUXF7:S->O            7   0.148   1.002  VGAdisplay/vsyncModule/YPositionCounter/Mmux_NextQ3_rs_cy<2>11_SW0 (N35)
-     LUT6:I3->O            4   0.205   0.912  VGAdisplay/vsyncModule/YPositionCounter/Mmux_NextQ3_rs_cy<2>11 (VGAdisplay/vsyncModule/YPositionCounter/Mmux_NextQ3_rs_cy<2>1)
-     LUT6:I3->O            1   0.205   0.580  VGAdisplay/vsyncModule/YPositionCounter/Mmux_NextQ3_rs_cy<5>1_SW0_SW1 (N125)
-     LUT6:I5->O            1   0.205   0.000  VGAdisplay/vsyncModule/YPositionCounter/Mmux_NextQ3_rs_xor<9>11 (VGAdisplay/vsyncModule/YPositionCounter/Mmux_NextQ3_split<9>)
-     FDC:D                     0.102          VGAdisplay/vsyncModule/YPositionCounter/Q_9
+     FDC:C->Q              1   0.447   0.924  VGAdisplay/vsyncModule/YPositionCounter/Q_4_1 (VGAdisplay/vsyncModule/YPositionCounter/Q_4_1)
+     LUT5:I0->O           12   0.203   0.908  VGAdisplay/vsyncModule/YPositionCounter/Q[9]_BeginCount[9]_equal_6_o10_SW0 (N9)
+     MUXF7:S->O            7   0.148   0.774  VGAdisplay/vsyncModule/YPositionCounter/Mmux_NextQ3_rs_cy<2>11_SW0 (N53)
+     LUT5:I4->O            1   0.205   0.684  VGAdisplay/vsyncModule/YPositionCounter/Mmux_NextQ3_rs_cy<5>1_SW6_SW0 (N175)
+     LUT5:I3->O            1   0.203   0.580  VGAdisplay/vsyncModule/YPositionCounter/Mmux_NextQ3_rs_cy<5>1_SW6 (N150)
+     LUT6:I5->O            1   0.205   0.579  VGAdisplay/vsyncModule/YPositionCounter/Mmux_NextQ3_rs_cy<5>1 (VGAdisplay/vsyncModule/YPositionCounter/Mmux_NextQ3_rs_cy<5>)
+     MUXF7:S->O            2   0.148   0.000  VGAdisplay/vsyncModule/YPositionCounter/Mmux_NextQ3_rs_xor<8>11 (VGAdisplay/vsyncModule/YPositionCounter/Mmux_NextQ3_split<8>)
+     FDC:D                     0.102          VGAdisplay/vsyncModule/YPositionCounter/Q_8
     ----------------------------------------
-    Total                      6.048ns (1.515ns logic, 4.533ns route)
-                                       (25.1% logic, 74.9% route)
+    Total                      6.109ns (1.661ns logic, 4.448ns route)
+                                       (27.2% logic, 72.8% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'Clock'
-  Total number of paths / destination ports: 153 / 153
+  Total number of paths / destination ports: 160 / 160
 -------------------------------------------------------------------------
-Offset:              4.544ns (Levels of Logic = 2)
+Offset:              4.549ns (Levels of Logic = 2)
   Source:            Reset (PAD)
-  Destination:       game_inst/PlayMusic/Sheet/TimeOutput_3 (FF)
+  Destination:       game_inst/PlayMusic/PlayOneShot/State_FSM_FFd2 (FF)
   Destination Clock: Clock rising
 
-  Data Path: Reset to game_inst/PlayMusic/Sheet/TimeOutput_3
+  Data Path: Reset to game_inst/PlayMusic/PlayOneShot/State_FSM_FFd2
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O           144   1.222   1.992  Reset_IBUF (Reset_IBUF)
-     INV:I->O              8   0.206   0.802  game_inst/PlayMusic/Sheet/Reset_inv1_INV_0 (game_inst/PlayMusic/Sheet/Reset_inv)
-     FDE:CE                    0.322          game_inst/PlayMusic/Sheet/KeyOutput_0
+     IBUF:I->O           153   1.222   2.115  Reset_IBUF (Reset_IBUF)
+     LUT3:I1->O            1   0.203   0.579  game_inst/PlayMusic/DebouncedPlayAgain1 (game_inst/PlayMusic/DebouncedPlayAgain_0)
+     FDR:R                     0.430          game_inst/PlayMusic/PlayOneShot/State_FSM_FFd2
     ----------------------------------------
-    Total                      4.544ns (1.750ns logic, 2.794ns route)
-                                       (38.5% logic, 61.5% route)
+    Total                      4.549ns (1.855ns logic, 2.694ns route)
+                                       (40.8% logic, 59.2% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'Clock'
-  Total number of paths / destination ports: 1655 / 7
+  Total number of paths / destination ports: 7455 / 9
 -------------------------------------------------------------------------
-Offset:              9.913ns (Levels of Logic = 7)
-  Source:            game_inst/ballY_1 (FF)
-  Destination:       blue<0> (PAD)
+Offset:              14.416ns (Levels of Logic = 12)
+  Source:            VGAdisplay/vsyncModule/YPositionCounter/Q_3 (FF)
+  Destination:       blue<1> (PAD)
   Source Clock:      Clock rising
 
-  Data Path: game_inst/ballY_1 to blue<0>
+  Data Path: VGAdisplay/vsyncModule/YPositionCounter/Q_3 to blue<1>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q            27   0.447   1.221  game_inst/ballY_1 (game_inst/ballY_1)
-     LUT5:I4->O            4   0.205   0.684  game_inst/Madd_n0166_cy<5>11 (game_inst/Madd_n0166_cy<5>)
-     LUT5:I4->O            2   0.205   0.961  game_inst/Madd_n0166_xor<9>11 (game_inst/n0166<9>)
-     LUT5:I0->O            0   0.203   0.000  game_inst/Mcompar_GND_9_o_BUS_0006_LessThan_46_o_lutdi4 (game_inst/Mcompar_GND_9_o_BUS_0006_LessThan_46_o_lutdi4)
-     MUXCY:DI->O           9   0.339   1.077  game_inst/Mcompar_GND_9_o_BUS_0006_LessThan_46_o_cy<4> (game_inst/GND_9_o_BUS_0006_LessThan_46_o)
-     LUT4:I0->O            3   0.203   1.015  game_inst/ball1 (game_inst/ball)
-     LUT6:I0->O            1   0.203   0.579  game_inst/blue<0> (blue_0_OBUF)
-     OBUF:I->O                 2.571          blue_0_OBUF (blue<0>)
+     FDC:C->Q             22   0.447   1.362  VGAdisplay/vsyncModule/YPositionCounter/Q_3 (VGAdisplay/vsyncModule/YPositionCounter/Q_3)
+     LUT3:I0->O            1   0.205   0.684  game_inst/VGA7SegDisplayOnes/digitYPosition[9]_ypos[9]_LessThan_6_o1_SW0 (N45)
+     LUT6:I4->O            7   0.203   1.138  game_inst/VGA7SegDisplayOnes/digitYPosition[9]_ypos[9]_LessThan_6_o1 (game_inst/VGA7SegDisplayOnes/digitYPosition[9]_ypos[9]_LessThan_6_o)
+     LUT6:I0->O            2   0.203   0.617  game_inst/VGA7SegDisplayOnes/segmentA1 (game_inst/VGA7SegDisplayOnes/segmentA1)
+     LUT3:I2->O            3   0.205   0.995  game_inst/VGA7SegDisplayOnes/segmentA2 (game_inst/VGA7SegDisplayOnes/segmentA)
+     LUT6:I1->O            4   0.203   0.684  game_inst/VGA7SegDisplayOnes/segmentA_segmentC_OR_84_o1 (game_inst/VGA7SegDisplayOnes/segmentA_segmentC_OR_84_o)
+     LUT5:I4->O            2   0.205   0.961  game_inst/VGA7SegDisplayOnes/segmentA_segmentD_OR_80_o1 (game_inst/VGA7SegDisplayOnes/segmentA_segmentD_OR_80_o)
+     LUT6:I1->O            1   0.203   0.580  game_inst/VGA7SegDisplayOnes/segmentA_segmentF_OR_76_o1 (game_inst/VGA7SegDisplayOnes/segmentA_segmentF_OR_76_o)
+     LUT6:I5->O            1   0.205   0.000  game_inst/VGA7SegDisplayOnes/Mmux_digitpixel_7 (game_inst/VGA7SegDisplayOnes/Mmux_digitpixel_7)
+     MUXF7:I0->O           1   0.131   0.944  game_inst/VGA7SegDisplayOnes/Mmux_digitpixel_5_f7 (game_inst/VGA7SegDisplayOnes/Mmux_digitpixel_5_f7)
+     LUT6:I0->O            4   0.203   0.684  game_inst/digitPixel14 (green_0_OBUF)
+     LUT6:I5->O            1   0.205   0.579  game_inst/blue<1>1 (blue_1_OBUF)
+     OBUF:I->O                 2.571          blue_1_OBUF (blue<1>)
     ----------------------------------------
-    Total                      9.913ns (4.376ns logic, 5.537ns route)
-                                       (44.1% logic, 55.9% route)
+    Total                     14.416ns (5.189ns logic, 9.227ns route)
+                                       (36.0% logic, 64.0% route)
 
 =========================================================================
 
@@ -1518,20 +1917,20 @@ Clock to Setup on destination clock Clock
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-Clock          |    6.048|         |         |         |
+Clock          |    6.109|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 12.00 secs
-Total CPU time to Xst completion: 12.62 secs
+Total REAL time to Xst completion: 16.00 secs
+Total CPU time to Xst completion: 16.16 secs
  
 --> 
 
-Total memory usage is 264212 kilobytes
+Total memory usage is 267156 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  333 (   0 filtered)
+Number of warnings :  519 (   0 filtered)
 Number of infos    :   11 (   0 filtered)
 

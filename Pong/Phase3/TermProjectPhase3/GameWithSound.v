@@ -29,10 +29,23 @@ module GameWithSound(input clk25, input Reset,
 				output Speaker);
 
 reg PlayAgain;
-
+reg PlayAgain1;
+reg [1:0] Choice, Choice1;
 // paddle movement		
 reg [8:0] paddlePosition;
 reg [2:0] quadAr, quadBr;
+
+reg [3:0] score;
+wire [3:0] scoreOnesDigit;
+wire [3:0] scoreTensDigit;
+assign scoreOnesDigit = score % 10;
+assign scoreTensDigit = score / 10;
+wire tensDigit;
+wire onesDigit;
+wire digitPixel;
+assign digitPixel = tensDigit || onesDigit;	// 76
+VGA7SegDisplay VGA7SegDisplayTens(9'd100,9'd300,xpos,ypos,scoreTensDigit,tensDigit);
+VGA7SegDisplay VGA7SegDisplayOnes(9'd130,9'd300,xpos,ypos,scoreOnesDigit,onesDigit);
 
 always @(posedge clk25) quadAr <= {quadAr[1:0], rota};
 always @(posedge clk25) quadBr <= {quadBr[1:0], rotb};
@@ -44,6 +57,7 @@ begin
 		if(paddlePosition < 508)        // make sure the value doesn't overflow
 			begin
 			paddlePosition <= paddlePosition + 3'd4;
+			Choice <= 2'b00;
 			PlayAgain <= 1;
 			end
 		else
@@ -53,8 +67,8 @@ begin
 		if(paddlePosition > 2'd3)        // make sure the value doesn't underflow
 			begin
 			paddlePosition <= paddlePosition - 3'd4;
+			Choice <= 2'b01;
 			PlayAgain <= 1;
-			PlayAgain <= 0;
 			end
 		else
 			PlayAgain <= 0;
@@ -103,20 +117,24 @@ wire background = (visible && !(border || paddle || ball));
 wire checkerboard = (xpos[5] ^ ypos[5]);
 wire missed = visible && missTimer != 0;
 
-assign red   = { missed || border || paddle, 2'b00 };
-assign green = { !missed && (border || paddle || ball), 2'b00 };
-assign blue  = { !missed && (border || ball), background && checkerboard}; 
+assign red   = { missed || border || paddle, 2'b0 };
+assign green = { !missed && (border || paddle || ball), digitPixel, digitPixel };
+assign blue  = { !missed && (border || ball) || digitPixel, background && checkerboard || digitPixel}; 
 
 		
 // ball collision	
 always @(posedge clk25) begin
 	if (!endOfFrame) begin
+		PlayAgain1 <= 0;
 		if (ball && (left || right))
 			bounceX <= 1;
 		if (ball && (top || bottom || (paddle && ballYdir)))
 			bounceY <= 1;
 		if (ball && bottom)
+			begin
 			missTimer <= 63;
+			score <= -1;
+			end
 	end
 	else begin
 		if (ballX == 0 && ballY == 0) begin // cheesy reset handling, assumes initial value of 0
@@ -124,12 +142,24 @@ always @(posedge clk25) begin
 			ballYdir <= 1;
 			bounceX <= 0;
 			bounceY <= 0;
+			score <= -1;
+			PlayAgain1 <= 0;
 		end 
 		else begin
 			if (bounceX)
 				ballXdir <= ~ballXdir;
 			if (bounceY)
-				ballYdir <= ~ballYdir;			
+				if(ballYdir) begin
+					score <= score + 1;
+					//Choice1 <= 2'b10;
+					PlayAgain1 <= 1;
+					ballYdir <= ~ballYdir;
+				end
+				else
+					begin
+					ballYdir <= ~ballYdir;
+					PlayAgain1 <= 0;
+					end
 			bounceX <= 0;
 			bounceY <= 0;
 			if (missTimer != 0)
@@ -138,6 +168,6 @@ always @(posedge clk25) begin
 	end
 end
 
-PlaySound PlayMusic(PlayAgain, Speaker, Reset, clk25);
+PlaySound PlayMusic(PlayAgain|PlayAgain1, Speaker, Reset, clk25, Choice);
 		
 endmodule
